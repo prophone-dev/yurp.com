@@ -2,3 +2,124 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+        <loc>https://yurp.com/index</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/store</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/reviews</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/gallery-All</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/gallery</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Residential-Cleaning</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Deep-Cleaning</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Commercial-Cleaning</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Move-In-/-Move-Out-Cleaning</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Airbnb-Cleaning</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Post-Construction-Cleaning</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Covid-19-Disinfection</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Eco-/-Green-Cleaning</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Carpet-Cleaning</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Window-Cleaning</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Other-Services</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Organizing</loc>
+        <lastmod>2022-03-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+</urlset>
