@@ -6,25 +6,26 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Residential &amp; Commercial Cleaning in CITY, STATE | yurp |  Service | Carpet Cleaning</title>
-        <meta name="description" content="">
-        <!-- <title>ProPhone Templates</title> -->
-        <!-- TailwindCSS  -->
-        <!-- <link rel="stylesheet" type="text/css" href="/staticfiles/landing_page_gen/tailwind.css"> -->
-        <!-- <link rel="stylesheet" type="stylesheet" href="/staticfiles/landing_page_gen/tailwind.css"> -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"> -->
-        <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type="image/x-icon">
-        <link rel="stylesheet" href="https://prophone-templates.vercel.app/assets/output.css">
-           
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Residential &amp; Commercial Cleaning in CITY, STATE | yurp |  Service | Carpet Cleaning</title>
+    <meta name="description"
+          content="">
+    <!-- <title>ProPhone Templates</title> -->
+    <!-- TailwindCSS  -->
+    <!-- <link rel="stylesheet" type="text/css" href="/staticfiles/landing_page_gen/tailwind.css"> -->
+    <!-- <link rel="stylesheet" type="stylesheet" href="/staticfiles/landing_page_gen/tailwind.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"> -->
+    <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type="image/x-icon">
+    <link rel="stylesheet" href="https://prophone-templates.vercel.app/assets/output.css">
+    
 
-        
-        <link defer href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/output.css" rel="stylesheet">
-        <!-- Include Scripts -->
-        <!-- Header Component, only used for presentation -->
+    
+    <link defer href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/output.css" rel="stylesheet">
+    <!-- Include Scripts -->
+    <!-- Header Component, only used for presentation -->
 
 <!-- Carousel Plugin (can replaced if you already use one) -->
 <script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
@@ -38,10 +39,10 @@
 <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
 <!-- Focus Visible Polyfill -->
 <script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
-        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-        <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script> -->
-        <style>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script> -->
+    <style>
             :root {
                 /* Settings */
                 --contrastThreshold: 60%;
@@ -61,78 +62,207 @@
                 --switch: calc((var(--color-primary-l) - var(--contrastThreshold)) * -100);
                 --color-primary-foreground: hsl(0, 0%, var(--switch));
             }
-        </style>
-                <script type="text/javascript" defer>
+
+
+
+    </style>
+    <script type="text/javascript" defer>
                     function send_sms(slug){
-                        console.log('send_sms', slug)
+                        console.log('send_sms',1, slug)
+                        function uuidV4() {
+                            return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+                              (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+                            );
+                          }
+
+                        const getFileExtenstion = (dataUrl) =>{
+                            var arr = dataUrl.split(','),
+                                  mime = arr[0].match(/:(.*?);/)[1]
+                            return mime.split('/')[1]
+                        }
+  
+                          const getFileName = (dataUrl) =>{
+                              const uuid = uuidV4()
+                              const fileName = `${uuid}.${getFileExtenstion(dataUrl)}`
+                              return fileName
+                          }
+                          function dataURLtoFile(dataUrl, filename) {
+                              var arr = dataUrl.split(','),
+                                  mime = arr[0].match(/:(.*?);/)[1],
+                                  bstr = atob(arr[1]),
+                                  n = bstr.length,
+                                  u8arr = new Uint8Array(n);
+  
+                              while(n--){
+                                  u8arr[n] = bstr.charCodeAt(n);
+                              }
+  
+                              return new File([u8arr], filename, {type:mime});
+                          }
+                        function uploadFile(file, signedRequest, url) {
+                            return new Promise(function (resolve, reject) {
+                                const xhr = new XMLHttpRequest()
+                                xhr.open('PUT', signedRequest)
+                                xhr.onreadystatechange = () => {
+                                    if (xhr.readyState === 4) {
+                                        if (xhr.status === 200) {
+                                            console.log(url, 'url in uploadFile')
+                                            resolve(file.name)
+                                            //   resolve(url)
+                                        } else {
+                                            alert('Could not upload file.')
+                                        }
+                                    }
+                                }
+                                xhr.send(file)
+                            })
+                        }
+                        
+                        function getSignedRequest(file,fileName) {
+                            return new Promise(function (resolve, reject) {
+                                const xhr = new XMLHttpRequest()
+                                console.log(fileName, 'fileName')
+                                const newUrl = `https://programmable-voice-server-node.herokuapp.com/sign_s3?file_name=${fileName}&file_type=${file.type}`
+                                console.log('newurl', newUrl)
+                                xhr.open('GET', newUrl)
+                                xhr.onreadystatechange = async function () {
+                                    console.log('getSignedRequest - in onreadystatechange - xhr', xhr)
+                                    if (xhr.readyState === 4) {
+                                        if (xhr.status === 200) {
+                                            const response = JSON.parse(xhr.responseText)
+                                            const uploaded = await uploadFile(
+                                                file,
+                                                response.signedRequest,
+                                                response.url
+                                            )
+                                            resolve(fileName)
+                                        } else {
+                                            alert('Could not get signed URL.')
+                                        }
+                                    }
+                                }
+                                console.log('getSignedRequest -pre xhr.send')
+                                xhr.send()
+                            })
+                        }
+                        const get_sender_attachment = ()=>{
+                            var ImageSrc = getIdValue(`#contact-attachment`)
+                            console.log(ImageSrc,"ImageSrc")
+                            if (ImageSrc){
+                                const fileName = getFileName(ImageSrc)
+                                const fileObject = dataURLtoFile(ImageSrc,fileName)
+                                getSignedRequest(fileObject,fileName).then(res => console.log(res))
+                                return fileName
+                            }
+                            return ""
+                        }
+
                         // var sender_fname = $(`#${form_num}-first-name`).val()
                         // var sender_lname = $(`#${form_num}-last-name`).val()
                         // var sender_number = $(`#${form_num}-phone-number`).val()
                         // console.log(sender_number)
                         // var sender_message = $(`#${form_num}-message`).val()
-                        var sender_full_name = $(`#contact-full-name`).val()
-                        var full_name_split = sender_full_name.split(' ')
-                        var sender_fname = full_name_split.shift()
-                        var sender_lname = full_name_split.join(' ')
-                        var sender_number = $(`#contact-phone-number`).val()
-                        var sender_email = $(`#contact-email`).val()
-                        var sender_contact_date = $(`#contact-date`).val()
-                        var sender_promo = $(`#contact-promo-code`).val()
-                        var sender_address = $(`#contact-address`).val()
-                        
-                        // iterate over the service
-                        var sender_service = "" //$(`#contact-phone-number`).val()
-        
-                        
-                        console.log(sender_number)
-                        var sender_message = $(`#contact-concern`).val()
-                        if (!sender_fname || !sender_number || !sender_message){
-                        // if (!sender_fname || !sender_lname || !sender_number || !sender_message){
-                            alert("Please make sure to fill out all the form fields")
-                            return
+
+                        const checkIdExist = (id) =>{
+                            if ($(id).length) return true
+                            return false
                         }
-        
+
+                        const getIdValue = (id) => {
+                            if (checkIdExist(id)) return $(id).val()
+                            else return ""
+                        }
+                        const getSenderName = () =>{
+                        const sender_full_name = getIdValue(`#contact-full-name`)
+                        if (sender_full_name){
+                            const full_name_split = sender_full_name.split(' ')
+                        const sender_fname = full_name_split.shift()
+                        const sender_lname = full_name_split.join(' ')
+                        return [sender_full_name,sender_fname,sender_lname]
+                        }
+                        else{
+                            return ["","",""]
+                        }
+
+                        }
+                        const getSelectedServices = () =>{
+                            const allSelectedServiced = Array.from(document.querySelectorAll('[id^="contact-service"]'))
+
+                            if (allSelectedServiced.length){
+                                return allSelectedServiced.filter( (x)=> x.checked
+                            ).map(item => item.value).join(",");
+                            }
+                            else {return ""}
+
+                        }
+
+
+                        const [sender_full_name,sender_fname,sender_lname  ]=getSenderName()
+                        var sender_number = getIdValue(`#contact-phone-number`)
+                        var sender_email = getIdValue(`#contact-email`)
+                        var sender_contact_date = getIdValue(`#contact-date`)
+                        var sender_promo = getIdValue(`#contact-promo-code`)
+                        var sender_address = getIdValue(`#contact-address`)
+                        const photo = get_sender_attachment()
+                        console.log(photo,"sender_attachment")
+                        // TODO As services are multiple choice option do user can select only one or user can select multiple option
+                            // discuss about how this should happen
+                        // iterate over the service
+                        const services = getSelectedServices()
+                        // var sender_service = "" //$(`#contact-phone-number`).val()
+
+                        var sender_message = getIdValue(`#contact-concern`)
+                        // TODO add a better validator for each field
+                            // Perform validation before any computation
+
+                        // if (!sender_fname || !sender_number || !sender_message){
+                        // // if (!sender_fname || !sender_lname || !sender_number || !sender_message){
+                        //     alert("Please make sure to fill out all the form fields")
+                        //     return
+                        // }
+
                         var cleaned_sender_number = sender_number.replace("(", "").replace(")", "").replace("-", "").replace(" ", "")
-                        var sender_services = ""
-        
+
+
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
 
-                        fetch('https://prophone.herokuapp.com/sms/' + slug , {
+                        fetch('http://localhost:8000/sms/' + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
                                 sender_email : sender_email,
                                 sender_promo : sender_promo,
-                                sender_services : sender_services,
                                 sender_fname : sender_fname,
                                 sender_lname: sender_lname,
                                 sender_number: cleaned_sender_number,
                                 sender_message: sender_message,
                                 sender_address: sender_address,
-                                sender_contact_date: sender_contact_date
+                                sender_contact_date: sender_contact_date,
+                                photo,
+                                services
                             })
-                            
+
                         })
                         .then(result => {
                             //Here body is not ready yet, throw promise
                             if (!result.ok) throw result;
                             return result.json();
-                        })      
+                        })
                         .then(result => {
                             console.log(result)
                             alert("Your message has been sent!")
                             location.reload()
                         })
-        
-        
-                        
+
+
                     }
+                
                     console.log('go bucks')
                     $('document').ready(function(){
                         console.log('doc ready')
                         let cover = $("#cover-button")
-                        console.log("cover", cover)  
-        
+                        console.log("cover", cover)
+
                         if (cover.position() !== undefined){
                             let cover_bottom = cover.position().top - 40
                             $(window).scroll(function(){
@@ -142,7 +272,7 @@
                                 if ( $("#side-button").hasClass('-translate-x-80')){
                                 $("#side-button").removeClass("-translate-x-80").addClass("translate-x-64")
                                 }
-                                
+
                             }
                             else{
                                 $("#side-button").addClass("transform -translate-x-80 ease-in duration-700");
@@ -151,58 +281,61 @@
                         } else {
                             $("#side-button").addClass("transform -translate-x-80 ease-in duration-700");
                         }
-        
-                        
-                        
+
+
+
                         });
-        
-                </script>
-    </head>
-    <body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-24 md:pt-44">
-            <!-- <div class="sticky top-0 z-50 pt-8 pb-4 bg-white">
-                <div class="flex items-center justify-between">
-                    <h1 class="text-2xl font-medium tracking-tight">ProPhone Templates</h1>
-                    <div class="flex items-center mt-2 space-x-4 bg-white">
-                        <span class="sr-only">Select Theme</span>
-                        <div class="flex space-x-2">
-                            <button
-                                :class="active === 0 ? 'ring ring-offset-1 ring-[#1e3a8a]' : ''"
-                                x-on:click="active = 0; setPrimary('224', '78%', '33%'); setSecondary('21', '95%', '48%');"
-                                class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
-                            >
-                                <div class="h-3 w-6 bg-[#1e3a8a]"></div>
-                                <div class="h-3 w-6 bg-[#ea580c]"></div>
-                            </button>
-                            <button
-                                :class="active === 1 ? 'ring ring-offset-1 ring-[#1E293B]' : ''"
-                                x-on:click="active = 1; setPrimary('217', '33%', '17%'); setSecondary('142', '83%', '45%');"
-                                class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
-                            >
-                                <div class="h-3 w-6 bg-[#1E293B]"></div>
-                                <div class="h-3 w-6 bg-[#22C55E]"></div>
-                            </button>
-                            <button
-                                :class="active === 2 ? 'ring ring-offset-1 ring-[#4F46E5]' : ''"
-                                x-on:click="active = 2; setPrimary('243', '69%', '59%'); setSecondary('189', '97%', '43%');"
-                                class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
-                            >
-                                <div class="h-3 w-6 bg-[#4F46E5]"></div>
-                                <div class="h-3 w-6 bg-[#06B6D4]"></div>
-                            </button>
-                            <button
-                                :class="active === 3 ? 'ring ring-offset-1 ring-[#f72585]' : ''"
-                                x-on:click="active = 3; setPrimary('333', '85%', '56%'); setSecondary('263', '93%', '35%');"
-                                class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
-                            >
-                                <div class="h-3 w-6 bg-[#f72585]"></div>
-                                <div class="h-3 w-6 bg-[#480ca8]"></div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-    
-            <nav class="fixed inset-x-0 top-0 z-20">
+
+
+
+
+    </script>
+</head>
+<body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-24 md:pt-44">
+<!-- <div class="sticky top-0 z-50 pt-8 pb-4 bg-white">
+    <div class="flex items-center justify-between">
+        <h1 class="text-2xl font-medium tracking-tight">ProPhone Templates</h1>
+        <div class="flex items-center mt-2 space-x-4 bg-white">
+            <span class="sr-only">Select Theme</span>
+            <div class="flex space-x-2">
+                <button
+                    :class="active === 0 ? 'ring ring-offset-1 ring-[#1e3a8a]' : ''"
+                    x-on:click="active = 0; setPrimary('224', '78%', '33%'); setSecondary('21', '95%', '48%');"
+                    class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
+                >
+                    <div class="h-3 w-6 bg-[#1e3a8a]"></div>
+                    <div class="h-3 w-6 bg-[#ea580c]"></div>
+                </button>
+                <button
+                    :class="active === 1 ? 'ring ring-offset-1 ring-[#1E293B]' : ''"
+                    x-on:click="active = 1; setPrimary('217', '33%', '17%'); setSecondary('142', '83%', '45%');"
+                    class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
+                >
+                    <div class="h-3 w-6 bg-[#1E293B]"></div>
+                    <div class="h-3 w-6 bg-[#22C55E]"></div>
+                </button>
+                <button
+                    :class="active === 2 ? 'ring ring-offset-1 ring-[#4F46E5]' : ''"
+                    x-on:click="active = 2; setPrimary('243', '69%', '59%'); setSecondary('189', '97%', '43%');"
+                    class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
+                >
+                    <div class="h-3 w-6 bg-[#4F46E5]"></div>
+                    <div class="h-3 w-6 bg-[#06B6D4]"></div>
+                </button>
+                <button
+                    :class="active === 3 ? 'ring ring-offset-1 ring-[#f72585]' : ''"
+                    x-on:click="active = 3; setPrimary('333', '85%', '56%'); setSecondary('263', '93%', '35%');"
+                    class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
+                >
+                    <div class="h-3 w-6 bg-[#f72585]"></div>
+                    <div class="h-3 w-6 bg-[#480ca8]"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<nav class="fixed inset-x-0 top-0 z-20">
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
@@ -781,7 +914,7 @@
     </div>
 </nav>
 
-            <div
+<div
     x-data="{ buttonVisible: false }"
     x-init="buttonVisible = window.pageYOffset >= 400 && (window.innerHeight + window.pageYOffset) <= document.body.scrollHeight - 500"
     @scroll.window="window.pageYOffset >= 400 && (window.innerHeight + window.scrollY) <= document.body.scrollHeight - 500 ? buttonVisible = true : buttonVisible = false"
@@ -809,28 +942,28 @@
 </div>
 
 
-            
-                
-                    
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                                <style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
     image {
         max-width: 960px;
         height: auto;
@@ -1087,7 +1220,7 @@
     </div>
 </section>
 
-                                <!-- Reviews Component -->
+<!-- Reviews Component -->
 <section class="bg-white" id="reviews">
     <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6  lg:pt-32 lg:pb-16  lg:px-8">
 
@@ -1236,7 +1369,7 @@
     </div>
 </section>
 
-                                <!-- Service Areas Component -->
+<!-- Service Areas Component -->
 <section class="relative my-24 bg-white">
     <!-- Decorative Grey Box -->
     <div aria-hidden="true" x-cloak x-data="{ shown: false }" x-intersect.half="shown = true" class="hidden lg:block">
@@ -1364,18 +1497,18 @@
         </div>
     </div>
 </section>
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                    
-                
-            
-                <!-- CTA Component -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- CTA Component -->
 <section class="bg-white">
     <div class="px-4 py-12 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
         <!-- Heading -->
@@ -1420,7 +1553,7 @@
     </div>
 </section>
 
-                <!-- Footer Component -->
+<!-- Footer Component -->
 <footer class="bg-primary" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-16 lg:pb-10 lg:px-8">
@@ -1437,7 +1570,7 @@
                   <!-- Is this supposed to be here and correct?  -->
                   <!-- The finest landscaping in Austin & surrounding areas. Exceptional, professional service. You are our priority! -->
               </p>
-              <div class="flex space-x-6">
+              <div class="flex flex-wrap justify-between align-middle ">
                   <!-- are these conditional? and linked to corret links? -->
                   
                   <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/" class="text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
@@ -1650,7 +1783,7 @@
                               <a
                                   href="#"
                                   class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Mon: 0:00am - 0:00am</a
+                                  >Mon: 8:00am - 6:00pm</a
                               >
                           </li>
                           
@@ -1674,7 +1807,7 @@
                               <a
                                   href="#"
                                   class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Thu: 8:00am - 6:00pm</a
+                                  >Thu: 0:00am - 0:00am</a
                               >
                           </li>
                           
@@ -1724,45 +1857,45 @@
   </div>
 </footer>
 
-                <!-- Modal -->
+<!-- Modal -->
 <template x-teleport="body">
     <div
-        x-show="contactModalOpen"
-        @keydown.escape.prevent.stop="contactModalOpen = false"
-        role="dialog"
-        aria-modal="true"
-        x-id="['modal-title']"
-        :aria-labelledby="$id('modal-title')"
-        class="fixed inset-0 z-40 pt-8 pb-20"
-        x-trap.noscroll.inert="contactModalOpen"
+            x-show="contactModalOpen"
+            @keydown.escape.prevent.stop="contactModalOpen = false"
+            role="dialog"
+            aria-modal="true"
+            x-id="['modal-title']"
+            :aria-labelledby="$id('modal-title')"
+            class="fixed inset-0 z-40 md:pt-8 md:pb-20"
+            x-trap.noscroll.inert="contactModalOpen"
     >
         <!-- Overlay -->
         <div
-            x-show="contactModalOpen"
-            x-transition:enter="ease-out duration-300"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100"
-            x-transition:leave="ease-in duration-200"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0"
-            aria-hidden="true"
-            class="fixed inset-0 bg-black bg-opacity-50"
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                aria-hidden="true"
+                class="fixed inset-0 bg-black bg-opacity-50"
         ></div>
         <!-- Panel -->
         <div
-            x-show="contactModalOpen"
-            x-transition:enter="ease-out duration-300"
-            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-            x-transition:leave="ease-in duration-200"
-            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            @click="contactModalOpen = false"
-            class="relative flex items-center justify-center w-full h-full"
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                @click="contactModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full"
         >
             <div
-                @click.stop
-                class="flex flex-col w-full max-h-full pb-3 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl  sm:px-0 sm:my-8 sm:align-middle sm:max-w-sm"
+                    @click.stop
+                    class="flex flex-col w-full h-full overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-sm  "
             >
                 <!-- Header -->
                 <div class="relative px-6 bg-white">
@@ -1771,319 +1904,265 @@
                     <!-- Small overlay for scrolling area  -->
                     <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8 bg-gradient-to-b from-white"></div>
                     <button
-                        @click="contactModalOpen = false;"
-                        class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                            @click="contactModalOpen = false;"
+                            class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                     >
                         <span class="sr-only">Close modal</span>
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </button>
                 </div>
 
                 <!-- Form -->
-                <form class="flex-grow overflow-x-hidden overflow-y-auto">
-                    <div class="h-full px-6 pb-1 mt-6 space-y-6">
-                        <!-- Full Name -->
-                        <div>
-                            <label for="contact-full-name" class="sr-only">Full Name</label>
-                            <input
-                                required
-                                type="text"
-                                name="full-name"
-                                id="contact-full-name"
-                                class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
-                                placeholder="Full Name"
-                            />
-                        </div>
-                        <!-- Number -->
-                        <div>
-                            <label for="contact-phone-number" class="sr-only">Phone Number</label>
-                            <input
-                                type="tel"
-                                name="phone-number"
-                                id="contact-phone-number"
-                                class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
-                                placeholder="Phone Number"
-                            />
-                        </div>
-                        <!-- Email -->
-                        <div>
-                            <label for="contact-email" class="sr-only">Email</label>
-                            <input
-                                required
-                                type="email"
-                                name="email"
-                                id="contact-email"
-                                class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
-                                placeholder="Email"
-                            />
-                        </div>
-                        <!-- Address -->
-                        <div>
-                            <label for="contact-address" class="sr-only">Address</label>
-                            <input
-                                type="text"
-                                name="address"
-                                id="contact-address"
-                                class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
-                                placeholder="Address"
-                            />
-                        </div>
-                        <!-- Preferred date of service
-                        <div>
-                            <label for="contact-date" class="sr-only">Preferred Date of Service</label>
-                            <input
-                                type="date"
-                                name="date"
-                                id="contact-date"
-                                class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
-                                placeholder="Preferred Date of Service"
-                            />
-                        </div> -->
-                        <!-- Promo Code -->
-                        <!-- <div>
-                            <label for="contact-promo-code" class="sr-only">Promo Code</label>
-                            <input
-                                type="text"
-                                name="promo-code"
-                                id="contact-promo-code"
-                                class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
-                                placeholder="Promo Code"
-                            />
-                        </div> -->
-                        <!-- How can we help you? (Concern) -->
-                        <div>
-                            <label for="contact-concern" class="sr-only">How can we help you?</label>
-                            <textarea
-                                required
-                                id="contact-concern"
-                                name="concern"
-                                rows="4"
-                                class="block py-2.5 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
-                                placeholder="How can we help you?"
-                            ></textarea>
-                        </div>
-                        <!-- <fieldset>
-                            <legend class="text-base font-medium text-gray-900">Services</legend>
-                            <div class="mt-2.5 grid gap-y-3.5 grid-cols-2">
-                                12
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111164"
-                                            name="111164"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111164" class="ml-3 text-sm font-medium text-gray-700">Residential Cleaning</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111165"
-                                            name="111165"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111165" class="ml-3 text-sm font-medium text-gray-700">Deep Cleaning</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111166"
-                                            name="111166"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111166" class="ml-3 text-sm font-medium text-gray-700">Commercial Cleaning</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111167"
-                                            name="111167"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111167" class="ml-3 text-sm font-medium text-gray-700">Move In / Move Out Cleaning</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111168"
-                                            name="111168"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111168" class="ml-3 text-sm font-medium text-gray-700">Airbnb Cleaning</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111169"
-                                            name="111169"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111169" class="ml-3 text-sm font-medium text-gray-700">Post-Construction Cleaning</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111170"
-                                            name="111170"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111170" class="ml-3 text-sm font-medium text-gray-700">Covid-19 Disinfection</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111171"
-                                            name="111171"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111171" class="ml-3 text-sm font-medium text-gray-700">Eco / Green Cleaning</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111172"
-                                            name="111172"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111172" class="ml-3 text-sm font-medium text-gray-700">Carpet Cleaning</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111173"
-                                            name="111173"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111173" class="ml-3 text-sm font-medium text-gray-700">Window Cleaning</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111174"
-                                            name="111174"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111174" class="ml-3 text-sm font-medium text-gray-700">Other Services</label>
-                                    </div>
-                                
-                                    <div class="flex items-center">
-                                        <input
-                                            id="contact-service-111175"
-                                            name="111175"
-                                            type="checkbox"
-                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        />
-                                        <label for="contact-label-service-111175" class="ml-3 text-sm font-medium text-gray-700">Organizing</label>
-                                    </div>
-                                
+
+                <form class="overflow-y-scroll">
+                    <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
+                        <div class="h-full px-6 pb-1 mt-6 space-y-6">
+                            <!-- Full Name -->
+                            
+                            <div>
+                                <label for="contact-full-name" class="sr-only">Full Name</label>
+                                <input
+                                        required
+                                        type="text"
+                                        name="full-name"
+                                        id="contact-full-name"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Full Name"
+                                />
                             </div>
-                        </fieldset> -->
-                        <!-- Photo Upload -->
-                        <!-- <div
-                            x-data="{
-                            imageUrl: '',
-                            fileTooLarge: false,
-                            fileChosen(event) {
-                                if (this.isProperlySized(event)) {
-                                    this.fileToDataUrl(event, (src) => (this.imageUrl = src));
-                                    this.fileTooLarge = false;
-                                }
-                                else
-                                    this.fileTooLarge = true;
-                            },
-                            fileToDataUrl(event, callback) {
-                                if (!event.target.files.length) return;
-                                let file = event.target.files[0],
-                                    reader = new FileReader();
-                                reader.readAsDataURL(file);
-                                reader.onload = (e) => callback(e.target.result);
-                            },
-                            isProperlySized(event) {
-                                const files = event.currentTarget.files;
-                                for (const file in files) {
-                                    const filesize = ((files[file].size/1024)/1024).toFixed(4);
-                                    if (filesize > 2)
-                                        return false;
-                                }
-                                return true;
-                            },
-                        }"
-                        >
-                            <label class="block text-sm font-medium text-gray-700">Share a photo</label>
-                            <div x-show="imageUrl !== ''" x-collapse>
-                                <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
-                                    <img :src="imageUrl" class="object-cover rounded-md w-[200px] h-[140px]" />
-                                    <button
-                                        @click="imageUrl = ''; $refs.fileInput.value = '';"
-                                        type="button"
-                                        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                    >
-                                        Change
-                                    </button>
+                            
+                            <!-- Number -->
+                            
+                            <div>
+                                <label for="contact-phone-number" class="sr-only">Phone Number</label>
+                                <input
+                                        type="tel"
+                                        name="phone-number"
+                                        id="contact-phone-number"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Phone Number"
+                                />
+                            </div>
+                            
+                            <!-- Email -->
+                            
+                            <div>
+                                <label for="contact-email" class="sr-only">EmailTrue</label>
+                                <input
+                                        required
+                                        type="email"
+                                        name="email"
+                                        id="contact-email"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Email"
+                                />
+                            </div>
+                            
+
+                            <!-- Address -->
+                            
+                            <div>
+                                <label for="contact-address" class="sr-only">Address</label>
+                                <input
+                                        type="text"
+                                        name="address"
+                                        id="contact-address"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Address"
+                                />
+                            </div>
+                            
+                            <!-- Preferred date of service-->
+                            
+                            <div>
+                                <label for="contact-date" class="sr-only">Preferred Date of Service</label>
+                                <input
+                                        type="date"
+                                        name="date"
+                                        id="contact-date"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Preferred Date of Service"
+                                />
+                            </div>
+                            
+                            <!--                        Promo Code-->
+                            
+                            <!-- How can we help you? (Concern) -->
+                            
+                            <div>
+                                <label for="contact-concern" class="sr-only">How can we help you?</label>
+                                <textarea
+                                        required
+                                        id="contact-concern"
+                                        name="concern"
+                                        rows="4"
+                                        class="block py-2.5 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="How can we help you?"
+                                ></textarea>
+                            </div>
+                            
+                            <!-- Services -->
+                            
+                            <fieldset>
+                                <legend class="text-base font-medium text-gray-900">Services</legend>
+                                <div class="mt-2.5 grid gap-y-3.5 grid-cols-2">
+
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111654"
+                                                name="111654"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Residential Cleaning"
+                                        />
+                                        <label for="contact-label-service-111654" class="ml-3 text-sm font-medium text-gray-700">Residential Cleaning</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111655"
+                                                name="111655"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Deep Cleaning"
+                                        />
+                                        <label for="contact-label-service-111655" class="ml-3 text-sm font-medium text-gray-700">Deep Cleaning</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111656"
+                                                name="111656"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Commercial Cleaning"
+                                        />
+                                        <label for="contact-label-service-111656" class="ml-3 text-sm font-medium text-gray-700">Commercial Cleaning</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111657"
+                                                name="111657"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Move In / Move Out Cleaning"
+                                        />
+                                        <label for="contact-label-service-111657" class="ml-3 text-sm font-medium text-gray-700">Move In / Move Out Cleaning</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111658"
+                                                name="111658"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Airbnb Cleaning"
+                                        />
+                                        <label for="contact-label-service-111658" class="ml-3 text-sm font-medium text-gray-700">Airbnb Cleaning</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111659"
+                                                name="111659"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Post-Construction Cleaning"
+                                        />
+                                        <label for="contact-label-service-111659" class="ml-3 text-sm font-medium text-gray-700">Post-Construction Cleaning</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111660"
+                                                name="111660"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Covid-19 Disinfection"
+                                        />
+                                        <label for="contact-label-service-111660" class="ml-3 text-sm font-medium text-gray-700">Covid-19 Disinfection</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111661"
+                                                name="111661"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Eco / Green Cleaning"
+                                        />
+                                        <label for="contact-label-service-111661" class="ml-3 text-sm font-medium text-gray-700">Eco / Green Cleaning</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111662"
+                                                name="111662"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Carpet Cleaning"
+                                        />
+                                        <label for="contact-label-service-111662" class="ml-3 text-sm font-medium text-gray-700">Carpet Cleaning</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111663"
+                                                name="111663"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Window Cleaning"
+                                        />
+                                        <label for="contact-label-service-111663" class="ml-3 text-sm font-medium text-gray-700">Window Cleaning</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111664"
+                                                name="111664"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Other Services"
+                                        />
+                                        <label for="contact-label-service-111664" class="ml-3 text-sm font-medium text-gray-700">Other Services</label>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-111665"
+                                                name="111665"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Organizing"
+                                        />
+                                        <label for="contact-label-service-111665" class="ml-3 text-sm font-medium text-gray-700">Organizing</label>
+                                    </div>
+                                    
                                 </div>
-                            </div>
-                            <div x-show="imageUrl === ''" x-collapse>
-                                <div
-                                    x-on:dragenter.prevent.stop
-                                    x-on:dragleave.prevent.stop
-                                    class="flex justify-center px-6 pt-5 pb-6 mt-1 border-2 border-dashed rounded-md"
-                                >
-                                    <div class="space-y-1 text-center">
-                                        <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                            <path
-                                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                        </svg>
-                                        <div class="flex justify-center text-sm text-gray-600">
-                                            <label
-                                                for="file-upload"
-                                                class="relative font-medium bg-white rounded-md cursor-pointer  text-secondary hover:text-secondary-darker focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary"
-                                            >
-                                                <span>Upload a file</span>
-                                                <input
-                                                    x-ref="fileInput"
-                                                    id="file-upload"
-                                                    name="file-upload"
-                                                    type="file"
-                                                    accept="image/*"
-                                                    class="sr-only"
-                                                    @change="fileChosen"
-                                                />
-                                            </label>
-                                        </div>
-                                        <p class="text-xs text-gray-500">PNG, JPG, GIF up to 2MB</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
-                                The selected file is too large. Please reduce the size or choose another file.
-                            </p>
-                        </div> -->
-                        <div
-                        onclick= "send_sms('676be983-ac00-4698-96b0-b9c307fe25db')" 
-                            class="
-                                inline-flex
+                            </fieldset>
+                            
+                            <!-- Photo Upload -->
+                            
+                        </div>
+
+                    </div>
+
+                </form>
+                <div class="flex
                                 items-center
                                 justify-center
                                 w-full
-                                px-5
+                                my-4
+                            "
+                     onclick="send_sms('676be983-ac00-4698-96b0-b9c307fe25db')"
+                >
+                    <button class="px-5
                                 py-2.5
+                                w-3/4
                                 text-sm
                                 font-medium
                                 transition
@@ -2095,19 +2174,17 @@
                                 hover:bg-primary-darker
                                 bg-primar
                                 focus-visible:ring-2
-                                ring-primary ring-opacity-75 ring-offset-2
-                            "
-                        >
-                            Send
-                    </div>
-                    </div>
-                </form>
+                                ring-primary ring-opacity-75 ring-offset-2"> Send
+                    </button>
+                </div>
+
+
             </div>
         </div>
     </div>
 </template>
 
-                <!-- Modal -->
+<!-- Modal -->
 <template x-teleport="body">
     <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
         <!-- Overlay -->
@@ -2152,28 +2229,28 @@
         </div>
     </div>
 </template>
- 
-    
 
-        <!-- <div x-data="{ open: false }">
-            <button @click="open = true">Open Dialogue</button>
 
-            <span x-show="open" x-trap.inert.noscroll="open">
+
+<!-- <div x-data="{ open: false }">
+    <button @click="open = true">Open Dialogue</button>
+
+    <span x-show="open" x-trap.inert.noscroll="open">
+        ...
+
+        <div x-data="{ open: false }">
+            <button @click="open = true">Open Nested Dialogue</button>
+
+            <span x-show="open" x-trap="open">
                 ...
 
-                <div x-data="{ open: false }">
-                    <button @click="open = true">Open Nested Dialogue</button>
-
-                    <span x-show="open" x-trap="open">
-                        ...
-
-                        <button @click="open = false">Close Nested Dialogue</button>
-                    </span>
-                </div>
-
-                <button @click="open = false">Close Dialogue</button>
+                <button @click="open = false">Close Nested Dialogue</button>
             </span>
         </div>
-        <p>Nostrud eu amet nostrud id ut cillum sint minim anim Lorem nulla nisi cillum commodo. Dolor exercitation incididunt et velit qui ea nisi. Do consectetur in ex adipisicing. Irure id aute non nulla eiusmod incididunt deserunt labore amet. Consequat proident nisi amet est consequat sunt eiusmod aute ut exercitation amet. Eu eu Lorem minim duis culpa sit qui nostrud irure aliquip irure occaecat. Duis eu duis id veniam.</p> -->
-    </body>
+
+        <button @click="open = false">Close Dialogue</button>
+    </span>
+</div>
+<p>Nostrud eu amet nostrud id ut cillum sint minim anim Lorem nulla nisi cillum commodo. Dolor exercitation incididunt et velit qui ea nisi. Do consectetur in ex adipisicing. Irure id aute non nulla eiusmod incididunt deserunt labore amet. Consequat proident nisi amet est consequat sunt eiusmod aute ut exercitation amet. Eu eu Lorem minim duis culpa sit qui nostrud irure aliquip irure occaecat. Duis eu duis id veniam.</p> -->
+</body>
 </html>
