@@ -10,9 +10,9 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Residential &amp; Commercial Cleaning in CITY, STATE | yurp |  Home</title>
+    <title>landscaping near me in CITY, STATE | COMPANY NAME |  Home</title>
     <meta name="description"
-          content="yurp offers professional residential and commercial cleaning services to customers in CITY, STATE and the surrounding areas.">
+          content="COMPANY NAME offers a wide range of landscaping and hardscaping services to residents in CITY, STATE and the surrounding areas.">
     <!-- <title>ProPhone Templates</title> -->
     <!-- TailwindCSS  -->
     <!-- <link rel="stylesheet" type="text/css" href="/staticfiles/landing_page_gen/tailwind.css"> -->
@@ -48,15 +48,15 @@
                 --contrastThreshold: 60%;
 
                 /* Primary color as HSL */
-                --color-primary-h: 224.44444444444443;
-                --color-primary-s: 64.28571428571429%;
-                --color-primary-l: 32.8125%;
+                --color-primary-h: 147.23076923076925;
+                --color-primary-s: 100.0%;
+                --color-primary-l: 25.390625%;
                 --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
 
                 /* Secondary color as HSL */
-                --color-secondary-h: 115.76470588235296;
-                --color-secondary-s: 32.075471698113205%;
-                --color-secondary-l: 51.7578125%;
+                --color-secondary-h: 220.9090909090909;
+                --color-secondary-s: 39.285714285714285%;
+                --color-secondary-l: 10.9375%;
                 --color-secondary-darker: hsl(var(--color-secondary-h), var(--color-secondary-s), calc(var(--color-secondary-l) - 7.5%));
 
                 --switch: calc((var(--color-primary-l) - var(--contrastThreshold)) * -100);
@@ -225,8 +225,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-
-                        fetch('http://localhost:8000/sms/' + slug , {
+                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -383,9 +382,9 @@
                                 
                                     <a
                                         href=" index "
-                                        class=" 'border-secondary'  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  border-b-2 text-gray-900  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                        class=" border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  border-b-2 text-gray-900  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                                     >
-                                        Home
+                                        Home 
                                     </a>
                                 <!-- </else> -->
                                 
@@ -450,136 +449,147 @@
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                 <!-- Render each sublink -->
-                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Residential Cleaning&#x27;, &#x27;href&#x27;: &#x27;service-Residential-Cleaning&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Deep Cleaning&#x27;, &#x27;href&#x27;: &#x27;service-Deep-Cleaning&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Commercial Cleaning&#x27;, &#x27;href&#x27;: &#x27;service-Commercial-Cleaning&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Move In / Move Out Cleaning&#x27;, &#x27;href&#x27;: &#x27;service-Move-In---Move-Out-Cleaning&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Airbnb Cleaning&#x27;, &#x27;href&#x27;: &#x27;service-Airbnb-Cleaning&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Post-Construction Cleaning&#x27;, &#x27;href&#x27;: &#x27;service-Post-Construction-Cleaning&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Covid-19 Disinfection&#x27;, &#x27;href&#x27;: &#x27;service-Covid-19-Disinfection&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Eco / Green Cleaning&#x27;, &#x27;href&#x27;: &#x27;service-Eco---Green-Cleaning&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Carpet Cleaning&#x27;, &#x27;href&#x27;: &#x27;service-Carpet-Cleaning&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Window Cleaning&#x27;, &#x27;href&#x27;: &#x27;service-Window-Cleaning&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Other Services&#x27;, &#x27;href&#x27;: &#x27;service-Other-Services&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Organizing&#x27;, &#x27;href&#x27;: &#x27;service-Organizing&#x27;}]"> -->
+                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Mowing&#x27;, &#x27;href&#x27;: &#x27;service-Mowing&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Mulch Installation&#x27;, &#x27;href&#x27;: &#x27;service-Mulch-Installation&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Shrub Trimming&#x27;, &#x27;href&#x27;: &#x27;service-Shrub-Trimming&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Fall and Spring Clean Up&#x27;, &#x27;href&#x27;: &#x27;service-Fall-and-Spring-Clean-Up&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Patio Design &amp; Construction&#x27;, &#x27;href&#x27;: &#x27;service-Patio-Design-&amp;-Construction&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Driveway Design &amp; Build&#x27;, &#x27;href&#x27;: &#x27;service-Driveway-Design-&amp;-Build&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Stone Wall Installation&#x27;, &#x27;href&#x27;: &#x27;service-Stone-Wall-Installation&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Retaining Wall Construction&#x27;, &#x27;href&#x27;: &#x27;service-Retaining-Wall-Construction&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Fencing Repair &amp; Installation&#x27;, &#x27;href&#x27;: &#x27;service-Fencing-Repair-&amp;-Installation&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Fertilization&#x27;, &#x27;href&#x27;: &#x27;service-Fertilization&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Lawn Aeration&#x27;, &#x27;href&#x27;: &#x27;service-Lawn-Aeration&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Snow Removal&#x27;, &#x27;href&#x27;: &#x27;service-Snow-Removal&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Natural Stone Hardscape&#x27;, &#x27;href&#x27;: &#x27;service-Natural-Stone-Hardscape&#x27;}]"> -->
                                                   
                                                     <a
-                                                        href=" service-Residential-Cleaning "
+                                                        href=" service-Mowing "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Residential Cleaning</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Mowing</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Deep-Cleaning "
+                                                        href=" service-Mulch-Installation "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Deep Cleaning</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Mulch Installation</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Commercial-Cleaning "
+                                                        href=" service-Shrub-Trimming "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Commercial Cleaning</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Shrub Trimming</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Move-In---Move-Out-Cleaning "
+                                                        href=" service-Fall-and-Spring-Clean-Up "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Move In / Move Out Cleaning</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Fall and Spring Clean Up</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Airbnb-Cleaning "
+                                                        href=" service-Patio-Design-&amp;-Construction "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Airbnb Cleaning</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Patio Design &amp; Construction</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Post-Construction-Cleaning "
+                                                        href=" service-Driveway-Design-&amp;-Build "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Post-Construction Cleaning</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Driveway Design &amp; Build</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Covid-19-Disinfection "
+                                                        href=" service-Stone-Wall-Installation "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Covid-19 Disinfection</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Stone Wall Installation</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Eco---Green-Cleaning "
+                                                        href=" service-Retaining-Wall-Construction "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Eco / Green Cleaning</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Retaining Wall Construction</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Carpet-Cleaning "
+                                                        href=" service-Fencing-Repair-&amp;-Installation "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Carpet Cleaning</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Fencing Repair &amp; Installation</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Window-Cleaning "
+                                                        href=" service-Fertilization "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Window Cleaning</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Fertilization</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Other-Services "
+                                                        href=" service-Lawn-Aeration "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Other Services</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Lawn Aeration</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Organizing "
+                                                        href=" service-Snow-Removal "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Organizing</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Snow Removal</p>
+                                                    </a>
+                                                <!-- </each> -->
+                                               <!--  -->
+                                                 
+                                                    <a
+                                                        href=" service-Natural-Stone-Hardscape "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
+                                                        <p class="mt-1 text-sm text-gray-500">Natural Stone Hardscape</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
@@ -604,14 +614,90 @@
                                 <!-- We decide between direct link and dropdown here -->
                                 <!-- <if condition="item.links"> -->
                                 
-                                    <a
-                                        href="  "
-                                        class=" 'border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500'  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                    <button
+                                        type="button"
+                                        aria-haspopup="true"
+                                        :aria-expanded="desktopOpen"
+                                        aria-controls="navitem_3"
+                                        @click="desktopOpen = !desktopOpen"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2"
                                     >
-                                        Galleries
-                                    </a>
-                                <!-- </else> -->
+                                        <span>Galleries</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            :class="{ '-rotate-180': desktopOpen }"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                <!-- </if> -->
+                                <!-- <else> -->
                                 
+                                
+                                    <div
+                                        x-cloak
+                                        x-show="desktopOpen"
+                                        x-transition:enter="transition ease-out duration-200"
+                                        x-transition:enter-start="opacity-0 translate-y-1"
+                                        x-transition:enter-end="opacity-100 translate-y-0"
+                                        x-transition:leave="transition ease-in duration-150"
+                                        x-transition:leave-start="opacity-100 translate-y-0"
+                                        x-transition:leave-end="opacity-0 translate-y-1"
+                                        id="navitem_3"
+                                        role="menu"
+                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
+                                                <!-- Render each sublink -->
+                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;greep&#x27;, &#x27;href&#x27;: &#x27;gallery-greep&#x27;}, {&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;groop&#x27;, &#x27;href&#x27;: &#x27;gallery-groop&#x27;}, {&#x27;title&#x27;: &#x27;All Photos&#x27;, &#x27;copy&#x27;: &#x27;All Photos&#x27;, &#x27;href&#x27;: &#x27;gallery-All&#x27;}]"> -->
+                                                  
+                                                    <a
+                                                        href=" gallery-greep "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
+                                                        <p class="mt-1 text-sm text-gray-500">greep</p>
+                                                    </a>
+                                                <!-- </each> -->
+                                               <!--  -->
+                                                 
+                                                    <a
+                                                        href=" gallery-groop "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
+                                                        <p class="mt-1 text-sm text-gray-500">groop</p>
+                                                    </a>
+                                                <!-- </each> -->
+                                               <!--  -->
+                                                 
+                                                    <a
+                                                        href=" gallery-All "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <!-- <p class="text-base font-medium text-gray-900">All Photos</p> -->
+                                                        <p class="mt-1 text-sm text-gray-500">All Photos</p>
+                                                    </a>
+                                                <!-- </each> -->
+                                               <!--  -->
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- </if> -->
                                 
                                 
                             </div>
@@ -630,9 +716,9 @@
                                 
                                     <a
                                         href=" reviews "
-                                        class=" 'border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500'  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                                     >
-                                        Reviews
+                                        Reviews 
                                     </a>
                                 <!-- </else> -->
                                 
@@ -787,75 +873,81 @@
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             <!-- Render each sublink -->
                                             
-                                                <a href="service-Residential-Cleaning" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Mowing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Residential Cleaning</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Mowing</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Deep-Cleaning" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Mulch-Installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Deep Cleaning</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Mulch Installation</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Commercial-Cleaning" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Shrub-Trimming" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Commercial Cleaning</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Shrub Trimming</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Move-In---Move-Out-Cleaning" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Fall-and-Spring-Clean-Up" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Move In / Move Out Cleaning</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Fall and Spring Clean Up</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Airbnb-Cleaning" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Patio-Design-&amp;-Construction" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Airbnb Cleaning</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Patio Design &amp; Construction</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Post-Construction-Cleaning" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Driveway-Design-&amp;-Build" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Post-Construction Cleaning</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Driveway Design &amp; Build</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Covid-19-Disinfection" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Stone-Wall-Installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Covid-19 Disinfection</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Stone Wall Installation</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Eco---Green-Cleaning" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Retaining-Wall-Construction" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Eco / Green Cleaning</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Retaining Wall Construction</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Carpet-Cleaning" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Fencing-Repair-&amp;-Installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Carpet Cleaning</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Fencing Repair &amp; Installation</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Window-Cleaning" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Fertilization" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Window Cleaning</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Fertilization</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Other-Services" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Lawn-Aeration" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Other Services</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Lawn Aeration</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Organizing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Snow-Removal" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Organizing</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Snow Removal</p>
+                                                </a>
+                                            <!-- </each> -->
+                                            
+                                                <a href="service-Natural-Stone-Hardscape" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
+                                                    <p class="mt-1 text-sm text-gray-500">Natural Stone Hardscape</p>
                                                 </a>
                                             <!-- </each> -->
                                             
@@ -868,12 +960,67 @@
                             <div x-trap.inert="openMenu == 'navitem_3'">
                                 <!-- We decide between direct link and dropdown here -->
                                 
-                                    <a
-                                        href="  "
-                                        class=" 'text-gray-700'  block px-3 py-2 text-base font-medium rounded-md border-secondary transition"
-                                        >Galleries</a
+                                    <!-- <if condition="item.links"> -->
+                                    <button
+                                        aria-haspopup="true"
+                                        :aria-expanded="openMenu == 'navitem_3'"
+                                        aria-controls="mobile-navitem_3"
+                                        @click="openMenu = openMenu == 'navitem_3' ? '' : 'navitem_3'"
+                                        class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-700 transition rounded-md  border-secondary"
+                                        :class="openMenu == 'navitem_3' ? 'z-30' : 'z-0'"
                                     >
+                                        <span>Galleries</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            :class="{ '-rotate-180': openMenu == 'navitem_3' }"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
                                 
+                                
+                                    <!-- <if condition="item.links"> -->
+                                    <!-- Expandable Menu -->
+                                    <div
+                                        x-cloak
+                                        x-show="openMenu == 'navitem_3'"
+                                        x-collapse
+                                        id="mobile-navitem_3"
+                                        role="menu"
+                                        class="z-20 pt-1 pb-2"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
+                                            <!-- Render each sublink -->
+                                            
+                                                <a href="gallery-greep" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
+                                                    <p class="mt-1 text-sm text-gray-500">greep</p>
+                                                </a>
+                                            <!-- </each> -->
+                                            
+                                                <a href="gallery-groop" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
+                                                    <p class="mt-1 text-sm text-gray-500">groop</p>
+                                                </a>
+                                            <!-- </each> -->
+                                            
+                                                <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <!-- <p class="text-base font-medium text-gray-900">All Photos</p> -->
+                                                    <p class="mt-1 text-sm text-gray-500">All Photos</p>
+                                                </a>
+                                            <!-- </each> -->
+                                            
+                                        </div>
+                                    </div>
                                 
                             </div>
                         <!-- </each> -->
@@ -961,10 +1108,10 @@
             <main class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="sm:text-center lg:text-left">
                     <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-                        <span class="block xl:inline">yurp</span>
+                        <span class="block xl:inline">COMPANY NAME</span>
                     </h1>
                     <p class="mt-3 text-base sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        The Best Residential &amp; Commercial Cleaning service in CITY and surrounding areas. We provide professional service and offer free quotes. Reach out today to learn how we can help.
+                        Quality Landscaping &amp; Hardscaping service in CITY and surrounding areas. We provide professional service and offer free quotes. Reach out today to learn how we can help.
                     </p>
                     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         <!-- CTA Secondary -->    
@@ -1063,21 +1210,6 @@
             
             <!-- Single Logo -->
             
-            <div class="flex items-center px-4 m-4 space-x-3 font-medium text-primary">
-                <!-- <svg aria-hidden="true" class="flex-shrink-0 w-12 h-12" fill="none">
-                    <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 21.6v-4.8c0-6.627 5.373-12 12-12s12 5.373 12 12v4.8a4.8 4.8 0 0 1 4.8 4.8v12a4.8 4.8 0 0 1-4.8 4.8H12a4.8 4.8 0 0 1-4.8-4.8v-12a4.8 4.8 0 0 1 4.8-4.8Zm19.2-4.8v4.8H16.8v-4.8a7.2 7.2 0 1 1 14.4 0Z"
-                        fill="currentColor"
-                    />
-                </svg> -->
-                <svg  aria-hidden="true" class="flex-shrink-0 w-12 h-12" fill="none" width="34" height="44" viewBox="0 0 34 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" d="M20.1215 0.511044C21.1206 0.825973 21.8 1.75249 21.8 2.80002V14.8L31.4 14.8C32.2949 14.8 33.1154 15.2979 33.5287 16.0917C33.942 16.8854 33.8793 17.8432 33.3661 18.5763L16.5661 42.5763C15.9654 43.4345 14.8775 43.8039 13.8784 43.489C12.8794 43.1741 12.2 42.2475 12.2 41.2L12.2 29.2H2.59996C1.70506 29.2 0.884484 28.7021 0.471209 27.9084C0.0579347 27.1146 0.120609 26.1568 0.633802 25.4237L17.4338 1.42371C18.0345 0.565537 19.1224 0.196116 20.1215 0.511044Z"/>
-                </svg>
-                <span class="text-xl">Emergency Services</span>
-            </div>
-            
             <!-- Single Logo -->
             
             <div class="flex items-center px-4 m-4 space-x-3 font-medium text-primary">
@@ -1129,7 +1261,7 @@
                   <div class="text-primary">
                       <h2 class="text-3xl font-extrabold lg:text-4xl">About Us</h2>
                       <p class="mt-6 text-xl">
-                          yurp offers professional residential and commercial cleaning services to customers in CITY, STATE and the surrounding areas. We have a team of experienced and qualified cleaners who are dedicated to providing quality services that meet your needs and budget. Contact us today for a free quote!
+                          COMPANY NAME offers a wide range of landscaping and hardscaping services to residents in CITY, STATE and the surrounding areas. From design to installation, we can help you create the perfect outdoor space for your home.
                           <!-- Caro’s Landscaping and Lawn has been Austin's most trusted service for the past 15 years. We are a customer-first company and you
                           are always a priority. Our team is professional, trained, and ready to take care of all your lawn care needs. -->
                       </p>
@@ -1261,19 +1393,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Residential-Cleaning"
+                            href="service-Mowing"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Residential Cleaning"
+                            aria-label="Mowing"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Residential Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Mowing</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Residential Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Mowing</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1302,11 +1435,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1316,19 +1451,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Deep-Cleaning"
+                            href="service-Mulch-Installation"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Deep Cleaning"
+                            aria-label="Mulch Installation"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Deep Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Mulch Installation</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Deep Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Mulch Installation</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1357,11 +1493,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1371,19 +1509,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Commercial-Cleaning"
+                            href="service-Shrub-Trimming"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Commercial Cleaning"
+                            aria-label="Shrub Trimming"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Commercial Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Shrub Trimming</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Commercial Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Shrub Trimming</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1412,11 +1551,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1426,19 +1567,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Move-In---Move-Out-Cleaning"
+                            href="service-Fall-and-Spring-Clean-Up"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Move In / Move Out Cleaning"
+                            aria-label="Fall and Spring Clean Up"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Move In / Move Out Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Fall and Spring Clean Up</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Move In / Move Out Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Fall and Spring Clean Up</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1467,11 +1609,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1481,19 +1625,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Airbnb-Cleaning"
+                            href="service-Patio-Design-&amp;-Construction"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Airbnb Cleaning"
+                            aria-label="Patio Design &amp; Construction"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Airbnb Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Patio Design &amp; Construction</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Airbnb Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Patio Design &amp; Construction</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1522,11 +1667,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1536,19 +1683,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Post-Construction-Cleaning"
+                            href="service-Driveway-Design-&amp;-Build"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Post-Construction Cleaning"
+                            aria-label="Driveway Design &amp; Build"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Post-Construction Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Driveway Design &amp; Build</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Post-Construction Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Driveway Design &amp; Build</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1577,11 +1725,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1591,19 +1741,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Covid-19-Disinfection"
+                            href="service-Stone-Wall-Installation"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Covid-19 Disinfection"
+                            aria-label="Stone Wall Installation"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Covid-19 Disinfection</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Stone Wall Installation</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Covid-19 Disinfection</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Stone Wall Installation</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1632,11 +1783,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1646,19 +1799,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Eco---Green-Cleaning"
+                            href="service-Retaining-Wall-Construction"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Eco / Green Cleaning"
+                            aria-label="Retaining Wall Construction"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Eco / Green Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Retaining Wall Construction</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Eco / Green Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Retaining Wall Construction</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1687,11 +1841,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1701,19 +1857,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Carpet-Cleaning"
+                            href="service-Fencing-Repair-&amp;-Installation"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Carpet Cleaning"
+                            aria-label="Fencing Repair &amp; Installation"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Carpet Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Fencing Repair &amp; Installation</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Carpet Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Fencing Repair &amp; Installation</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1742,11 +1899,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1756,19 +1915,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Window-Cleaning"
+                            href="service-Fertilization"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Window Cleaning"
+                            aria-label="Fertilization"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Window Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Fertilization</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Window Cleaning</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Fertilization</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1797,11 +1957,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1811,19 +1973,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Other-Services"
+                            href="service-Lawn-Aeration"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Other Services"
+                            aria-label="Lawn Aeration"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Other Services</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Lawn Aeration</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Other Services</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Lawn Aeration</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1852,11 +2015,13 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
                         </a>
                     </li>
                 
@@ -1866,19 +2031,20 @@
                         class="group service-item"
                     >
                         <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
                         <a
-                            href="//service-Organizing"
+                            href="service-Snow-Removal"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Organizing"
+                            aria-label="Snow Removal"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Organizing</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Snow Removal</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Organizing</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Snow Removal</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1907,11 +2073,71 @@
                             <!-- Colored Overlay -->
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             <!-- Image -->
+                            
                             <img
                                 class="object-cover grayscale"
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
+                            
+                        </a>
+                    </li>
+                
+                    <li
+                        x-transition
+                        style="perspective: 800px"
+                        class="group service-item"
+                    >
+                        <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
+                        <a
+                            href="service-Natural-Stone-Hardscape"
+                            style="transform-style: preserve-3d"
+                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
+                            aria-label="Natural Stone Hardscape"
+                        >
+                            <!-- Front Card -->
+                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Natural Stone Hardscape</span>
+                            </div>
+                            <!-- Back Card -->
+                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Natural Stone Hardscape</span>
+                                <!-- Notice: Text is automatically clamped here -->
+                                <p
+                                    class="
+                                        text-lg
+                                        block
+                                        mt-1.5
+                                        line-clamp-8
+                                        sm:line-clamp-7
+                                        font-medium
+                                        leading-6
+                                        text-center
+                                        transition
+                                        duration-500
+                                        sm:opacity-0
+                                        group-hover:opacity-100
+                                    "
+                                    style="
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 5;
+                                    -webkit-box-orient: vertical;  "
+                                >
+                                    
+                                </p>
+                            </div>
+
+                            <!-- Colored Overlay -->
+                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
+                            <!-- Image -->
+                            
+                            <img
+                                class="object-cover grayscale"
+                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
+                                alt=""
+                            />
+                            
                         </a>
                     </li>
                 
@@ -2217,6 +2443,14 @@
         </div>
         <!-- See more photos link -->
         
+        <div class="flex justify-center -m-1">
+            <a
+                href="gallery-All"
+                class="inline-block p-1 mt-12 text-xl font-semibold text-center transition  focus:ring-2 focus:outline-none ring-primary ring-offset-2 text-primary hover:text-primary-darker"
+                >See more photos</a
+            >
+        </div>
+        
     </div>
 </section>
 
@@ -2384,7 +2618,7 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="27256"
+                                aria-controls="27535"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">What&#x27;s the best way to reach you?</span>
@@ -2404,7 +2638,7 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="27256">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="27535">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">Give us a call or send us a text at . Thanks!</p>
                         </dd>
@@ -2417,7 +2651,7 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="27257"
+                                aria-controls="27536"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">Do you provide free estimates?</span>
@@ -2437,7 +2671,7 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="27257">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="27536">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">Yes, we&#x27;ll always estimate the job for free. Just give us a call to get started.</p>
                         </dd>
@@ -2450,7 +2684,7 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="27258"
+                                aria-controls="27537"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">How are you different?</span>
@@ -2470,7 +2704,7 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="27258">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="27537">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">We&#x27;re a customer-first company that will do whatever it takes to make sure the job is well done.</p>
                         </dd>
@@ -2666,7 +2900,7 @@
           <div class="space-y-8 xl:col-span-1">
               
               <p class="text-base text-gray-100">
-                  yurp<br/>
+                  COMPANY NAME<br/>
                    
                       CITY, STATE <br/>
                   
@@ -2756,97 +2990,105 @@
                           
                           <li>
                               <a
-                                  href="service-Residential-Cleaning"
+                                  href="service-Mowing"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Residential Cleaning</a
+                                  >Mowing</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Deep-Cleaning"
+                                  href="service-Mulch-Installation"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Deep Cleaning</a
+                                  >Mulch Installation</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Commercial-Cleaning"
+                                  href="service-Shrub-Trimming"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Commercial Cleaning</a
+                                  >Shrub Trimming</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Move-In---Move-Out-Cleaning"
+                                  href="service-Fall-and-Spring-Clean-Up"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Move In / Move Out Cleaning</a
+                                  >Fall and Spring Clean Up</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Airbnb-Cleaning"
+                                  href="service-Patio-Design-&amp;-Construction"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Airbnb Cleaning</a
+                                  >Patio Design &amp; Construction</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Post-Construction-Cleaning"
+                                  href="service-Driveway-Design-&amp;-Build"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Post-Construction Cleaning</a
+                                  >Driveway Design &amp; Build</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Covid-19-Disinfection"
+                                  href="service-Stone-Wall-Installation"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Covid-19 Disinfection</a
+                                  >Stone Wall Installation</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Eco---Green-Cleaning"
+                                  href="service-Retaining-Wall-Construction"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Eco / Green Cleaning</a
+                                  >Retaining Wall Construction</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Carpet-Cleaning"
+                                  href="service-Fencing-Repair-&amp;-Installation"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Carpet Cleaning</a
+                                  >Fencing Repair &amp; Installation</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Window-Cleaning"
+                                  href="service-Fertilization"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Window Cleaning</a
+                                  >Fertilization</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Other-Services"
+                                  href="service-Lawn-Aeration"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Other Services</a
+                                  >Lawn Aeration</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Organizing"
+                                  href="service-Snow-Removal"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Organizing</a
+                                  >Snow Removal</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-Natural-Stone-Hardscape"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Natural Stone Hardscape</a
                               >
                           </li>
                           
@@ -2911,7 +3153,7 @@
                               <a
                                   href="#"
                                   class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Thu: 0:00am - 0:00am</a
+                                  >Thu: 8:00am - 6:00pm</a
                               >
                           </li>
                           
@@ -2927,7 +3169,7 @@
                               <a
                                   href="#"
                                   class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Sat: 8:00am - 6:00pm</a
+                                  >Sat: 0:00am - 0:00am</a
                               >
                           </li>
                           
@@ -2995,11 +3237,11 @@
                 x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 @click="contactModalOpen = false"
-                class="relative flex items-center justify-center w-full h-full"
+                class="relative flex items-center justify-center w-full h-full sm:h-max"
         >
             <div
                     @click.stop
-                    class="flex flex-col w-full h-full overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-sm  "
+                    class="flex flex-col w-full h-full overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl"
             >
                 <!-- Header -->
                 <div class="relative px-6 bg-white">
@@ -3020,12 +3262,12 @@
 
                 <!-- Form -->
 
-                <form class="overflow-y-scroll">
+                <form class="overflow-y-scroll pb-20 sm:w-full">
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
-                        <div class="h-full px-6 pb-1 mt-6 space-y-6">
+                        <div class="h-full px-6 pb-1 mt-6 space-y-6 sm:grid sm:grid-cols-2 sm:min-w-max sm:space-x-3">
                             <!-- Full Name -->
                             
-                            <div>
+                            <div class="sm:ml-3 sm:transform sm:translate-y-6">
                                 <label for="contact-full-name" class="sr-only">Full Name</label>
                                 <input
                                         required
@@ -3093,166 +3335,333 @@
                             
                             <!--                        Promo Code-->
                             
-                            <!-- How can we help you? (Concern) -->
-                            
-                            <div>
-                                <label for="contact-concern" class="sr-only">How can we help you?</label>
-                                <textarea
-                                        required
-                                        id="contact-concern"
-                                        name="concern"
-                                        rows="4"
-                                        class="block py-2.5 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
-                                        placeholder="How can we help you?"
-                                ></textarea>
-                            </div>
-                            
-                            <!-- Services -->
-                            
-                            <fieldset>
-                                <legend class="text-base font-medium text-gray-900">Services</legend>
-                                <div class="mt-2.5 grid gap-y-3.5 grid-cols-2">
-
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111654"
-                                                name="111654"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Residential Cleaning"
-                                        />
-                                        <label for="contact-label-service-111654" class="ml-3 text-sm font-medium text-gray-700">Residential Cleaning</label>
+                            <div class='sm:col-span-2'>
+                                
+                                <fieldset class="hidden sm:block sm:mb-3">
+                                    <legend class="text-base font-medium text-gray-900">Services</legend>
+                                    <div class="my-2.5 grid gap-y-3.5 grid-cols-2 ">
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112506"
+                                                    name="112506"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Mowing"
+                                            />
+                                            <label for="contact-label-service-112506" class="ml-3 text-sm font-medium text-gray-700">Mowing</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112507"
+                                                    name="112507"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Mulch Installation"
+                                            />
+                                            <label for="contact-label-service-112507" class="ml-3 text-sm font-medium text-gray-700">Mulch Installation</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112508"
+                                                    name="112508"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Shrub Trimming"
+                                            />
+                                            <label for="contact-label-service-112508" class="ml-3 text-sm font-medium text-gray-700">Shrub Trimming</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112509"
+                                                    name="112509"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fall and Spring Clean Up"
+                                            />
+                                            <label for="contact-label-service-112509" class="ml-3 text-sm font-medium text-gray-700">Fall and Spring Clean Up</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112510"
+                                                    name="112510"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Patio Design & Construction"
+                                            />
+                                            <label for="contact-label-service-112510" class="ml-3 text-sm font-medium text-gray-700">Patio Design & Construction</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112511"
+                                                    name="112511"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Driveway Design & Build"
+                                            />
+                                            <label for="contact-label-service-112511" class="ml-3 text-sm font-medium text-gray-700">Driveway Design & Build</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112512"
+                                                    name="112512"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Stone Wall Installation"
+                                            />
+                                            <label for="contact-label-service-112512" class="ml-3 text-sm font-medium text-gray-700">Stone Wall Installation</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112513"
+                                                    name="112513"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Retaining Wall Construction"
+                                            />
+                                            <label for="contact-label-service-112513" class="ml-3 text-sm font-medium text-gray-700">Retaining Wall Construction</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112514"
+                                                    name="112514"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fencing Repair & Installation"
+                                            />
+                                            <label for="contact-label-service-112514" class="ml-3 text-sm font-medium text-gray-700">Fencing Repair & Installation</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112515"
+                                                    name="112515"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fertilization"
+                                            />
+                                            <label for="contact-label-service-112515" class="ml-3 text-sm font-medium text-gray-700">Fertilization</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112516"
+                                                    name="112516"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Lawn Aeration"
+                                            />
+                                            <label for="contact-label-service-112516" class="ml-3 text-sm font-medium text-gray-700">Lawn Aeration</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112517"
+                                                    name="112517"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Snow Removal"
+                                            />
+                                            <label for="contact-label-service-112517" class="ml-3 text-sm font-medium text-gray-700">Snow Removal</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112518"
+                                                    name="112518"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Natural Stone Hardscape"
+                                            />
+                                            <label for="contact-label-service-112518" class="ml-3 text-sm font-medium text-gray-700">Natural Stone Hardscape</label>
+                                        </div>
+                                        
                                     </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111655"
-                                                name="111655"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Deep Cleaning"
-                                        />
-                                        <label for="contact-label-service-111655" class="ml-3 text-sm font-medium text-gray-700">Deep Cleaning</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111656"
-                                                name="111656"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Commercial Cleaning"
-                                        />
-                                        <label for="contact-label-service-111656" class="ml-3 text-sm font-medium text-gray-700">Commercial Cleaning</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111657"
-                                                name="111657"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Move In / Move Out Cleaning"
-                                        />
-                                        <label for="contact-label-service-111657" class="ml-3 text-sm font-medium text-gray-700">Move In / Move Out Cleaning</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111658"
-                                                name="111658"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Airbnb Cleaning"
-                                        />
-                                        <label for="contact-label-service-111658" class="ml-3 text-sm font-medium text-gray-700">Airbnb Cleaning</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111659"
-                                                name="111659"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Post-Construction Cleaning"
-                                        />
-                                        <label for="contact-label-service-111659" class="ml-3 text-sm font-medium text-gray-700">Post-Construction Cleaning</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111660"
-                                                name="111660"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Covid-19 Disinfection"
-                                        />
-                                        <label for="contact-label-service-111660" class="ml-3 text-sm font-medium text-gray-700">Covid-19 Disinfection</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111661"
-                                                name="111661"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Eco / Green Cleaning"
-                                        />
-                                        <label for="contact-label-service-111661" class="ml-3 text-sm font-medium text-gray-700">Eco / Green Cleaning</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111662"
-                                                name="111662"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Carpet Cleaning"
-                                        />
-                                        <label for="contact-label-service-111662" class="ml-3 text-sm font-medium text-gray-700">Carpet Cleaning</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111663"
-                                                name="111663"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Window Cleaning"
-                                        />
-                                        <label for="contact-label-service-111663" class="ml-3 text-sm font-medium text-gray-700">Window Cleaning</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111664"
-                                                name="111664"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Other Services"
-                                        />
-                                        <label for="contact-label-service-111664" class="ml-3 text-sm font-medium text-gray-700">Other Services</label>
-                                    </div>
-                                    
-                                    <div class="flex items-center">
-                                        <input
-                                                id="contact-service-111665"
-                                                name="111665"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                value="Organizing"
-                                        />
-                                        <label for="contact-label-service-111665" class="ml-3 text-sm font-medium text-gray-700">Organizing</label>
-                                    </div>
-                                    
+                                </fieldset>
+                                
+                                <div>
+                                <!-- How can we help you? (Concern) -->
+                                
+                                <div class='sm:flex sm:flex-1 sm:mt-3 sm:space-x-3'>
+                                <div class='sm:flex-grow'>
+                                    <label for="contact-concern" class="sr-only">How can we help you?</label>
+                                    <textarea
+                                            required
+                                            id="contact-concern"
+                                            name="concern"
+                                            rows="4"
+                                            class="block py-3.5 px-2.5 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                            placeholder="How can we help you?"
+                                    ></textarea>
                                 </div>
-                            </fieldset>
-                            
-                            <!-- Photo Upload -->
-                            
-                        </div>
+                                
+                                <!-- Services -->
+                                
+                                
+                                <fieldset class="sm:hidden my-3 sm:mb-0">
+                                    <legend class="text-base font-medium text-gray-900">Services</legend>
+                                    <div class="mt-2.5 grid gap-y-3.5 grid-cols-2 sm:flex sm:space-x-6">
 
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112506"
+                                                    name="112506"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Mowing"
+                                            />
+                                            <label for="contact-label-service-112506" class="ml-3 text-sm font-medium text-gray-700">Mowing</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112507"
+                                                    name="112507"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Mulch Installation"
+                                            />
+                                            <label for="contact-label-service-112507" class="ml-3 text-sm font-medium text-gray-700">Mulch Installation</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112508"
+                                                    name="112508"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Shrub Trimming"
+                                            />
+                                            <label for="contact-label-service-112508" class="ml-3 text-sm font-medium text-gray-700">Shrub Trimming</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112509"
+                                                    name="112509"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fall and Spring Clean Up"
+                                            />
+                                            <label for="contact-label-service-112509" class="ml-3 text-sm font-medium text-gray-700">Fall and Spring Clean Up</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112510"
+                                                    name="112510"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Patio Design & Construction"
+                                            />
+                                            <label for="contact-label-service-112510" class="ml-3 text-sm font-medium text-gray-700">Patio Design & Construction</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112511"
+                                                    name="112511"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Driveway Design & Build"
+                                            />
+                                            <label for="contact-label-service-112511" class="ml-3 text-sm font-medium text-gray-700">Driveway Design & Build</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112512"
+                                                    name="112512"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Stone Wall Installation"
+                                            />
+                                            <label for="contact-label-service-112512" class="ml-3 text-sm font-medium text-gray-700">Stone Wall Installation</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112513"
+                                                    name="112513"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Retaining Wall Construction"
+                                            />
+                                            <label for="contact-label-service-112513" class="ml-3 text-sm font-medium text-gray-700">Retaining Wall Construction</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112514"
+                                                    name="112514"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fencing Repair & Installation"
+                                            />
+                                            <label for="contact-label-service-112514" class="ml-3 text-sm font-medium text-gray-700">Fencing Repair & Installation</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112515"
+                                                    name="112515"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fertilization"
+                                            />
+                                            <label for="contact-label-service-112515" class="ml-3 text-sm font-medium text-gray-700">Fertilization</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112516"
+                                                    name="112516"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Lawn Aeration"
+                                            />
+                                            <label for="contact-label-service-112516" class="ml-3 text-sm font-medium text-gray-700">Lawn Aeration</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112517"
+                                                    name="112517"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Snow Removal"
+                                            />
+                                            <label for="contact-label-service-112517" class="ml-3 text-sm font-medium text-gray-700">Snow Removal</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-112518"
+                                                    name="112518"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Natural Stone Hardscape"
+                                            />
+                                            <label for="contact-label-service-112518" class="ml-3 text-sm font-medium text-gray-700">Natural Stone Hardscape</label>
+                                        </div>
+                                        
+                                    </div>
+                                </fieldset>
+                                
+                                <!-- Photo Upload -->
+                                
+                            </div>
+                            </div>
+                        </div>
                     </div>
 
                 </form>
@@ -3260,13 +3669,14 @@
                                 items-center
                                 justify-center
                                 w-full
-                                my-4
                             "
-                     onclick="send_sms('676be983-ac00-4698-96b0-b9c307fe25db')"
+                     onclick="send_sms('9f71bd2c-1908-446b-8731-cfd0078ade17')"
                 >
-                    <button class="px-5
+                    <button class="
                                 py-2.5
-                                w-3/4
+                                w-4/5
+                                fixed
+                                bottom
                                 text-sm
                                 font-medium
                                 transition
@@ -3278,7 +3688,14 @@
                                 hover:bg-primary-darker
                                 bg-primar
                                 focus-visible:ring-2
-                                ring-primary ring-opacity-75 ring-offset-2"> Send
+                                ring-primary ring-opacity-75 ring-offset-2" 
+                                style="
+                                position:absolute;
+                                left: 50%;
+                                bottom: 0;
+                                transform: translate(-50%, -50%);
+                                margin-top: 0;
+                                margin-bottom: 0"> Send
                     </button>
                 </div>
 
@@ -3287,7 +3704,6 @@
         </div>
     </div>
 </template>
-
 <!-- Modal -->
 <template x-teleport="body">
     <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
