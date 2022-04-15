@@ -4,134 +4,85 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
-        <loc>https://yurp.com/index</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/index</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/store</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/store</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/reviews</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/reviews</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/gallery-All</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/gallery-All</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/gallery-greep</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/gallery-Interior-Painting</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/gallery-groop</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/gallery-Exterior-Painting</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/service-Mowing</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/service-Interior-Paintingz</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/service-Mulch-Installation</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/service-Exterior-Painting</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/service-Shrub-Trimming</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/service-Kitchen-and-Cabinet-Refinishing</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/service-Fall-and-Spring-Clean-Up</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/service-Drywall-and-Plastering</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/service-Patio-Design-&-Construction</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/service-Pre-paint-Washing</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/service-Driveway-Design-&-Build</loc>
-        <lastmod>2022-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://yurp.com/service-Stone-Wall-Installation</loc>
-        <lastmod>2022-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://yurp.com/service-Retaining-Wall-Construction</loc>
-        <lastmod>2022-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://yurp.com/service-Fencing-Repair-&-Installation</loc>
-        <lastmod>2022-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://yurp.com/service-Fertilization</loc>
-        <lastmod>2022-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://yurp.com/service-Lawn-Aeration</loc>
-        <lastmod>2022-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://yurp.com/service-Snow-Removal</loc>
-        <lastmod>2022-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://yurp.com/service-Natural-Stone-Hardscape</loc>
-        <lastmod>2022-04-04</lastmod>
+        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/index/service-Other-Painting-Services</loc>
+        <lastmod>2022-04-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
