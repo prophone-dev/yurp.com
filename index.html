@@ -10,15 +10,15 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>landscaping near me in CITY, STATE | COMPANY NAME |  Home</title>
+    <title>Your Industry in Brookyln , New York | BoomCo |  Home</title>
     <meta name="description"
-          content="COMPANY NAME offers a wide range of landscaping and hardscaping services to residents in CITY, STATE and the surrounding areas.">
+          content="COMPANY NAME is a painting company that services the CITY, STATE and surrounding areas.">
     <!-- <title>ProPhone Templates</title> -->
     <!-- TailwindCSS  -->
     <!-- <link rel="stylesheet" type="text/css" href="/staticfiles/landing_page_gen/tailwind.css"> -->
     <!-- <link rel="stylesheet" type="stylesheet" href="/staticfiles/landing_page_gen/tailwind.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"> -->
-    <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/SNZ9DI2TQKTF9D0PU3Y8S1HL4MOWDX2E3MYY39YJ.png" type="image/x-icon">
+    <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/3SP1GR5UOYTMSI6CJRVZI30AJ4CSGHJKS6J5L6MX.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="https://prophone-templates.vercel.app/assets/output.css">
     
 
@@ -39,7 +39,7 @@
 <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
 <!-- Focus Visible Polyfill -->
 <script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='https://cdn.tailwindcss.com'></script>
     <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script> -->
     <style>
@@ -48,15 +48,15 @@
                 --contrastThreshold: 60%;
 
                 /* Primary color as HSL */
-                --color-primary-h: 147.23076923076925;
+                --color-primary-h: 240.0;
                 --color-primary-s: 100.0%;
-                --color-primary-l: 25.390625%;
+                --color-primary-l: 15.625%;
                 --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
 
                 /* Secondary color as HSL */
-                --color-secondary-h: 220.9090909090909;
-                --color-secondary-s: 39.285714285714285%;
-                --color-secondary-l: 10.9375%;
+                --color-secondary-h: 217.14285714285714;
+                --color-secondary-s: 16.27906976744186%;
+                --color-secondary-l: 74.8046875%;
                 --color-secondary-darker: hsl(var(--color-secondary-h), var(--color-secondary-s), calc(var(--color-secondary-l) - 7.5%));
 
                 --switch: calc((var(--color-primary-l) - var(--contrastThreshold)) * -100);
@@ -68,7 +68,10 @@
     </style>
     <script type="text/javascript" defer>
                     function send_sms(slug){
+                        const sendButton = document.getElementById('sendButton')
+                        sendButton.disabled = true
                         console.log('send_sms',1, slug)
+                        event.preventDefault()
                         function uuidV4() {
                             return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
                               (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
@@ -187,7 +190,6 @@
                         }
                         const getSelectedServices = () =>{
                             const allSelectedServiced = Array.from(document.querySelectorAll('[id^="contact-service"]'))
-
                             if (allSelectedServiced.length){
                                 return allSelectedServiced.filter( (x)=> x.checked
                             ).map(item => item.value).join(",");
@@ -236,7 +238,7 @@
                                 sender_number: cleaned_sender_number,
                                 sender_message: sender_message,
                                 sender_address: sender_address,
-                                sender_contact_date: sender_contact_date,
+                                sender_date: sender_contact_date,
                                 photo,
                                 services
                             })
@@ -248,11 +250,18 @@
                             return result.json();
                         })
                         .then(result => {
-                            console.log(result)
-                            alert("Your message has been sent!")
-                            location.reload()
+                            const sendTextModalId = document.getElementById("send-text-modal")
+                            sendTextModalId.style.display = 'none'
+                            const modalId = document.getElementById("text-thank-you")
+                            modalId.style.display = 'block';
+                            setTimeout(() => {location.reload()}, 3000);
+                            return result
                         })
-
+                        .catch(result => {
+                            console.log(result)
+                            sendButton.disabled = false
+                            alert("There was a problem sending your text. Please reach out to ProPhone.")
+                        })
 
                     }
                 
@@ -352,16 +361,17 @@
                         class="flex items-center h-full transition-all duration-200 origin-left"
                     >
                         <!-- Logo Link -->
-                        <a
-                            href="/"
+                    
+                        <a  href= " index "
                             class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                         >
                             <img
                                 class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto"
-                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/SNZ9DI2TQKTF9D0PU3Y8S1HL4MOWDX2E3MYY39YJ.png"
+                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3SP1GR5UOYTMSI6CJRVZI30AJ4CSGHJKS6J5L6MX.jpeg"
                                 alt="Brand Logo"
                             />
                         </a>
+                    
                     </div>
                     <!-- Links -->
                     <div
@@ -449,147 +459,70 @@
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                 <!-- Render each sublink -->
-                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Mowing&#x27;, &#x27;href&#x27;: &#x27;service-Mowing&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Mulch Installation&#x27;, &#x27;href&#x27;: &#x27;service-Mulch-Installation&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Shrub Trimming&#x27;, &#x27;href&#x27;: &#x27;service-Shrub-Trimming&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Fall and Spring Clean Up&#x27;, &#x27;href&#x27;: &#x27;service-Fall-and-Spring-Clean-Up&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Patio Design &amp; Construction&#x27;, &#x27;href&#x27;: &#x27;service-Patio-Design-&amp;-Construction&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Driveway Design &amp; Build&#x27;, &#x27;href&#x27;: &#x27;service-Driveway-Design-&amp;-Build&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Stone Wall Installation&#x27;, &#x27;href&#x27;: &#x27;service-Stone-Wall-Installation&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Retaining Wall Construction&#x27;, &#x27;href&#x27;: &#x27;service-Retaining-Wall-Construction&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Fencing Repair &amp; Installation&#x27;, &#x27;href&#x27;: &#x27;service-Fencing-Repair-&amp;-Installation&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Fertilization&#x27;, &#x27;href&#x27;: &#x27;service-Fertilization&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Lawn Aeration&#x27;, &#x27;href&#x27;: &#x27;service-Lawn-Aeration&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Snow Removal&#x27;, &#x27;href&#x27;: &#x27;service-Snow-Removal&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Natural Stone Hardscape&#x27;, &#x27;href&#x27;: &#x27;service-Natural-Stone-Hardscape&#x27;}]"> -->
+                                                <!-- <each loop="link in [{&#x27;title&#x27;: &quot;Our Interior Paintingz service is top-notch! Our painters near me are experienced and can help you choose the perfect color for your home. We&#x27;ll work with you to ensure that the painting process is smooth and easy.&quot;, &#x27;copy&#x27;: &#x27;Interior Paintingz&#x27;, &#x27;href&#x27;: &#x27;service-Interior-Paintingz&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Exterior Painting&#x27;, &#x27;href&#x27;: &#x27;service-Exterior-Painting&#x27;}, {&#x27;title&#x27;: &quot;If your kitchen cabinets are looking dated or tired, our refinishing service can give them a new lease of life. We&#x27;ll strip off the old finish and repaint them in a color of your choice. Plus, we can also reface any cabinet doors that need it.&quot;, &#x27;copy&#x27;: &#x27;Kitchen and Cabinet Refinishing&#x27;, &#x27;href&#x27;: &#x27;service-Kitchen-and-Cabinet-Refinishing&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Drywall and Plastering&#x27;, &#x27;href&#x27;: &#x27;service-Drywall-and-Plastering&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Pre-paint Washing&#x27;, &#x27;href&#x27;: &#x27;service-Pre-paint-Washing&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Other Painting Services&#x27;, &#x27;href&#x27;: &#x27;service-Other-Painting-Services&#x27;}]"> -->
                                                   
                                                     <a
-                                                        href=" service-Mowing "
+                                                        href=" service-Interior-Paintingz "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Mowing</p>
+                                                        <!-- <p class="text-base font-medium text-gray-900">Our Interior Paintingz service is top-notch! Our painters near me are experienced and can help you choose the perfect color for your home. We&#x27;ll work with you to ensure that the painting process is smooth and easy.</p> -->
+                                                        <p class="mt-1 text-sm text-gray-500">Interior Paintingz</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Mulch-Installation "
+                                                        href=" service-Exterior-Painting "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Mulch Installation</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Shrub-Trimming "
+                                                        href=" service-Kitchen-and-Cabinet-Refinishing "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Shrub Trimming</p>
+                                                        <!-- <p class="text-base font-medium text-gray-900">If your kitchen cabinets are looking dated or tired, our refinishing service can give them a new lease of life. We&#x27;ll strip off the old finish and repaint them in a color of your choice. Plus, we can also reface any cabinet doors that need it.</p> -->
+                                                        <p class="mt-1 text-sm text-gray-500">Kitchen and Cabinet Refinishing</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Fall-and-Spring-Clean-Up "
+                                                        href=" service-Drywall-and-Plastering "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Fall and Spring Clean Up</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Drywall and Plastering</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Patio-Design-&amp;-Construction "
+                                                        href=" service-Pre-paint-Washing "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Patio Design &amp; Construction</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Pre-paint Washing</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" service-Driveway-Design-&amp;-Build "
+                                                        href=" service-Other-Painting-Services "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Driveway Design &amp; Build</p>
-                                                    </a>
-                                                <!-- </each> -->
-                                               <!--  -->
-                                                 
-                                                    <a
-                                                        href=" service-Stone-Wall-Installation "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Stone Wall Installation</p>
-                                                    </a>
-                                                <!-- </each> -->
-                                               <!--  -->
-                                                 
-                                                    <a
-                                                        href=" service-Retaining-Wall-Construction "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Retaining Wall Construction</p>
-                                                    </a>
-                                                <!-- </each> -->
-                                               <!--  -->
-                                                 
-                                                    <a
-                                                        href=" service-Fencing-Repair-&amp;-Installation "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Fencing Repair &amp; Installation</p>
-                                                    </a>
-                                                <!-- </each> -->
-                                               <!--  -->
-                                                 
-                                                    <a
-                                                        href=" service-Fertilization "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Fertilization</p>
-                                                    </a>
-                                                <!-- </each> -->
-                                               <!--  -->
-                                                 
-                                                    <a
-                                                        href=" service-Lawn-Aeration "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Lawn Aeration</p>
-                                                    </a>
-                                                <!-- </each> -->
-                                               <!--  -->
-                                                 
-                                                    <a
-                                                        href=" service-Snow-Removal "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Snow Removal</p>
-                                                    </a>
-                                                <!-- </each> -->
-                                               <!--  -->
-                                                 
-                                                    <a
-                                                        href=" service-Natural-Stone-Hardscape "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">Natural Stone Hardscape</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Other Painting Services</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
@@ -659,26 +592,26 @@
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                 <!-- Render each sublink -->
-                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;greep&#x27;, &#x27;href&#x27;: &#x27;gallery-greep&#x27;}, {&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;groop&#x27;, &#x27;href&#x27;: &#x27;gallery-groop&#x27;}, {&#x27;title&#x27;: &#x27;All Photos&#x27;, &#x27;copy&#x27;: &#x27;All Photos&#x27;, &#x27;href&#x27;: &#x27;gallery-All&#x27;}]"> -->
+                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;Interior Painting&#x27;, &#x27;href&#x27;: &#x27;gallery-Interior-Painting&#x27;}, {&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;Exterior Painting&#x27;, &#x27;href&#x27;: &#x27;gallery-Exterior-Painting&#x27;}, {&#x27;title&#x27;: &#x27;All Photos&#x27;, &#x27;copy&#x27;: &#x27;All Photos&#x27;, &#x27;href&#x27;: &#x27;gallery-All&#x27;}]"> -->
                                                   
                                                     <a
-                                                        href=" gallery-greep "
+                                                        href=" gallery-Interior-Painting "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">greep</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
                                                  
                                                     <a
-                                                        href=" gallery-groop "
+                                                        href=" gallery-Exterior-Painting "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
-                                                        <p class="mt-1 text-sm text-gray-500">groop</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                     </a>
                                                 <!-- </each> -->
                                                <!--  -->
@@ -795,7 +728,7 @@
                             href="/"
                             class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
                         >
-                            <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/SNZ9DI2TQKTF9D0PU3Y8S1HL4MOWDX2E3MYY39YJ.png" alt="Brand Logo" />
+                            <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3SP1GR5UOYTMSI6CJRVZI30AJ4CSGHJKS6J5L6MX.jpeg" alt="Brand Logo" />
                         </a>
                     </div>
                     <div class="-mr-2">
@@ -873,81 +806,39 @@
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             <!-- Render each sublink -->
                                             
-                                                <a href="service-Mowing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Mowing</p>
+                                                <a href="service-Interior-Paintingz" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <!-- <p class="text-base font-medium text-gray-900">Our Interior Paintingz service is top-notch! Our painters near me are experienced and can help you choose the perfect color for your home. We&#x27;ll work with you to ensure that the painting process is smooth and easy.</p> -->
+                                                    <p class="mt-1 text-sm text-gray-500">Interior Paintingz</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Mulch-Installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Exterior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Mulch Installation</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Shrub-Trimming" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Shrub Trimming</p>
+                                                <a href="service-Kitchen-and-Cabinet-Refinishing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <!-- <p class="text-base font-medium text-gray-900">If your kitchen cabinets are looking dated or tired, our refinishing service can give them a new lease of life. We&#x27;ll strip off the old finish and repaint them in a color of your choice. Plus, we can also reface any cabinet doors that need it.</p> -->
+                                                    <p class="mt-1 text-sm text-gray-500">Kitchen and Cabinet Refinishing</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Fall-and-Spring-Clean-Up" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Drywall-and-Plastering" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Fall and Spring Clean Up</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Drywall and Plastering</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Patio-Design-&amp;-Construction" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Pre-paint-Washing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Patio Design &amp; Construction</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Pre-paint Washing</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="service-Driveway-Design-&amp;-Build" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="service-Other-Painting-Services" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Driveway Design &amp; Build</p>
-                                                </a>
-                                            <!-- </each> -->
-                                            
-                                                <a href="service-Stone-Wall-Installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Stone Wall Installation</p>
-                                                </a>
-                                            <!-- </each> -->
-                                            
-                                                <a href="service-Retaining-Wall-Construction" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Retaining Wall Construction</p>
-                                                </a>
-                                            <!-- </each> -->
-                                            
-                                                <a href="service-Fencing-Repair-&amp;-Installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Fencing Repair &amp; Installation</p>
-                                                </a>
-                                            <!-- </each> -->
-                                            
-                                                <a href="service-Fertilization" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Fertilization</p>
-                                                </a>
-                                            <!-- </each> -->
-                                            
-                                                <a href="service-Lawn-Aeration" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Lawn Aeration</p>
-                                                </a>
-                                            <!-- </each> -->
-                                            
-                                                <a href="service-Snow-Removal" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Snow Removal</p>
-                                                </a>
-                                            <!-- </each> -->
-                                            
-                                                <a href="service-Natural-Stone-Hardscape" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">Natural Stone Hardscape</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Other Painting Services</p>
                                                 </a>
                                             <!-- </each> -->
                                             
@@ -1001,15 +892,15 @@
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             <!-- Render each sublink -->
                                             
-                                                <a href="gallery-greep" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="gallery-Interior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">greep</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
                                                 </a>
                                             <!-- </each> -->
                                             
-                                                <a href="gallery-groop" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <a href="gallery-Exterior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
-                                                    <p class="mt-1 text-sm text-gray-500">groop</p>
+                                                    <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                 </a>
                                             <!-- </each> -->
                                             
@@ -1108,10 +999,10 @@
             <main class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="sm:text-center lg:text-left">
                     <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-                        <span class="block xl:inline">COMPANY NAME</span>
+                        <span class="block xl:inline">BoomCo</span>
                     </h1>
                     <p class="mt-3 text-base sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        Quality Landscaping &amp; Hardscaping service in CITY and surrounding areas. We provide professional service and offer free quotes. Reach out today to learn how we can help.
+                        The finest Painting service in CITY and surrounding areas. We provide professional service and offer free quotes. Reach out today to learn how we can help.
                     </p>
                     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         <!-- CTA Secondary -->    
@@ -1162,11 +1053,11 @@
             
             <img
                 class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/PCEMB2Y4RIIBPPE3IYK920K8KWOPHM5CRGU6GUSM.png"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/YBD7P359KLE7TRJZ7AS7JB2L9G82UXIULOP9GDVG.jpeg"
                 loading="lazy"
                 alt=""
             />
-                <!-- <img src="https://landing-page-app-hero-images.s3.amazonaws.com/media/PCEMB2Y4RIIBPPE3IYK920K8KWOPHM5CRGU6GUSM.png"   alt="Hero Image"  class="object-cover w-full lg:absolute h-80 lg:h-full"> -->
+                <!-- <img src="https://landing-page-app-hero-images.s3.amazonaws.com/media/YBD7P359KLE7TRJZ7AS7JB2L9G82UXIULOP9GDVG.jpeg"   alt="Hero Image"  class="object-cover w-full lg:absolute h-80 lg:h-full"> -->
                 
         
             
@@ -1257,8 +1148,8 @@
                               
                                   
                                       <img 
-                                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/SQ92MVUHV2175GIMBO79N046DZO8H82SWBYMRJW0.png"
-                                        alt="COMPANY NAME team in CITY, STATE - people or person"
+                                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/4LCFIJV71T64M6SSS37SWAY6Z3EM3VWF2O6XTX83.jpeg"
+                                        alt="BoomCo team in Brookyln , New York - people or person"
                                         class="w-auto h-auto max-h-full max-w-full"
                                         loading="lazy"
                                       >
@@ -1276,7 +1167,7 @@
                   <div class="text-primary">
                       <h2 class="text-3xl font-extrabold lg:text-4xl">About Us</h2>
                       <p class="mt-6 text-xl">
-                          COMPANY NAME offers a wide range of landscaping and hardscaping services to residents in CITY, STATE and the surrounding areas. From design to installation, we can help you create the perfect outdoor space for your home.
+                          COMPANY NAME is a painting company that services the CITY, STATE and surrounding areas. We specialize in residential and commercial painting, and we offer a wide range of services to meet your needs. We are reliable, affordable, and always strive to provide the best possible service. Contact us today for a free estimate!
                           <!-- Caro’s Landscaping and Lawn has been Austin's most trusted service for the past 15 years. We are a customer-first company and you
                           are always a priority. Our team is professional, trained, and ready to take care of all your lawn care needs. -->
                       </p>
@@ -1410,18 +1301,76 @@
                         <!-- Whole Card is a link -->
                         <!-- Confirm item.href -->
                         <a
-                            href="service-Mowing"
+                            href="service-Interior-Paintingz"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Mowing"
+                            aria-label="Interior Paintingz"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Mowing</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Interior Paintingz</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Mowing</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Interior Paintingz</span>
+                                <!-- Notice: Text is automatically clamped here -->
+                                <p
+                                    class="
+                                        text-lg
+                                        block
+                                        mt-1.5
+                                        line-clamp-8
+                                        sm:line-clamp-7
+                                        font-medium
+                                        leading-6
+                                        text-center
+                                        transition
+                                        duration-500
+                                        sm:opacity-0
+                                        group-hover:opacity-100
+                                    "
+                                    style="
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 5;
+                                    -webkit-box-orient: vertical;  "
+                                >
+                                    Our Interior Paintingz service is top-notch! Our painters near me are experienced and can help you choose the perfect color for your home. We&#x27;ll work with you to ensure that the painting process is smooth and easy.
+                                </p>
+                            </div>
+
+                            <!-- Colored Overlay -->
+                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
+                            <!-- Image -->
+                            
+                            <img
+                                class="object-cover grayscale"
+                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
+                                alt=""
+                            />
+                            
+                        </a>
+                    </li>
+                
+                    <li
+                        x-transition
+                        style="perspective: 800px"
+                        class="group service-item"
+                    >
+                        <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
+                        <a
+                            href="service-Exterior-Painting"
+                            style="transform-style: preserve-3d"
+                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
+                            aria-label="Exterior Painting"
+                        >
+                            <!-- Front Card -->
+                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Exterior Painting</span>
+                            </div>
+                            <!-- Back Card -->
+                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Exterior Painting</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1468,18 +1417,76 @@
                         <!-- Whole Card is a link -->
                         <!-- Confirm item.href -->
                         <a
-                            href="service-Mulch-Installation"
+                            href="service-Kitchen-and-Cabinet-Refinishing"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Mulch Installation"
+                            aria-label="Kitchen and Cabinet Refinishing"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Mulch Installation</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Kitchen and Cabinet Refinishing</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Mulch Installation</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Kitchen and Cabinet Refinishing</span>
+                                <!-- Notice: Text is automatically clamped here -->
+                                <p
+                                    class="
+                                        text-lg
+                                        block
+                                        mt-1.5
+                                        line-clamp-8
+                                        sm:line-clamp-7
+                                        font-medium
+                                        leading-6
+                                        text-center
+                                        transition
+                                        duration-500
+                                        sm:opacity-0
+                                        group-hover:opacity-100
+                                    "
+                                    style="
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 5;
+                                    -webkit-box-orient: vertical;  "
+                                >
+                                    If your kitchen cabinets are looking dated or tired, our refinishing service can give them a new lease of life. We&#x27;ll strip off the old finish and repaint them in a color of your choice. Plus, we can also reface any cabinet doors that need it.
+                                </p>
+                            </div>
+
+                            <!-- Colored Overlay -->
+                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
+                            <!-- Image -->
+                            
+                            <img
+                                class="object-cover grayscale"
+                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
+                                alt=""
+                            />
+                            
+                        </a>
+                    </li>
+                
+                    <li
+                        x-transition
+                        style="perspective: 800px"
+                        class="group service-item"
+                    >
+                        <!-- Whole Card is a link -->
+                        <!-- Confirm item.href -->
+                        <a
+                            href="service-Drywall-and-Plastering"
+                            style="transform-style: preserve-3d"
+                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
+                            aria-label="Drywall and Plastering"
+                        >
+                            <!-- Front Card -->
+                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Drywall and Plastering</span>
+                            </div>
+                            <!-- Back Card -->
+                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Drywall and Plastering</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1526,18 +1533,18 @@
                         <!-- Whole Card is a link -->
                         <!-- Confirm item.href -->
                         <a
-                            href="service-Shrub-Trimming"
+                            href="service-Pre-paint-Washing"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Shrub Trimming"
+                            aria-label="Pre-paint Washing"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Shrub Trimming</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Pre-paint Washing</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Shrub Trimming</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Pre-paint Washing</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -1584,540 +1591,18 @@
                         <!-- Whole Card is a link -->
                         <!-- Confirm item.href -->
                         <a
-                            href="service-Fall-and-Spring-Clean-Up"
+                            href="service-Other-Painting-Services"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Fall and Spring Clean Up"
+                            aria-label="Other Painting Services"
                         >
                             <!-- Front Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Fall and Spring Clean Up</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Other Painting Services</span>
                             </div>
                             <!-- Back Card -->
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Fall and Spring Clean Up</span>
-                                <!-- Notice: Text is automatically clamped here -->
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <!-- Colored Overlay -->
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            <!-- Image -->
-                            
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <!-- Whole Card is a link -->
-                        <!-- Confirm item.href -->
-                        <a
-                            href="service-Patio-Design-&amp;-Construction"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Patio Design &amp; Construction"
-                        >
-                            <!-- Front Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Patio Design &amp; Construction</span>
-                            </div>
-                            <!-- Back Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Patio Design &amp; Construction</span>
-                                <!-- Notice: Text is automatically clamped here -->
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <!-- Colored Overlay -->
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            <!-- Image -->
-                            
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <!-- Whole Card is a link -->
-                        <!-- Confirm item.href -->
-                        <a
-                            href="service-Driveway-Design-&amp;-Build"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Driveway Design &amp; Build"
-                        >
-                            <!-- Front Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Driveway Design &amp; Build</span>
-                            </div>
-                            <!-- Back Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Driveway Design &amp; Build</span>
-                                <!-- Notice: Text is automatically clamped here -->
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <!-- Colored Overlay -->
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            <!-- Image -->
-                            
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <!-- Whole Card is a link -->
-                        <!-- Confirm item.href -->
-                        <a
-                            href="service-Stone-Wall-Installation"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Stone Wall Installation"
-                        >
-                            <!-- Front Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Stone Wall Installation</span>
-                            </div>
-                            <!-- Back Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Stone Wall Installation</span>
-                                <!-- Notice: Text is automatically clamped here -->
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <!-- Colored Overlay -->
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            <!-- Image -->
-                            
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <!-- Whole Card is a link -->
-                        <!-- Confirm item.href -->
-                        <a
-                            href="service-Retaining-Wall-Construction"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Retaining Wall Construction"
-                        >
-                            <!-- Front Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Retaining Wall Construction</span>
-                            </div>
-                            <!-- Back Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Retaining Wall Construction</span>
-                                <!-- Notice: Text is automatically clamped here -->
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <!-- Colored Overlay -->
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            <!-- Image -->
-                            
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <!-- Whole Card is a link -->
-                        <!-- Confirm item.href -->
-                        <a
-                            href="service-Fencing-Repair-&amp;-Installation"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Fencing Repair &amp; Installation"
-                        >
-                            <!-- Front Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Fencing Repair &amp; Installation</span>
-                            </div>
-                            <!-- Back Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Fencing Repair &amp; Installation</span>
-                                <!-- Notice: Text is automatically clamped here -->
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <!-- Colored Overlay -->
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            <!-- Image -->
-                            
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <!-- Whole Card is a link -->
-                        <!-- Confirm item.href -->
-                        <a
-                            href="service-Fertilization"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Fertilization"
-                        >
-                            <!-- Front Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Fertilization</span>
-                            </div>
-                            <!-- Back Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Fertilization</span>
-                                <!-- Notice: Text is automatically clamped here -->
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <!-- Colored Overlay -->
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            <!-- Image -->
-                            
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <!-- Whole Card is a link -->
-                        <!-- Confirm item.href -->
-                        <a
-                            href="service-Lawn-Aeration"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Lawn Aeration"
-                        >
-                            <!-- Front Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Lawn Aeration</span>
-                            </div>
-                            <!-- Back Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Lawn Aeration</span>
-                                <!-- Notice: Text is automatically clamped here -->
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <!-- Colored Overlay -->
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            <!-- Image -->
-                            
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <!-- Whole Card is a link -->
-                        <!-- Confirm item.href -->
-                        <a
-                            href="service-Snow-Removal"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Snow Removal"
-                        >
-                            <!-- Front Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Snow Removal</span>
-                            </div>
-                            <!-- Back Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Snow Removal</span>
-                                <!-- Notice: Text is automatically clamped here -->
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <!-- Colored Overlay -->
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            <!-- Image -->
-                            
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <!-- Whole Card is a link -->
-                        <!-- Confirm item.href -->
-                        <a
-                            href="service-Natural-Stone-Hardscape"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Natural Stone Hardscape"
-                        >
-                            <!-- Front Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Natural Stone Hardscape</span>
-                            </div>
-                            <!-- Back Card -->
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Natural Stone Hardscape</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Other Painting Services</span>
                                 <!-- Notice: Text is automatically clamped here -->
                                 <p
                                     class="
@@ -2375,7 +1860,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 2,
+        amountOfImages: 0,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -2390,48 +1875,6 @@
     }"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0b58fc04-d13c-42b2-a09e-e9bf97472009.png" alt="" /> -->
-                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0b58fc04-d13c-42b2-a09e-e9bf97472009.png" alt="Mowing for COMPANY NAME in CITY, STATE" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0b58fc04-d13c-42b2-a09e-e9bf97472009.png" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/0b58fc04-d13c-42b2-a09e-e9bf97472009.png" alt="" /> -->
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/bdc52ffd-b7e5-4bfb-9245-a2ef79d3b28a.png" alt="" /> -->
-                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/bdc52ffd-b7e5-4bfb-9245-a2ef79d3b28a.png" alt="Mowing for COMPANY NAME in CITY, STATE" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/bdc52ffd-b7e5-4bfb-9245-a2ef79d3b28a.png" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/bdc52ffd-b7e5-4bfb-9245-a2ef79d3b28a.png" alt="" /> -->
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
         
     </ul>
 
@@ -2480,22 +1923,6 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 0">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0b58fc04-d13c-42b2-a09e-e9bf97472009.png" alt="Mowing for COMPANY NAME in CITY, STATE" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 1">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/bdc52ffd-b7e5-4bfb-9245-a2ef79d3b28a.png" alt="Mowing for COMPANY NAME in CITY, STATE" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
                                 
                             </ul>
 
@@ -2557,110 +1984,6 @@
             <!-- Loop each of the three chunks (columns) here -->
             
             
-                <!-- Single Testimonial Column -->
-                <ul class="space-y-8">
-                    <!-- Loop each of the items (rows) here -->
-                    
-                    
-                    
-
-                        <!-- Review Item -->
-                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
-                            <!-- Star Rating -->
-                            <div class="flex">
-                                <div aria-hidden="true" class="space-x-1.5 flex">
-                                    <!-- TODO: Simply use a for loop here `for i = 1; i < amountOfStars; i++` -->
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                </div>
-                                <!-- TODO: Add the current amount of stars here -->
-                                <span class="sr-only"> out of 5 stars</span>
-                            </div>
-
-                            <blockquote class="mt-6">
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
-                                        Best service ever!
-                                    </p>
-                                </div>
-                                <footer class="flex items-center justify-between mt-8 space-x-4">
-                                    <div>
-                                        <span class="block font-medium text-primary">Nick O</span>
-                                        <span class="block font-medium">Homeowner</span>
-                                    </div>
-
-                                    <!-- Social Icon -->
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">None</span>
-                                        
-                                    
-                                    </div>
-                                </footer>
-                            </blockquote>
-                        </li>
-                    
-                    
-                </ul>
-            
-                <!-- Single Testimonial Column -->
-                <ul class="space-y-8">
-                    <!-- Loop each of the items (rows) here -->
-                    
-                    
-                </ul>
-            
-                <!-- Single Testimonial Column -->
-                <ul class="space-y-8">
-                    <!-- Loop each of the items (rows) here -->
-                    
-                    
-                </ul>
-            
             
         </div>
 
@@ -2691,7 +2014,7 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="27541"
+                                aria-controls="28461"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">What&#x27;s the best way to reach you?</span>
@@ -2711,7 +2034,7 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="27541">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="28461">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">Give us a call or send us a text at . Thanks!</p>
                         </dd>
@@ -2724,7 +2047,7 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="27542"
+                                aria-controls="28462"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">Do you provide free estimates?</span>
@@ -2744,7 +2067,7 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="27542">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="28462">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">Yes, we&#x27;ll always estimate the job for free. Just give us a call to get started.</p>
                         </dd>
@@ -2757,7 +2080,7 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="27543"
+                                aria-controls="28463"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">How are you different?</span>
@@ -2777,7 +2100,7 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="27543">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="28463">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">We&#x27;re a customer-first company that will do whatever it takes to make sure the job is well done.</p>
                         </dd>
@@ -2972,14 +2295,14 @@
           <!-- Image, description and logos -->
           <div class="space-y-8 xl:col-span-1">
               
-              <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/SNZ9DI2TQKTF9D0PU3Y8S1HL4MOWDX2E3MYY39YJ.png" alt="" />
+              <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3SP1GR5UOYTMSI6CJRVZI30AJ4CSGHJKS6J5L6MX.jpeg" alt="" />
               
               <p class="text-base text-gray-100">
-                  COMPANY NAME<br/>
+                  BoomCo<br/>
                    
                       CITY, STATE <br/>
                   
-                  
+                  None
                   <!-- Is this supposed to be here and correct?  -->
                   <!-- The finest landscaping in Austin & surrounding areas. Exceptional, professional service. You are our priority! -->
               </p>
@@ -3032,21 +2355,11 @@
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
                           <li>
                               <a
-                                  href="#"
+                                  href="index"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Home</a
                               >
                           </li>
-                          
-                              
-                              <li>
-                                  <a
-                                      href="#gallery"
-                                      class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                      >Gallery</a
-                                  >
-                              </li>
-                              
                           
                           
                           <li>
@@ -3059,6 +2372,7 @@
                           
                           
                           
+                          
                           <li>
                               <a
                                   href='sitemap.xml'
@@ -3066,6 +2380,7 @@
                                   >Sitemap</a
                               >
                           </li>
+                          
                       </ul>
                   </div>
                   <!-- Services Links -->
@@ -3075,105 +2390,49 @@
                           
                           <li>
                               <a
-                                  href="service-Mowing"
+                                  href="service-Interior-Paintingz"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Mowing</a
+                                  >Interior Paintingz</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Mulch-Installation"
+                                  href="service-Exterior-Painting"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Mulch Installation</a
+                                  >Exterior Painting</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Shrub-Trimming"
+                                  href="service-Kitchen-and-Cabinet-Refinishing"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Shrub Trimming</a
+                                  >Kitchen and Cabinet Refinishing</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Fall-and-Spring-Clean-Up"
+                                  href="service-Drywall-and-Plastering"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Fall and Spring Clean Up</a
+                                  >Drywall and Plastering</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Patio-Design-&amp;-Construction"
+                                  href="service-Pre-paint-Washing"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Patio Design &amp; Construction</a
+                                  >Pre-paint Washing</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Driveway-Design-&amp;-Build"
+                                  href="service-Other-Painting-Services"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Driveway Design &amp; Build</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="service-Stone-Wall-Installation"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Stone Wall Installation</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="service-Retaining-Wall-Construction"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Retaining Wall Construction</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="service-Fencing-Repair-&amp;-Installation"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Fencing Repair &amp; Installation</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="service-Fertilization"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Fertilization</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="service-Lawn-Aeration"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Lawn Aeration</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="service-Snow-Removal"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Snow Removal</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="service-Natural-Stone-Hardscape"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Natural Stone Hardscape</a
+                                  >Other Painting Services</a
                               >
                           </li>
                           
@@ -3189,7 +2448,7 @@
                           
                           <li>
                               <a
-                                  href="#"
+                                  href="index"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >CITY, STATE</a
                               >
@@ -3201,63 +2460,35 @@
                   <div class="mt-12 md:mt-0">
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Hours</h3>
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
-                          
-                          <li>
-                              <a
-                                  href="#"
-                                  class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Sun: 0:00am - 0:00am</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="#"
-                                  class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Mon: 8:00am - 6:00pm</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="#"
-                                  class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Tues: 8:00am - 6:00pm</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="#"
-                                  class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Wed: 8:00am - 6:00pm</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="#"
-                                  class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Thu: 8:00am - 6:00pm</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="#"
-                                  class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Fri: 8:00am - 6:00pm</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="#"
-                                  class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75"
-                                  >Sat: 0:00am - 0:00am</a
-                              >
-                          </li>
-                          
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Sun:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Mon:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Tues:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Wed:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Thu:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Fri:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Sat:  8:00am - 6:00pm 
+                            </li>
+                        
                       </ul>
                   </div>
               </div>
@@ -3299,6 +2530,7 @@
             :aria-labelledby="$id('modal-title')"
             class="fixed inset-0 z-40 md:pt-8 md:pb-20"
             x-trap.noscroll.inert="contactModalOpen"
+            id="send-text-modal"
     >
         <!-- Overlay -->
         <div
@@ -3322,11 +2554,11 @@
                 x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 @click="contactModalOpen = false"
-                class="relative flex items-center justify-center w-full h-full sm:h-max"
+                class="relative flex items-center justify-center w-full h-full"
         >
             <div
                     @click.stop
-                    class="flex flex-col w-full h-full overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl"
+                    class="flex flex-col w-full 2xl:h-max 2xl:mt-8 h-full sm:h-fit overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl"
             >
                 <!-- Header -->
                 <div class="relative px-6 bg-white">
@@ -3347,7 +2579,7 @@
 
                 <!-- Form -->
 
-                <form class="overflow-y-scroll pb-20 sm:w-full">
+                <form class="overflow-y-auto pb-20 sm:w-full" onsubmit="send_sms('BoomCo')">
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
                         <div class="h-full px-6 pb-1 mt-6 space-y-6 sm:grid sm:grid-cols-2 sm:min-w-max sm:space-x-3">
                             <!-- Full Name -->
@@ -3369,6 +2601,7 @@
                             <div>
                                 <label for="contact-phone-number" class="sr-only">Phone Number</label>
                                 <input
+                                        required
                                         type="tel"
                                         name="phone-number"
                                         id="contact-phone-number"
@@ -3428,145 +2661,68 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112532"
-                                                    name="112532"
+                                                    id="contact-service-115294"
+                                                    name="115294"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Mowing"
+                                                    value="Interior Paintingz"
                                             />
-                                            <label for="contact-label-service-112532" class="ml-3 text-sm font-medium text-gray-700">Mowing</label>
+                                            <label for="contact-label-service-115294" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112533"
-                                                    name="112533"
+                                                    id="contact-service-115295"
+                                                    name="115295"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Mulch Installation"
+                                                    value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-112533" class="ml-3 text-sm font-medium text-gray-700">Mulch Installation</label>
+                                            <label for="contact-label-service-115295" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112534"
-                                                    name="112534"
+                                                    id="contact-service-115296"
+                                                    name="115296"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Shrub Trimming"
+                                                    value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-112534" class="ml-3 text-sm font-medium text-gray-700">Shrub Trimming</label>
+                                            <label for="contact-label-service-115296" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112535"
-                                                    name="112535"
+                                                    id="contact-service-115297"
+                                                    name="115297"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Fall and Spring Clean Up"
+                                                    value="Drywall and Plastering"
                                             />
-                                            <label for="contact-label-service-112535" class="ml-3 text-sm font-medium text-gray-700">Fall and Spring Clean Up</label>
+                                            <label for="contact-label-service-115297" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112536"
-                                                    name="112536"
+                                                    id="contact-service-115298"
+                                                    name="115298"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Patio Design & Construction"
+                                                    value="Pre-paint Washing"
                                             />
-                                            <label for="contact-label-service-112536" class="ml-3 text-sm font-medium text-gray-700">Patio Design & Construction</label>
+                                            <label for="contact-label-service-115298" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112537"
-                                                    name="112537"
+                                                    id="contact-service-115299"
+                                                    name="115299"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Driveway Design & Build"
+                                                    value="Other Painting Services"
                                             />
-                                            <label for="contact-label-service-112537" class="ml-3 text-sm font-medium text-gray-700">Driveway Design & Build</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112538"
-                                                    name="112538"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Stone Wall Installation"
-                                            />
-                                            <label for="contact-label-service-112538" class="ml-3 text-sm font-medium text-gray-700">Stone Wall Installation</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112539"
-                                                    name="112539"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Retaining Wall Construction"
-                                            />
-                                            <label for="contact-label-service-112539" class="ml-3 text-sm font-medium text-gray-700">Retaining Wall Construction</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112540"
-                                                    name="112540"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Fencing Repair & Installation"
-                                            />
-                                            <label for="contact-label-service-112540" class="ml-3 text-sm font-medium text-gray-700">Fencing Repair & Installation</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112541"
-                                                    name="112541"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Fertilization"
-                                            />
-                                            <label for="contact-label-service-112541" class="ml-3 text-sm font-medium text-gray-700">Fertilization</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112542"
-                                                    name="112542"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Lawn Aeration"
-                                            />
-                                            <label for="contact-label-service-112542" class="ml-3 text-sm font-medium text-gray-700">Lawn Aeration</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112543"
-                                                    name="112543"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Snow Removal"
-                                            />
-                                            <label for="contact-label-service-112543" class="ml-3 text-sm font-medium text-gray-700">Snow Removal</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112544"
-                                                    name="112544"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Natural Stone Hardscape"
-                                            />
-                                            <label for="contact-label-service-112544" class="ml-3 text-sm font-medium text-gray-700">Natural Stone Hardscape</label>
+                                            <label for="contact-label-service-115299" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
                                         </div>
                                         
                                     </div>
@@ -3579,7 +2735,6 @@
                                 <div class='sm:flex-grow'>
                                     <label for="contact-concern" class="sr-only">How can we help you?</label>
                                     <textarea
-                                            required
                                             id="contact-concern"
                                             name="concern"
                                             rows="4"
@@ -3598,145 +2753,68 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112532"
-                                                    name="112532"
+                                                    id="contact-service-115294"
+                                                    name="115294"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Mowing"
+                                                    value="Interior Paintingz"
                                             />
-                                            <label for="contact-label-service-112532" class="ml-3 text-sm font-medium text-gray-700">Mowing</label>
+                                            <label for="contact-label-service-115294" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112533"
-                                                    name="112533"
+                                                    id="contact-service-115295"
+                                                    name="115295"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Mulch Installation"
+                                                    value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-112533" class="ml-3 text-sm font-medium text-gray-700">Mulch Installation</label>
+                                            <label for="contact-label-service-115295" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112534"
-                                                    name="112534"
+                                                    id="contact-service-115296"
+                                                    name="115296"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Shrub Trimming"
+                                                    value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-112534" class="ml-3 text-sm font-medium text-gray-700">Shrub Trimming</label>
+                                            <label for="contact-label-service-115296" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112535"
-                                                    name="112535"
+                                                    id="contact-service-115297"
+                                                    name="115297"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Fall and Spring Clean Up"
+                                                    value="Drywall and Plastering"
                                             />
-                                            <label for="contact-label-service-112535" class="ml-3 text-sm font-medium text-gray-700">Fall and Spring Clean Up</label>
+                                            <label for="contact-label-service-115297" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112536"
-                                                    name="112536"
+                                                    id="contact-service-115298"
+                                                    name="115298"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Patio Design & Construction"
+                                                    value="Pre-paint Washing"
                                             />
-                                            <label for="contact-label-service-112536" class="ml-3 text-sm font-medium text-gray-700">Patio Design & Construction</label>
+                                            <label for="contact-label-service-115298" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-112537"
-                                                    name="112537"
+                                                    id="contact-service-115299"
+                                                    name="115299"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Driveway Design & Build"
+                                                    value="Other Painting Services"
                                             />
-                                            <label for="contact-label-service-112537" class="ml-3 text-sm font-medium text-gray-700">Driveway Design & Build</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112538"
-                                                    name="112538"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Stone Wall Installation"
-                                            />
-                                            <label for="contact-label-service-112538" class="ml-3 text-sm font-medium text-gray-700">Stone Wall Installation</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112539"
-                                                    name="112539"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Retaining Wall Construction"
-                                            />
-                                            <label for="contact-label-service-112539" class="ml-3 text-sm font-medium text-gray-700">Retaining Wall Construction</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112540"
-                                                    name="112540"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Fencing Repair & Installation"
-                                            />
-                                            <label for="contact-label-service-112540" class="ml-3 text-sm font-medium text-gray-700">Fencing Repair & Installation</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112541"
-                                                    name="112541"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Fertilization"
-                                            />
-                                            <label for="contact-label-service-112541" class="ml-3 text-sm font-medium text-gray-700">Fertilization</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112542"
-                                                    name="112542"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Lawn Aeration"
-                                            />
-                                            <label for="contact-label-service-112542" class="ml-3 text-sm font-medium text-gray-700">Lawn Aeration</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112543"
-                                                    name="112543"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Snow Removal"
-                                            />
-                                            <label for="contact-label-service-112543" class="ml-3 text-sm font-medium text-gray-700">Snow Removal</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-112544"
-                                                    name="112544"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Natural Stone Hardscape"
-                                            />
-                                            <label for="contact-label-service-112544" class="ml-3 text-sm font-medium text-gray-700">Natural Stone Hardscape</label>
+                                            <label for="contact-label-service-115299" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
                                         </div>
                                         
                                     </div>
@@ -3748,47 +2826,89 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="flex items-center justify-center w-full">
+                        <button   id='sendButton'  class="
+                                    py-2.5
+                                    w-4/5
+                                    fixed
+                                    bottom
+                                    text-sm
+                                    font-medium
+                                    transition
+                                    border-2 border-transparent
+                                    rounded-md
+                                    bg-primary
+                                    text-primary-foreground
+                                    focus:outline-none
+                                    hover:bg-primary-darker
+                                    bg-primar
+                                    focus-visible:ring-2
+                                    ring-primary ring-opacity-75 ring-offset-2
+                                    disabled:bg-primary-darker"
+                                    style="
+                                    position:absolute;
+                                    left: 50%;
+                                    bottom: 0;
+                                    transform: translate(-50%, -50%);
+                                    margin-top: 0;
+                                    margin-bottom: 0">Send
+                        </button>
+                    </div>
                 </form>
-                <div class="flex
-                                items-center
-                                justify-center
-                                w-full
-                            "
-                     onclick="send_sms('Caro-Landscaping-20')"
-                >
-                    <button class="
-                                py-2.5
-                                w-4/5
-                                fixed
-                                bottom
-                                text-sm
-                                font-medium
-                                transition
-                                border-2 border-transparent
-                                rounded-md
-                                bg-primary
-                                text-primary-foreground
-                                focus:outline-none
-                                hover:bg-primary-darker
-                                bg-primar
-                                focus-visible:ring-2
-                                ring-primary ring-opacity-75 ring-offset-2" 
-                                style="
-                                position:absolute;
-                                left: 50%;
-                                bottom: 0;
-                                transform: translate(-50%, -50%);
-                                margin-top: 0;
-                                margin-bottom: 0"> Send
-                    </button>
-                </div>
 
 
             </div>
         </div>
     </div>
 </template>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = Array.from(
+            document.querySelectorAll('input[name=email], input[name=phone-number]')
+        )
+
+        const inputListener = e => {
+            inputs
+                .filter(i => i !== e.target)
+                .forEach(i => (i.required = !e.target.value.length))
+        }
+
+        inputs.forEach(i => i.addEventListener('input', inputListener))
+    })
+</script>
+<div
+	class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white backdrop-blur-sm"
+    id="text-thank-you"
+    style="display: none"
+>
+	<div class="mt-3 text-center">
+		<div
+			class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
+		>
+			<svg
+				class="h-6 w-6 text-green-600"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M5 13l4 4L19 7"
+				></path>
+			</svg>
+		</div>
+		<h3 class="text-lg leading-6 font-medium text-gray-900">Thank you!</h3>
+		<div class="mt-1 px-7 py-3">
+			<p class="text-sm text-gray-500">
+				Your message was sent successfully. We’ll send you a text or give you a call soon.
+			</p>
+		</div>
+	</div>
+</div>
 <!-- Modal -->
 <template x-teleport="body">
     <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
@@ -3828,6 +2948,10 @@
                     <!-- Facebook Link -->
                     
                     <!-- Yelp Link -->
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://bucks.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">Facebook</a>
+                    </li>
                     
                 </ul>
             </div>
