@@ -10,50 +10,31 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Your Industry in Brookyln , New York | BoomCo |  Gallery | Exterior Painting</title>
+    <title>painters near me in CITY, STATE | BoomCo |  Gallery | Exterior Painting</title>
     <meta name="description"
-          content="A collection of exterior painting photos to showcase our best work as a your industry company. See what BoomCo can do for you!">
-    <!-- <title>ProPhone Templates</title> -->
-    <!-- TailwindCSS  -->
-    <!-- <link rel="stylesheet" type="text/css" href="/staticfiles/landing_page_gen/tailwind.css"> -->
-    <!-- <link rel="stylesheet" type="stylesheet" href="/staticfiles/landing_page_gen/tailwind.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"> -->
+          content="A collection of exterior painting photos to showcase our best work as a painters near me company. See what BoomCo can do for you!">
     <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/3SP1GR5UOYTMSI6CJRVZI30AJ4CSGHJKS6J5L6MX.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="https://prophone-templates.vercel.app/assets/output.css">
     
 
-    
     <link defer href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/output.css" rel="stylesheet">
-    <!-- Include Scripts -->
-    <!-- Header Component, only used for presentation -->
-
-<!-- Carousel Plugin (can replaced if you already use one) -->
-<script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
-<!-- Alpine Plugin - Intersect -->
+    <script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
 <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-<!-- Alpine Plugin - Focus Trap -->
 <script defer src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"></script>
-<!-- Alpine Plugin - Collapse -->
 <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-<!-- Alpine.js -->
 <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
-<!-- Focus Visible Polyfill -->
 <script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='https://cdn.tailwindcss.com'></script>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script> -->
     <style>
             :root {
-                /* Settings */
                 --contrastThreshold: 60%;
 
-                /* Primary color as HSL */
                 --color-primary-h: 240.0;
                 --color-primary-s: 100.0%;
                 --color-primary-l: 15.625%;
                 --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
 
-                /* Secondary color as HSL */
                 --color-secondary-h: 217.14285714285714;
                 --color-secondary-s: 16.27906976744186%;
                 --color-secondary-l: 74.8046875%;
@@ -300,48 +281,7 @@
     </script>
 </head>
 <body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-24 md:pt-44">
-<!-- <div class="sticky top-0 z-50 pt-8 pb-4 bg-white">
-    <div class="flex items-center justify-between">
-        <h1 class="text-2xl font-medium tracking-tight">ProPhone Templates</h1>
-        <div class="flex items-center mt-2 space-x-4 bg-white">
-            <span class="sr-only">Select Theme</span>
-            <div class="flex space-x-2">
-                <button
-                    :class="active === 0 ? 'ring ring-offset-1 ring-[#1e3a8a]' : ''"
-                    x-on:click="active = 0; setPrimary('224', '78%', '33%'); setSecondary('21', '95%', '48%');"
-                    class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
-                >
-                    <div class="h-3 w-6 bg-[#1e3a8a]"></div>
-                    <div class="h-3 w-6 bg-[#ea580c]"></div>
-                </button>
-                <button
-                    :class="active === 1 ? 'ring ring-offset-1 ring-[#1E293B]' : ''"
-                    x-on:click="active = 1; setPrimary('217', '33%', '17%'); setSecondary('142', '83%', '45%');"
-                    class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
-                >
-                    <div class="h-3 w-6 bg-[#1E293B]"></div>
-                    <div class="h-3 w-6 bg-[#22C55E]"></div>
-                </button>
-                <button
-                    :class="active === 2 ? 'ring ring-offset-1 ring-[#4F46E5]' : ''"
-                    x-on:click="active = 2; setPrimary('243', '69%', '59%'); setSecondary('189', '97%', '43%');"
-                    class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
-                >
-                    <div class="h-3 w-6 bg-[#4F46E5]"></div>
-                    <div class="h-3 w-6 bg-[#06B6D4]"></div>
-                </button>
-                <button
-                    :class="active === 3 ? 'ring ring-offset-1 ring-[#f72585]' : ''"
-                    x-on:click="active = 3; setPrimary('333', '85%', '56%'); setSecondary('263', '93%', '35%');"
-                    class="relative w-6 h-6 overflow-hidden transition-all -rotate-45 rounded-full hover:scale-110"
-                >
-                    <div class="h-3 w-6 bg-[#f72585]"></div>
-                    <div class="h-3 w-6 bg-[#480ca8]"></div>
-                </button>
-            </div>
-        </div>
-    </div>
-</div> -->
+
 
 <nav class="fixed inset-x-0 top-0 z-20">
     <div
@@ -351,16 +291,13 @@
         :class="{'translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'h-24 shadow-magical': scrolledFromTop}"
         class="relative transition-all duration-200 bg-white"
     >
-        <!-- Desktop Navigation -->
         <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-full">
                 <div class="flex items-center">
-                    <!-- Logo -->
                     <div
                         :class="{'scale-100': !scrolledFromTop, 'xl:scale-50': scrolledFromTop}"
                         class="flex items-center h-full transition-all duration-200 origin-left"
                     >
-                        <!-- Logo Link -->
                     
                         <a  href= " index "
                             class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
@@ -373,7 +310,6 @@
                         </a>
                     
                     </div>
-                    <!-- Links -->
                     <div
                         :class="{'h-16': !scrolledFromTop, 'h-16 -translate-x-24': scrolledFromTop}"
                         class="hidden transition-all duration-200 xl:ml-6 xl:flex xl:space-x-5"
@@ -386,9 +322,6 @@
                                 @keydown.escape.stop="desktopOpen = false"
                                 @click.away="desktopOpen = false"
                             >
-                            <!-- <div>navitem_1</div>  -->
-                                <!-- We decide between direct link and dropdown here -->
-                                <!-- <if condition="item.links"> -->
                                 
                                     <a
                                         href=" index "
@@ -396,12 +329,10 @@
                                     >
                                         Home 
                                     </a>
-                                <!-- </else> -->
                                 
                                 
                                 
                             </div>
-                        <!-- </each> -->
                         
                             <div
                                 class="relative flex items-center"
@@ -410,9 +341,6 @@
                                 @keydown.escape.stop="desktopOpen = false"
                                 @click.away="desktopOpen = false"
                             >
-                            <!-- <div>navitem_2</div>  -->
-                                <!-- We decide between direct link and dropdown here -->
-                                <!-- <if condition="item.links"> -->
                                 
                                     <button
                                         type="button"
@@ -438,8 +366,6 @@
                                             />
                                         </svg>
                                     </button>
-                                <!-- </if> -->
-                                <!-- <else> -->
                                 
                                 
                                     <div
@@ -458,83 +384,61 @@
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-                                                <!-- Render each sublink -->
-                                                <!-- <each loop="link in [{&#x27;title&#x27;: &quot;Our Interior Paintingz service is top-notch! Our painters near me are experienced and can help you choose the perfect color for your home. We&#x27;ll work with you to ensure that the painting process is smooth and easy.&quot;, &#x27;copy&#x27;: &#x27;Interior Paintingz&#x27;, &#x27;href&#x27;: &#x27;service-Interior-Paintingz&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Exterior Painting&#x27;, &#x27;href&#x27;: &#x27;service-Exterior-Painting&#x27;}, {&#x27;title&#x27;: &quot;If your kitchen cabinets are looking dated or tired, our refinishing service can give them a new lease of life. We&#x27;ll strip off the old finish and repaint them in a color of your choice. Plus, we can also reface any cabinet doors that need it.&quot;, &#x27;copy&#x27;: &#x27;Kitchen and Cabinet Refinishing&#x27;, &#x27;href&#x27;: &#x27;service-Kitchen-and-Cabinet-Refinishing&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Drywall and Plastering&#x27;, &#x27;href&#x27;: &#x27;service-Drywall-and-Plastering&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Pre-paint Washing&#x27;, &#x27;href&#x27;: &#x27;service-Pre-paint-Washing&#x27;}, {&#x27;title&#x27;: &#x27;&#x27;, &#x27;copy&#x27;: &#x27;Other Painting Services&#x27;, &#x27;href&#x27;: &#x27;service-Other-Painting-Services&#x27;}]"> -->
                                                   
                                                     <a
                                                         href=" service-Interior-Paintingz "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900">Our Interior Paintingz service is top-notch! Our painters near me are experienced and can help you choose the perfect color for your home. We&#x27;ll work with you to ensure that the painting process is smooth and easy.</p> -->
                                                         <p class="mt-1 text-sm text-gray-500">Interior Paintingz</p>
                                                     </a>
-                                                <!-- </each> -->
-                                               <!--  -->
                                                  
                                                     <a
                                                         href=" service-Exterior-Painting "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
                                                         <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                     </a>
-                                                <!-- </each> -->
-                                               <!--  -->
                                                  
                                                     <a
                                                         href=" service-Kitchen-and-Cabinet-Refinishing "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900">If your kitchen cabinets are looking dated or tired, our refinishing service can give them a new lease of life. We&#x27;ll strip off the old finish and repaint them in a color of your choice. Plus, we can also reface any cabinet doors that need it.</p> -->
                                                         <p class="mt-1 text-sm text-gray-500">Kitchen and Cabinet Refinishing</p>
                                                     </a>
-                                                <!-- </each> -->
-                                               <!--  -->
                                                  
                                                     <a
                                                         href=" service-Drywall-and-Plastering "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
                                                         <p class="mt-1 text-sm text-gray-500">Drywall and Plastering</p>
                                                     </a>
-                                                <!-- </each> -->
-                                               <!--  -->
                                                  
                                                     <a
                                                         href=" service-Pre-paint-Washing "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
                                                         <p class="mt-1 text-sm text-gray-500">Pre-paint Washing</p>
                                                     </a>
-                                                <!-- </each> -->
-                                               <!--  -->
                                                  
                                                     <a
                                                         href=" service-Other-Painting-Services "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900"></p> -->
                                                         <p class="mt-1 text-sm text-gray-500">Other Painting Services</p>
                                                     </a>
-                                                <!-- </each> -->
-                                               <!--  -->
                                                
                                             </div>
                                         </div>
                                     </div>
-                                <!-- </if> -->
                                 
                                 
                             </div>
-                        <!-- </each> -->
                         
                             <div
                                 class="relative flex items-center"
@@ -543,9 +447,6 @@
                                 @keydown.escape.stop="desktopOpen = false"
                                 @click.away="desktopOpen = false"
                             >
-                            <!-- <div>navitem_3</div>  -->
-                                <!-- We decide between direct link and dropdown here -->
-                                <!-- <if condition="item.links"> -->
                                 
                                     <button
                                         type="button"
@@ -571,8 +472,6 @@
                                             />
                                         </svg>
                                     </button>
-                                <!-- </if> -->
-                                <!-- <else> -->
                                 
                                 
                                     <div
@@ -591,50 +490,37 @@
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-                                                <!-- Render each sublink -->
-                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;Interior Painting&#x27;, &#x27;href&#x27;: &#x27;gallery-Interior-Painting&#x27;}, {&#x27;title&#x27;: &#x27;Our Best Work&#x27;, &#x27;copy&#x27;: &#x27;Exterior Painting&#x27;, &#x27;href&#x27;: &#x27;gallery-Exterior-Painting&#x27;}, {&#x27;title&#x27;: &#x27;All Photos&#x27;, &#x27;copy&#x27;: &#x27;All Photos&#x27;, &#x27;href&#x27;: &#x27;gallery-All&#x27;}]"> -->
                                                   
                                                     <a
                                                         href=" gallery-Interior-Painting "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
                                                         <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
                                                     </a>
-                                                <!-- </each> -->
-                                               <!--  -->
                                                  
                                                     <a
                                                         href=" gallery-Exterior-Painting "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
                                                         <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                     </a>
-                                                <!-- </each> -->
-                                               <!--  -->
                                                  
                                                     <a
                                                         href=" gallery-All "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900">All Photos</p> -->
                                                         <p class="mt-1 text-sm text-gray-500">All Photos</p>
                                                     </a>
-                                                <!-- </each> -->
-                                               <!--  -->
                                                
                                             </div>
                                         </div>
                                     </div>
-                                <!-- </if> -->
                                 
                                 
                             </div>
-                        <!-- </each> -->
                         
                             <div
                                 class="relative flex items-center"
@@ -643,9 +529,6 @@
                                 @keydown.escape.stop="desktopOpen = false"
                                 @click.away="desktopOpen = false"
                             >
-                            <!-- <div>navitem_4</div>  -->
-                                <!-- We decide between direct link and dropdown here -->
-                                <!-- <if condition="item.links"> -->
                                 
                                     <a
                                         href=" reviews "
@@ -653,17 +536,14 @@
                                     >
                                         Reviews 
                                     </a>
-                                <!-- </else> -->
                                 
                                 
                                 
                             </div>
-                        <!-- </each> -->
                         
 
                     </div>
                 </div>
-                <!-- Mobile Button -->
                 <div class="flex flex-col items-center text-gray-500 xl:hidden">
                     <span>Menu</span>
                     <button @click="mobileOpen = !mobileOpen" class="p-2">
@@ -674,12 +554,10 @@
                     </button>
                 </div>
 
-                <!-- Side Content -->
                 <div class="items-center hidden space-x-5 xl:flex">
                     <p :class="{'translate-x-0': !scrolledFromTop, 'translate-x-12': scrolledFromTop}" class="text-gray-500 transition-transform">
                         
                     </p>
-                    <!-- CTA Primary -->
                     <div class="w-full sm:w-auto">
                         
                         <div class="w-full sm:w-auto">
@@ -699,7 +577,6 @@
                     
                     
                     </div>
-                    <!-- CTA Primary-Invert -->
                     <div class="inline-flex w-full ml-3 sm:w-auto">
                         
                     </div>
@@ -707,7 +584,6 @@
             </div>
         </div>
 
-        <!-- Mobile menu -->
         <div
             x-cloak
             x-show="mobileOpen"
@@ -723,7 +599,6 @@
             <div class="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
                 <div class="flex items-center justify-between px-5 pt-4">
                     <div>
-                        <!-- Logo Link -->
                         <a
                             href="/"
                             class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
@@ -738,19 +613,16 @@
                             class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                         >
                             <span class="sr-only">Close menu</span>
-                            <!-- Heroicon name: outline/x -->
                             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
                     </div>
                 </div>
-                <!-- Links and bottom CTA -->
                 <div class="overflow-y-scroll">
                     <div x-data="{ openMenu: '' }" class="flex flex-col px-2 pt-2 pb-3 space-y-1">
                         
                             <div x-trap.inert="openMenu == 'navitem_1'">
-                                <!-- We decide between direct link and dropdown here -->
                                 
                                     <a
                                         href=" index "
@@ -760,12 +632,9 @@
                                 
                                 
                             </div>
-                        <!-- </each> -->
                       
                             <div x-trap.inert="openMenu == 'navitem_2'">
-                                <!-- We decide between direct link and dropdown here -->
                                 
-                                    <!-- <if condition="item.links"> -->
                                     <button
                                         aria-haspopup="true"
                                         :aria-expanded="openMenu == 'navitem_2'"
@@ -792,8 +661,6 @@
                                     </button>
                                 
                                 
-                                    <!-- <if condition="item.links"> -->
-                                    <!-- Expandable Menu -->
                                     <div
                                         x-cloak
                                         x-show="openMenu == 'navitem_2'"
@@ -804,54 +671,38 @@
                                         aria-orientation="vertical"
                                     >
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
-                                            <!-- Render each sublink -->
                                             
                                                 <a href="service-Interior-Paintingz" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900">Our Interior Paintingz service is top-notch! Our painters near me are experienced and can help you choose the perfect color for your home. We&#x27;ll work with you to ensure that the painting process is smooth and easy.</p> -->
                                                     <p class="mt-1 text-sm text-gray-500">Interior Paintingz</p>
                                                 </a>
-                                            <!-- </each> -->
                                             
                                                 <a href="service-Exterior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
                                                     <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                 </a>
-                                            <!-- </each> -->
                                             
                                                 <a href="service-Kitchen-and-Cabinet-Refinishing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900">If your kitchen cabinets are looking dated or tired, our refinishing service can give them a new lease of life. We&#x27;ll strip off the old finish and repaint them in a color of your choice. Plus, we can also reface any cabinet doors that need it.</p> -->
                                                     <p class="mt-1 text-sm text-gray-500">Kitchen and Cabinet Refinishing</p>
                                                 </a>
-                                            <!-- </each> -->
                                             
                                                 <a href="service-Drywall-and-Plastering" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
                                                     <p class="mt-1 text-sm text-gray-500">Drywall and Plastering</p>
                                                 </a>
-                                            <!-- </each> -->
                                             
                                                 <a href="service-Pre-paint-Washing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
                                                     <p class="mt-1 text-sm text-gray-500">Pre-paint Washing</p>
                                                 </a>
-                                            <!-- </each> -->
                                             
                                                 <a href="service-Other-Painting-Services" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900"></p> -->
                                                     <p class="mt-1 text-sm text-gray-500">Other Painting Services</p>
                                                 </a>
-                                            <!-- </each> -->
                                             
                                         </div>
                                     </div>
                                 
                             </div>
-                        <!-- </each> -->
                       
                             <div x-trap.inert="openMenu == 'navitem_3'">
-                                <!-- We decide between direct link and dropdown here -->
                                 
-                                    <!-- <if condition="item.links"> -->
                                     <button
                                         aria-haspopup="true"
                                         :aria-expanded="openMenu == 'navitem_3'"
@@ -878,8 +729,6 @@
                                     </button>
                                 
                                 
-                                    <!-- <if condition="item.links"> -->
-                                    <!-- Expandable Menu -->
                                     <div
                                         x-cloak
                                         x-show="openMenu == 'navitem_3'"
@@ -890,34 +739,25 @@
                                         aria-orientation="vertical"
                                     >
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
-                                            <!-- Render each sublink -->
                                             
                                                 <a href="gallery-Interior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
                                                     <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
                                                 </a>
-                                            <!-- </each> -->
                                             
                                                 <a href="gallery-Exterior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900">Our Best Work</p> -->
                                                     <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                 </a>
-                                            <!-- </each> -->
                                             
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900">All Photos</p> -->
                                                     <p class="mt-1 text-sm text-gray-500">All Photos</p>
                                                 </a>
-                                            <!-- </each> -->
                                             
                                         </div>
                                     </div>
                                 
                             </div>
-                        <!-- </each> -->
                       
                             <div x-trap.inert="openMenu == 'navitem_4'">
-                                <!-- We decide between direct link and dropdown here -->
                                 
                                     <a
                                         href=" reviews "
@@ -927,10 +767,8 @@
                                 
                                 
                             </div>
-                        <!-- </each> -->
                       
                     </div>
-                    <!-- Bottom CTAs -->
                     <div class="d-none p-1 bg-primary sm:bg-gray-50">
                         
                             <button
@@ -958,7 +796,6 @@
     @scroll.window="window.pageYOffset >= 400 && (window.innerHeight + window.scrollY) <= document.body.scrollHeight - 500 ? buttonVisible = true : buttonVisible = false"
     class="fixed z-40 right-7 bottom-7"
 >
-    <!-- Text Us Button -->
     <div
         x-cloak
         x-show="buttonVisible"
@@ -987,40 +824,17 @@
 
 
 
-<!-- Our Best Work Component -->
 <section class="overflow-hidden bg-white">
     <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
-        <!-- Heading -->
         <h1>
             <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Our Best Work</span>
             <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Exterior Painting</span>
         </h1>
-        <!-- Images Grid -->
         <div class="relative mt-12">
-            <!-- This component adds a grid of gallery items and a modal to display full width images -->
-
-<!-- This are the parameters of the component. In the real python environment you want to call the component with the items as parameter -->
-<!-- <script locals>
-    module.exports = {
-        items: [
-            {
-                title: "Mowing | Austin, TX",
-                copy: "Cabin in the woods with a green background that’s a client. Landscaped, mowed lawn. Id irure voluptate ea et minim tempor cillum nisi voluptate Lorem ad enim pariatur. Ut mollit culpa est ipsum irure eiusmod consectetur cupidatat velit qui nisi officia. Exercitation nostrud dolor mollit elit eu exercitation voluptate reprehenderit tempor esse cupidatat.",
-                image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
-            },
-            { title: "Mowing | Austin, TX", copy: "Landscaping at a client’s home", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60" },
-            { title: "Mowing | Austin, TX", copy: "Landscaping at a client’s home", image: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60" },
-            { title: "Mowing | Austin, TX", copy: "Landscaping at a client’s home", image: "https://images.unsplash.com/photo-1576941089067-2de3c901e126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60" },
-            { title: "Mowing | Austin, TX", copy: "Landscaping at a client’s home", image: "https://images.unsplash.com/photo-1584738766473-61c083514bf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60" },
-            { title: "Mowing | Austin, TX", copy: "Landscaping at a client’s home", image: "https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60" },
-        ],
-    };
-</script> -->
-
-<div
+            <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 0,
+        amountOfImages: 1,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1036,14 +850,28 @@
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
         
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/033dc2e7-93ad-4168-b888-94a03982d128.png" alt="Exterior Painting for BoomCo in CITY, STATE" loading="lazy"/> 
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
     </ul>
 
-    <!-- Gallery Modal -->
     <template x-teleport="body">
         <div x-cloak x-show="galleryModalOpen" @keydown.escape.prevent.stop="galleryModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="galleryModalOpen">
-            <!-- Overlay -->
             <div x-show="galleryModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
-            <!-- Panel -->
             <div
                 x-show="galleryModalOpen"
                 x-transition:enter="ease-out duration-300"
@@ -1056,9 +884,7 @@
                 class="relative flex items-center justify-center w-full h-full"
             >
                 <div @click.stop class="flex flex-col w-full max-h-full pb-12 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-4 sm:my-8 sm:align-middle sm:max-w-5xl">
-                    <!-- Header -->
                     <div class="relative h-16 px-6 bg-white">
-                        <!-- Title -->
                         <h2 class="sr-only" :id="$id('modal-title')">Modal Gallery</h2>
 
                         <button @click="galleryModalOpen = false;" class="absolute p-1 transition rounded top-5 right-1 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
@@ -1083,6 +909,13 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/033dc2e7-93ad-4168-b888-94a03982d128.png" alt="Exterior Painting for BoomCo in CITY, STATE" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
                                 
                             </ul>
 
@@ -1109,17 +942,13 @@
 
 
 
-<!-- CTA Component -->
 <section class="bg-white">
     <div class="px-4 py-12 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
-        <!-- Heading -->
         <h2 class="text-3xl font-extrabold sm:text-4xl">
             <span class="block">Ready to get started?</span>
             <span class="block">Book an appointment today.</span>
         </h2>
-        <!-- CTAs -->
         <div class="flex justify-center mt-8">
-            <!-- CTA Primary -->
             
             
             <div class="w-full sm:w-auto">
@@ -1133,33 +962,14 @@
             
                 
             
-<!--             
-            <div class="w-full sm:w-auto">
-                <button
-                @click="contactModalOpen = true"
-                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-primary"
-                >
-                    Text Us
-            </button>
-            </div>
-            <div class="inline-flex w-full ml-3 sm:w-auto">
-                <a
-                    href="#"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary"
-                >
-                    Book Now
-                </a>
-            </div> -->
         </div>
     </div>
 </section>
 
-<!-- Footer Component -->
 <footer class="bg-primary" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-16 lg:pb-10 lg:px-8">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-          <!-- Image, description and logos -->
           <div class="space-y-8 xl:col-span-1">
               
               <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3SP1GR5UOYTMSI6CJRVZI30AJ4CSGHJKS6J5L6MX.jpeg" alt="" />
@@ -1169,14 +979,11 @@
                    
                       CITY, STATE <br/>
                   
-                  None
-                  <!-- Is this supposed to be here and correct?  -->
-                  <!-- The finest landscaping in Austin & surrounding areas. Exceptional, professional service. You are our priority! -->
+                  4148402721
               </p>
-              <div class="flex flex-wrap justify-between align-middle ">
-                  <!-- are these conditional? and linked to corret links? -->
+              <div class="flex flex-wrap align-middle ">
                   
-                  <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/" class="text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                  <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
                       <span class="sr-only">Facebook</span>
                       <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                           <path
@@ -1189,16 +996,6 @@
                   
                   
                   
-                  <!-- <a href="" class="text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
-                      <span class="sr-only">GitHub</span>
-                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                          <path
-                              fill-rule="evenodd"
-                              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                              clip-rule="evenodd"
-                          />
-                      </svg>
-                  </a> -->
                   
                   
                   
@@ -1212,11 +1009,8 @@
                   
               </div>
           </div>
-          <!-- Links -->
           <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
-              <!-- First two footer items -->
               <div class="md:grid md:grid-cols-2 md:gap-8">
-                  <!-- Company Links -->
                   <div>
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Company</h3>
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
@@ -1227,6 +1021,16 @@
                                   >Home</a
                               >
                           </li>
+                          
+                              
+                              <li>
+                                  <a
+                                      href="#gallery"
+                                      class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                      >Gallery</a
+                                  >
+                              </li>
+                              
                           
                           
                           <li>
@@ -1250,7 +1054,6 @@
                           
                       </ul>
                   </div>
-                  <!-- Services Links -->
                   <div class="mt-12 md:mt-0">
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Services</h3>
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
@@ -1306,9 +1109,7 @@
                       </ul>
                   </div>
               </div>
-              <!-- Second two footer items -->
               <div class="md:grid md:grid-cols-2 md:gap-8">
-                  <!-- Locations Links -->
                   <div>
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Service Areas</h3>
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
@@ -1323,7 +1124,6 @@
                           
                       </ul>
                   </div>
-                  <!-- Hours Links -->
                   <div class="mt-12 md:mt-0">
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Hours</h3>
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
@@ -1361,7 +1161,6 @@
               </div>
           </div>
       </div>
-      <!-- Bottom Part -->
       <div class="pt-8 mt-12 text-center border-t-2 border-primary-darker">
           <p class="inline-flex items-center text-base text-gray-100 xl:text-center">
               Built with ♥ from
@@ -1386,7 +1185,6 @@
   </div>
 </footer>
 
-<!-- Modal -->
 <template x-teleport="body">
     <div
             x-show="contactModalOpen"
@@ -1399,7 +1197,6 @@
             x-trap.noscroll.inert="contactModalOpen"
             id="send-text-modal"
     >
-        <!-- Overlay -->
         <div
                 x-show="contactModalOpen"
                 x-transition:enter="ease-out duration-300"
@@ -1411,7 +1208,6 @@
                 aria-hidden="true"
                 class="fixed inset-0 bg-black bg-opacity-50"
         ></div>
-        <!-- Panel -->
         <div
                 x-show="contactModalOpen"
                 x-transition:enter="ease-out duration-300"
@@ -1425,13 +1221,10 @@
         >
             <div
                     @click.stop
-                    class="flex flex-col w-full 2xl:h-max 2xl:mt-8 h-full sm:h-fit overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl"
+                    class="flex flex-col w-full 2xl:h-max 2xl:mt-8 h-full overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl"
             >
-                <!-- Header -->
                 <div class="relative px-6 bg-white">
-                    <!-- Title -->
                     <h2 class="mt-6 text-lg font-medium text-center" :id="$id('modal-title')">Send us a text</h2>
-                    <!-- Small overlay for scrolling area  -->
                     <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8 bg-gradient-to-b from-white"></div>
                     <button
                             @click="contactModalOpen = false;"
@@ -1444,12 +1237,10 @@
                     </button>
                 </div>
 
-                <!-- Form -->
 
                 <form class="overflow-y-auto pb-20 sm:w-full" onsubmit="send_sms('BoomCo')">
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
                         <div class="h-full px-6 pb-1 mt-6 space-y-6 sm:grid sm:grid-cols-2 sm:min-w-max sm:space-x-3">
-                            <!-- Full Name -->
                             
                             <div class="sm:ml-3 sm:transform sm:translate-y-6">
                                 <label for="contact-full-name" class="sr-only">Full Name</label>
@@ -1463,7 +1254,6 @@
                                 />
                             </div>
                             
-                            <!-- Number -->
                             
                             <div>
                                 <label for="contact-phone-number" class="sr-only">Phone Number</label>
@@ -1477,7 +1267,6 @@
                                 />
                             </div>
                             
-                            <!-- Email -->
                             
                             <div>
                                 <label for="contact-email" class="sr-only">EmailTrue</label>
@@ -1492,7 +1281,6 @@
                             </div>
                             
 
-                            <!-- Address -->
                             
                             <div>
                                 <label for="contact-address" class="sr-only">Address</label>
@@ -1505,7 +1293,6 @@
                                 />
                             </div>
                             
-                            <!-- Preferred date of service-->
                             
                             <div>
                                 <label for="contact-date" class="sr-only">Preferred Date of Service</label>
@@ -1518,7 +1305,6 @@
                                 />
                             </div>
                             
-                            <!--                        Promo Code-->
                             
                             <div class='sm:col-span-2'>
                                 
@@ -1528,75 +1314,74 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115294"
-                                                    name="115294"
+                                                    id="contact-service-115388"
+                                                    name="115388"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Paintingz"
                                             />
-                                            <label for="contact-label-service-115294" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
+                                            <label for="contact-label-service-115388" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115295"
-                                                    name="115295"
+                                                    id="contact-service-115389"
+                                                    name="115389"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-115295" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                            <label for="contact-label-service-115389" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115296"
-                                                    name="115296"
+                                                    id="contact-service-115390"
+                                                    name="115390"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-115296" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                            <label for="contact-label-service-115390" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115297"
-                                                    name="115297"
+                                                    id="contact-service-115391"
+                                                    name="115391"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Drywall and Plastering"
                                             />
-                                            <label for="contact-label-service-115297" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                            <label for="contact-label-service-115391" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115298"
-                                                    name="115298"
+                                                    id="contact-service-115392"
+                                                    name="115392"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Pre-paint Washing"
                                             />
-                                            <label for="contact-label-service-115298" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
+                                            <label for="contact-label-service-115392" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115299"
-                                                    name="115299"
+                                                    id="contact-service-115393"
+                                                    name="115393"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Other Painting Services"
                                             />
-                                            <label for="contact-label-service-115299" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                            <label for="contact-label-service-115393" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
                                         </div>
                                         
                                     </div>
                                 </fieldset>
                                 
                                 <div>
-                                <!-- How can we help you? (Concern) -->
                                 
                                 <div class='sm:flex sm:flex-1 sm:mt-3 sm:space-x-3'>
                                 <div class='sm:flex-grow'>
@@ -1610,7 +1395,6 @@
                                     ></textarea>
                                 </div>
                                 
-                                <!-- Services -->
                                 
                                 
                                 <fieldset class="sm:hidden my-3 sm:mb-0">
@@ -1620,74 +1404,73 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115294"
-                                                    name="115294"
+                                                    id="contact-service-115388"
+                                                    name="115388"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Paintingz"
                                             />
-                                            <label for="contact-label-service-115294" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
+                                            <label for="contact-label-service-115388" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115295"
-                                                    name="115295"
+                                                    id="contact-service-115389"
+                                                    name="115389"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-115295" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                            <label for="contact-label-service-115389" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115296"
-                                                    name="115296"
+                                                    id="contact-service-115390"
+                                                    name="115390"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-115296" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                            <label for="contact-label-service-115390" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115297"
-                                                    name="115297"
+                                                    id="contact-service-115391"
+                                                    name="115391"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Drywall and Plastering"
                                             />
-                                            <label for="contact-label-service-115297" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                            <label for="contact-label-service-115391" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115298"
-                                                    name="115298"
+                                                    id="contact-service-115392"
+                                                    name="115392"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Pre-paint Washing"
                                             />
-                                            <label for="contact-label-service-115298" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
+                                            <label for="contact-label-service-115392" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-115299"
-                                                    name="115299"
+                                                    id="contact-service-115393"
+                                                    name="115393"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Other Painting Services"
                                             />
-                                            <label for="contact-label-service-115299" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                            <label for="contact-label-service-115393" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
                                         </div>
                                         
                                     </div>
                                 </fieldset>
                                 
-                                <!-- Photo Upload -->
                                 
                             </div>
                             </div>
@@ -1776,12 +1559,9 @@
 		</div>
 	</div>
 </div>
-<!-- Modal -->
 <template x-teleport="body">
     <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
-        <!-- Overlay -->
         <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
-        <!-- Panel -->
         <div
             x-show="reviewModalOpen"
             x-transition:enter="ease-out duration-300"
@@ -1794,10 +1574,7 @@
             class="relative flex items-center justify-center w-full h-full"
         >
             <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl px-6 sm:my-8 sm:align-middle sm:max-w-sm">
-                <!-- <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-6 sm:my-8 sm:align-middle sm:max-w-sm"> -->
-                <!-- Header -->
                 <div class="relative px-6 bg-white">
-                    <!-- Title -->
                     <h2 class="mt-16 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
                     <button @click="reviewModalOpen = false;" class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
                         <span class="sr-only">Close modal</span>
@@ -1807,14 +1584,10 @@
                     </button>
                 </div>
 
-                <!-- Review Links. TODO: Think about target=_blank and noopener noreferrer here -->
                 <ul class="mt-2 space-y-6">
                     <span hidden class="sr-only">Review types</span>
-                    <!-- Google Link -->
                     
-                    <!-- Facebook Link -->
                     
-                    <!-- Yelp Link -->
                     
                     <li>
                         <a target="_blank" rel="noopener noreferrer" href="https://bucks.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">Facebook</a>
@@ -1828,25 +1601,5 @@
 
 
 
-<!-- <div x-data="{ open: false }">
-    <button @click="open = true">Open Dialogue</button>
-
-    <span x-show="open" x-trap.inert.noscroll="open">
-        ...
-
-        <div x-data="{ open: false }">
-            <button @click="open = true">Open Nested Dialogue</button>
-
-            <span x-show="open" x-trap="open">
-                ...
-
-                <button @click="open = false">Close Nested Dialogue</button>
-            </span>
-        </div>
-
-        <button @click="open = false">Close Dialogue</button>
-    </span>
-</div>
-<p>Nostrud eu amet nostrud id ut cillum sint minim anim Lorem nulla nisi cillum commodo. Dolor exercitation incididunt et velit qui ea nisi. Do consectetur in ex adipisicing. Irure id aute non nulla eiusmod incididunt deserunt labore amet. Consequat proident nisi amet est consequat sunt eiusmod aute ut exercitation amet. Eu eu Lorem minim duis culpa sit qui nostrud irure aliquip irure occaecat. Duis eu duis id veniam.</p> -->
 </body>
 </html>
