@@ -1800,7 +1800,7 @@
             <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 6,
+        amountOfImages: 7,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1821,7 +1821,7 @@
                     <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                              
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/5796cf6c-090a-48a8-8483-11a81d499990.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ecae506a-81ac-49d0-9b1d-a76428a79d73.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
                             
                         </div>
 
@@ -1838,7 +1838,7 @@
                     <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                              
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/032e7a6c-6506-470d-8783-a905f80eaeaa.jpeg" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/5796cf6c-090a-48a8-8483-11a81d499990.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
                             
                         </div>
 
@@ -1872,7 +1872,7 @@
                     <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                              
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/40429609-14a8-4fba-b756-65a946560c15.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/92440fcb-6b15-42b7-bf6a-ba28f0cbb211.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
                             
                         </div>
 
@@ -1889,7 +1889,7 @@
                     <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                              
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/92440fcb-6b15-42b7-bf6a-ba28f0cbb211.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/1ded6732-2564-4096-96e6-c5a51b498c52.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
                             
                         </div>
 
@@ -1906,7 +1906,24 @@
                     <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                              
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/1ded6732-2564-4096-96e6-c5a51b498c52.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/40429609-14a8-4fba-b756-65a946560c15.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/032e7a6c-6506-470d-8783-a905f80eaeaa.jpeg" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/> 
                             
                         </div>
 
@@ -1963,14 +1980,14 @@
                                 
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5796cf6c-090a-48a8-8483-11a81d499990.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ecae506a-81ac-49d0-9b1d-a76428a79d73.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/032e7a6c-6506-470d-8783-a905f80eaeaa.jpeg" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5796cf6c-090a-48a8-8483-11a81d499990.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -1984,21 +2001,28 @@
                                 
                                     <li class="flex flex-col" x-show="activeImage === 3">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/40429609-14a8-4fba-b756-65a946560c15.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/92440fcb-6b15-42b7-bf6a-ba28f0cbb211.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 4">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/92440fcb-6b15-42b7-bf6a-ba28f0cbb211.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1ded6732-2564-4096-96e6-c5a51b498c52.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 5">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1ded6732-2564-4096-96e6-c5a51b498c52.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/40429609-14a8-4fba-b756-65a946560c15.png" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 6">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/032e7a6c-6506-470d-8783-a905f80eaeaa.jpeg" alt="Interior Paintingz for BoomCooop in milwaukee, wi" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3316,7 +3340,7 @@
                     <span hidden class="sr-only">Review types</span>
                     
                     <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://google.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">Google</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://google.com/goop" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">Google</a>
                     </li>
                     
                     
