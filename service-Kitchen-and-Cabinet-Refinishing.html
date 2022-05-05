@@ -10,10 +10,10 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>painters near me in CITY, STATE | Caro Painting |  Service | Kitchen And Cabinet Refinishing</title>
+    <title>painters near me in milwaukee, wi | BoomCo |  Service | Kitchen And Cabinet Refinishing</title>
     <meta name="description"
-          content="">
-    <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/Caro_Painting.png" type="image/x-icon">
+          content="If your kitchen cabinets are looking dated or tired, our refinishing service can give them a new lease of life.">
+    <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/5f7e0d62-b6d4-460f-81f7-15a031f7331a.png" type="image/x-icon">
     <link rel="stylesheet" href="https://prophone-templates.vercel.app/assets/output.css">
     
 
@@ -275,15 +275,58 @@
 
                         });
 
-
-
-
     </script>
 </head>
-<body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-24 md:pt-44">
+<body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-56 md:pt-48">
 
-
-<nav class="fixed inset-x-0 top-0 z-20">
+<div
+    id="launch-site-banner"
+    x-data="{ scrolledFromTop: false }"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
+    class="fixed inset-x-0 top-0 z-20 bg-orange-600 sm:h-16 transition-all duration-200"
+>
+    <div
+        :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
+        class="relative transition-all duration-200"
+    >
+        <div
+            :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
+            class="flex flex-col justify-center sm:flex-row sm:justify-between sm:h-16 w-4/5 items-start sm:items-center m-auto transition-all duration-200"
+        >
+            <div class="flex flex-row items-center">
+                <div class="hidden sm:flex mr-2 bg-orange-900 rounded-md p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                    </svg>
+                </div>
+                <div
+                    :class="{'hidden': !scrolledFromTop, 'hidden': scrolledFromTop}"
+                    class="sm:flex text-white text-sm mb-3 sm:mb-0"
+                >
+                    You’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
+                </div>
+            </div>
+            <div class="flex flex-row items-center">
+                <a class="flex bg-white px-4 py-2 rounded-md text-orange-600 mr-4 text-sm" href="http://app.prophone.com?id=7E84KL0G65LOWTD7AFGSOWPUQ7H8AI">
+                    Launch my site
+                </a>
+                <a class="flex font-bold underline underline-offset-4 text-white text-sm" href="https://www.prophone.com/learn-more">
+                    Learn more →
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<nav
+    id="nav-bar"
+    x-data="{ scrolledFromTop: false }"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    :class="{'top-32': !scrolledFromTop, 'top-16': scrolledFromTop}"
+    class="fixed inset-x-0 z-20"
+>
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
@@ -304,7 +347,7 @@
                         >
                             <img
                                 class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto"
-                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/Caro_Painting.png"
+                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5f7e0d62-b6d4-460f-81f7-15a031f7331a.png"
                                 alt="Brand Logo"
                             />
                         </a>
@@ -386,11 +429,11 @@
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                   
                                                     <a
-                                                        href=" service-Interior-Painting "
+                                                        href=" service-Interior-Paintingz "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Interior Paintingz</p>
                                                     </a>
                                                  
                                                     <a
@@ -410,27 +453,27 @@
                                                     </a>
                                                  
                                                     <a
-                                                        href=" service-Drywall-and-Plastering "
+                                                        href=" service-nop "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">Drywall and Plastering</p>
+                                                        <p class="mt-1 text-sm text-gray-500">nop</p>
                                                     </a>
                                                  
                                                     <a
-                                                        href=" service-Pre-paint-Washing "
+                                                        href=" service-NEW-SERVICE-4 "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">Pre-paint Washing</p>
+                                                        <p class="mt-1 text-sm text-gray-500">NEW SERVICE 4</p>
                                                     </a>
                                                  
                                                     <a
-                                                        href=" service-Other-Painting-Services "
+                                                        href=" service-NEW-SERVICE-5 "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">Other Painting Services</p>
+                                                        <p class="mt-1 text-sm text-gray-500">NEW SERVICE 5</p>
                                                     </a>
                                                
                                             </div>
@@ -492,19 +535,11 @@
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                   
                                                     <a
-                                                        href=" gallery-Gallery-4 "
+                                                        href=" gallery-yurp "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 4</p>
-                                                    </a>
-                                                 
-                                                    <a
-                                                        href=" gallery-Exterior-Painting "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
+                                                        <p class="mt-1 text-sm text-gray-500">yurp</p>
                                                     </a>
                                                  
                                                     <a
@@ -516,27 +551,19 @@
                                                     </a>
                                                  
                                                     <a
-                                                        href=" gallery-Gallery-3 "
+                                                        href=" gallery-Exterior-Painting "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 3</p>
+                                                        <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                     </a>
                                                  
                                                     <a
-                                                        href=" gallery-Gallery-5 "
+                                                        href=" gallery-fvb "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 5</p>
-                                                    </a>
-                                                 
-                                                    <a
-                                                        href=" gallery-Gallery-6 "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 6</p>
+                                                        <p class="mt-1 text-sm text-gray-500">fvb</p>
                                                     </a>
                                                  
                                                     <a
@@ -573,6 +600,25 @@
                                 
                             </div>
                         
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" team "
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                    >
+                                        Team 
+                                    </a>
+                                
+                                
+                                
+                            </div>
+                        
 
                     </div>
                 </div>
@@ -598,7 +644,7 @@
                             @click="contactModalOpen = true"
                                 class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none hover:bg-primary-darker sm:w-auto bg-primary focus-visible:ring-2 ring-primary ring-opacity-75 ring-offset-2"
                                 >
-                                Send us a Text
+                                Send us a text pls
                             </button>
                         </div> 
                         
@@ -610,6 +656,16 @@
                     
                     </div>
                     <div class="inline-flex w-full ml-3 sm:w-auto">
+                        
+                        <div class="inline-flex w-full ml-3 sm:w-auto">
+                            <a
+                                href="//"
+                            :class="{'scale-100': !scrolledFromTop, 'scale-75': scrolledFromTop}"
+                            class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
+                                >
+                                Book Now or else
+                            </a>
+                        </div>
                         
                     </div>
                 </div>
@@ -635,7 +691,7 @@
                             href="/"
                             class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
                         >
-                            <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/Caro_Painting.png" alt="Brand Logo" />
+                            <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5f7e0d62-b6d4-460f-81f7-15a031f7331a.png" alt="Brand Logo" />
                         </a>
                     </div>
                     <div class="-mr-2">
@@ -704,8 +760,8 @@
                                     >
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             
-                                                <a href="service-Interior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
+                                                <a href="service-Interior-Paintingz" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">Interior Paintingz</p>
                                                 </a>
                                             
                                                 <a href="service-Exterior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -716,16 +772,16 @@
                                                     <p class="mt-1 text-sm text-gray-500">Kitchen and Cabinet Refinishing</p>
                                                 </a>
                                             
-                                                <a href="service-Drywall-and-Plastering" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Drywall and Plastering</p>
+                                                <a href="service-nop" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">nop</p>
                                                 </a>
                                             
-                                                <a href="service-Pre-paint-Washing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Pre-paint Washing</p>
+                                                <a href="service-NEW-SERVICE-4" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">NEW SERVICE 4</p>
                                                 </a>
                                             
-                                                <a href="service-Other-Painting-Services" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Other Painting Services</p>
+                                                <a href="service-NEW-SERVICE-5" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">NEW SERVICE 5</p>
                                                 </a>
                                             
                                         </div>
@@ -772,28 +828,20 @@
                                     >
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             
-                                                <a href="gallery-Gallery-4" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 4</p>
-                                                </a>
-                                            
-                                                <a href="gallery-Exterior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
+                                                <a href="gallery-yurp" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">yurp</p>
                                                 </a>
                                             
                                                 <a href="gallery-Interior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
                                                 </a>
                                             
-                                                <a href="gallery-Gallery-3" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 3</p>
+                                                <a href="gallery-Exterior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
                                                 </a>
                                             
-                                                <a href="gallery-Gallery-5" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 5</p>
-                                                </a>
-                                            
-                                                <a href="gallery-Gallery-6" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 6</p>
+                                                <a href="gallery-fvb" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">fvb</p>
                                                 </a>
                                             
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -816,6 +864,17 @@
                                 
                             </div>
                       
+                            <div x-trap.inert="openMenu == 'navitem_5'">
+                                
+                                    <a
+                                        href=" team "
+                                        class=" 'text-gray-700'  block px-3 py-2 text-base font-medium rounded-md border-secondary transition"
+                                        >Team</a
+                                    >
+                                
+                                
+                            </div>
+                      
                     </div>
                     <div class="d-none p-1 bg-primary sm:bg-gray-50">
                         
@@ -823,9 +882,18 @@
                             @click="contactModalOpen = true"
                             class="relative block w-full px-5 py-3 font-medium text-center rounded-md  focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary  hover:bg-gray-100"
                             >
-                                Send us a Text
+                                Send us a text pls
                             </button>
                         
+                        
+                            <a
+                                target="_blank" rel="noopener noreferrer" 
+                                href="//"
+                            :class="{'scale-100': !scrolledFromTop, 'scale-75': scrolledFromTop}"
+                            class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
+                                >
+                                Book Now or else
+                            </a>
                          
                      
                 
@@ -838,6 +906,31 @@
     </div>
 </nav>
 
+<script>
+    const navBar = document.getElementById('nav-bar')
+    const launchBanner = document.getElementById('launch-site-banner')
+
+    function detectMob() {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            return true
+        } else { 
+            return false
+        }
+    }
+    const isMobile = detectMob()
+
+    if (window.location.href.includes('prosite.prophone.com')) {
+        launchBanner.style.display = 'block'
+        if (isMobile) {
+            navBar.className = "fixed inset-x-0 sm:top-16 z-20 transition-all duration-200"
+        } else {
+            navBar.className = "fixed inset-x-0 top-0 sm:top-16 z-20 transition-all duration-200"
+        }
+    } else {
+        launchBanner.style.display = 'none'
+        navBar.className = "fixed inset-x-0 !top-0 sm:top-0 z-20 transition-all duration-200"
+    }
+</script>
 <div
     x-data="{ buttonVisible: false }"
     x-init="buttonVisible = window.pageYOffset >= 400 && (window.innerHeight + window.pageYOffset) <= document.body.scrollHeight - 500"
@@ -911,7 +1004,7 @@
                     <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Services</span>
                     <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Kitchen and Cabinet Refinishing</span>
                 </h1>
-                <p class="max-w-3xl text-xl text-center text-gray-500"></p>
+                <p class="max-w-3xl text-xl text-center text-gray-500">If your kitchen cabinets are looking dated or tired, our refinishing service can give them a new lease of life. We&#x27;ll strip off the old finish and repaint them in a color of your choice. Plus, we can also reface any cabinet doors that need it.</p>
             </div>
             <div class="flex justify-center w-full mt-8">
                      
@@ -921,11 +1014,20 @@
                     @click="contactModalOpen = true"
                     class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-primary"
                     >
-                    Get a Free Quote
+                    Get yer quote here
                 </button>
             </div> 
             
                 
+            
+            <div class="inline-flex w-full ml-3 sm:w-auto">
+                <a
+                target = "_blank" href="mailto:None?subject=[company type] Job - Requesting a quote&body=Hi [[Owner Name]],%0d%0a %0d%0a  My name is [your name]. I&#x27;m writing from your website about requesting a quote for a [[company type]] job. I&#x27;ve included my information below - %0d%0a%0d%0a Quick Description: %0d%0a Address: [your address here] %0d%0a Urgency: [low, medium, high] %0d%0a Would like a quote by: [date] %0d%0a Additional notes: %0d%0a %0d%0a Thanks!"
+                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary"
+                >
+                    Email Us NOW
+                </a>
+            </div>
             
             </div>
         </div>
@@ -1031,11 +1133,11 @@
             <content>
                 
                     
-                        <p></p>
+                        <p>You&#x27;re likely considering kitchen and cabinet refinishing because your cabinets are outdated, damaged, or just don&#x27;t match your current design scheme. Regardless of the reason, here are four reasons why you should book a service with BoomCo:<br><br>1. You&#x27;ll save money in the long run.<br><br>Refinishing your cabinets is a much more affordable option than replacing them entirely. In many cases, it can be done for a fraction of the cost.<br><br>2. You&#x27;ll get a brand new look.<br><br>Cabinet refinishing can completely transform the look of your kitchen - and you don&#x27;t have to settle for outdated styles or colors. Our team can work with you to choose a new color and style that will perfectly match your current decor.<br><br>3. Your cabinets will be durable and long-lasting.<br><br>Our team uses only the highest quality materials and finishes in our cabinet refinishing process, which means your cabinets will be durable and long-lasting. You won&#x27;t have to worry about them fading or chipping over time.<br><br>4. You&#x27;ll get a professional finish every time.<br><br>Our team of experienced professionals will ensure that your cabinets are refinished to perfection every time - so you can relax and enjoy your new look without having to worry about the details.</p>
                     
                 
                     
-                        <p></p>
+                        <p>Kitchen and Cabinet Refinishing<br><br>There are a few reasons why you should book a Kitchen and Cabinet refinishing service from BoomCo. The first reason is that the process is much less invasive than a full kitchen remodel. With cabinet refinishing, the existing cabinets are not removed so there is less mess and disruption to your home. In addition, the cost of refinishing cabinets is much less than replacing them altogether.<br><br>Another reason to consider cabinet refinishing is that it can give your kitchen a new look without having to spend a lot of money. By sanding down and repainting your cabinets, you can give them a fresh new look that will brighten up your entire kitchen. And if you are not happy with the current colour of your cabinets, cabinet refinishing allows you to choose any colour you want – so you can create the perfect look for your kitchen.<br><br>Finally, cabinet refinishing is a great way to update your kitchen without having to do any major renovations. If your appliances are still in good condition, but you’re tired of the look of your kitchen, cabinet refinishing can be a great way to give it a fresh new feel without spending too much money. So if you’re considering updating your kitchen, be sure to consider cabinet refinishing as an option – it may be just what you need to give your kitchen an updated look.</p>
                     
                 
             </content>
@@ -1048,10 +1150,10 @@
 
         <div class="flex flex-col items-center space-y-5">
             <h2>
-                <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary"> 3+ 5-star Reviews</span>
-                <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Testimonials &amp; Reviews</span>
+                <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary"> 2+ 5-star Reviews</span>
+                <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Testimonials &amp; Reviewzzz</span>
             </h2>
-            <p class="max-w-3xl text-xl text-center text-gray-500">Don&#x27;t just take our word for it</p>
+            <p class="max-w-3xl text-xl text-center text-gray-500">Don&#x27;t just take our word for it, just don&#x27;t</p>
             <button
                 @click="reviewModalOpen = true;"
                 class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition border-2 border-transparent rounded-md  text-primary-foreground hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 bg-primary"
@@ -1123,95 +1225,13 @@
                                         />
                                     </svg>
                                     <p lorem="1" class="relative text-lg font-medium">
-                                        Easy to find, easy to work with, all around a 5-star experience.
+                                        Recommend them 100% - so responsive and do great work. I keep getting compliments!
                                     </p>
                                 </div>
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
-                                        <span class="block font-medium text-primary">Reagan Owen</span>
-                                        <span class="block font-medium">CITY, STATE</span>
-                                    </div>
-
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">None</span>
-                                        
-                                    
-                                    </div>
-                                </footer>
-                            </blockquote>
-                        </li>
-                    
-                    
-                </ul>
-            
-                <ul class="space-y-8">
-                    
-                    
-
-                        <li class=" hidden sm:block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
-                            <div class="flex">
-                                <div aria-hidden="true" class="space-x-1.5 flex">
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                </div>
-                                <span class="sr-only"> out of 5 stars</span>
-                            </div>
-
-                            <blockquote class="mt-6">
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
-                                        Reliable, trustworthy, all around stellar. Check them out!
-                                    </p>
-                                </div>
-                                <footer class="flex items-center justify-between mt-8 space-x-4">
-                                    <div>
-                                        <span class="block font-medium text-primary">McKenna Mueller</span>
-                                        <span class="block font-medium">CITY, STATE</span>
+                                        <span class="block font-medium text-primary">Chaya Kline</span>
+                                        <span class="block font-medium">milwaukee, wi</span>
                                     </div>
 
                                     <div class="flex-shrink-0">
@@ -1293,7 +1313,7 @@
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
                                         <span class="block font-medium text-primary">Chaya Kline</span>
-                                        <span class="block font-medium">CITY, STATE</span>
+                                        <span class="block font-medium">milwaukee, wi</span>
                                     </div>
 
                                     <div class="flex-shrink-0">
@@ -1305,6 +1325,10 @@
                             </blockquote>
                         </li>
                     
+                    
+                </ul>
+            
+                <ul class="space-y-8">
                     
                 </ul>
             
@@ -1340,7 +1364,7 @@
         <div class="z-10 row-start-1 space-y-4 lg:col-start-4">
             <h2 class="text-3xl font-extrabold text-primary lg:text-4xl">Service Areas</h2>
             <p id="proudLocation" class="text-xl text-gray-500">
-                Proudly Serving   CITY & Surrounding Areas  
+                Proudly Serving   milwaukee & Surrounding Areas  
             </p>
         </div>
         <div class="relative col-span-3 row-start-1 mt-6 lg:mt-0 lg:col-start-1">
@@ -1414,8 +1438,8 @@
                     async
                   ></script> 
               
-                <span class="sr-only" id="city">CITY</span>
-                <span class="sr-only" id="state">STATE</span>
+                <span class="sr-only" id="city">milwaukee</span>
+                <span class="sr-only" id="state">wi</span>
                 <span class="sr-only" id="radius">50</span>
                 </div>
             </div>
@@ -1447,11 +1471,20 @@
                     @click="contactModalOpen = true"
                     class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-primary"
                     >
-                    Get a Free Quote
+                    Get yer quote here
                 </button>
             </div> 
             
                 
+            
+            <div class="inline-flex w-full ml-3 sm:w-auto">
+                <a
+                target = "_blank" href="mailto:None?subject=[company type] Job - Requesting a quote&body=Hi [[Owner Name]],%0d%0a %0d%0a  My name is [your name]. I&#x27;m writing from your website about requesting a quote for a [[company type]] job. I&#x27;ve included my information below - %0d%0a%0d%0a Quick Description: %0d%0a Address: [your address here] %0d%0a Urgency: [low, medium, high] %0d%0a Would like a quote by: [date] %0d%0a Additional notes: %0d%0a %0d%0a Thanks!"
+                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary"
+                >
+                    Email Us NOW
+                </a>
+            </div>
             
         </div>
     </div>
@@ -1463,14 +1496,14 @@
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-8 xl:col-span-1">
               
-              <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/Caro_Painting.png" alt="" />
+              <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5f7e0d62-b6d4-460f-81f7-15a031f7331a.png" alt="" />
               
               <p class="text-base text-gray-100">
-                  Caro Painting<br/>
+                  BoomCo<br/>
                    
-                      CITY, STATE <br/>
+                      milwaukee, wi <br/>
                   
-                  2149098386
+                  4148402721
               </p>
               <div class="flex flex-wrap align-middle items-center">
                   
@@ -1486,15 +1519,67 @@
                   </a>
                   
                   
+                  <a target="_blank" rel="noopener noreferrer" href="https://instagram.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Instagram</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                              fill-rule="evenodd"
+                              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                              clip-rule="evenodd"
+                          />
+                      </svg>
+                  </a>
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Twitter</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                              d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                          />
+                      </svg>
+                  </a>
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://youtube.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">YOUTUBE</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M19.5583 3.16209C19.3249 2.29938 18.6509 1.62547 17.7882 1.39203C16.2362 0.96875 9.98971 0.96875 9.98971 0.96875C9.98971 0.96875 3.7432 0.981577 2.19119 1.40485C1.32848 1.6383 0.654573 2.31221 0.421128 3.17491C-0.0483229 5.93261 -0.23046 10.1346 0.433954 12.782C0.667399 13.6447 1.34131 14.3186 2.20401 14.552C3.75602 14.9753 10.0025 14.9753 10.0025 14.9753C10.0025 14.9753 16.2491 14.9753 17.8011 14.552C18.6638 14.3186 19.3377 13.6447 19.5711 12.782C20.0662 10.0204 20.2189 5.82102 19.5583 3.16209Z" fill="#9CA3AF"/>
+                          <path d="M8.00159 10.9735L13.1835 7.97205L8.00159 4.97064V10.9735Z" fill="white"/>
+                      </svg>
+                  </a>
+                  
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://google.com" class="mr-3 -mb-1 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Google</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#9CA3AF"/>
+                          <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#9CA3AF"/>
+                          <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#9CA3AF"/>
+                          <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#9CA3AF"/>
+                      </svg>    
+                  </a>
+                  
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://yelp.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Yelp</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M14.8 10.495L10.6375 11.6892C9.8375 11.9192 9.1875 11.0225 9.6575 10.3308L12.0783 6.74084C12.1493 6.63566 12.2418 6.5468 12.3498 6.48018C12.4578 6.41356 12.5787 6.3707 12.7045 6.35446C12.8304 6.33822 12.9582 6.34897 13.0796 6.38599C13.2009 6.42301 13.313 6.48546 13.4083 6.56917C14.2569 7.31611 14.9296 8.24156 15.3783 9.27917C15.4291 9.39576 15.4544 9.52183 15.4525 9.64896C15.4507 9.7761 15.4217 9.90138 15.3676 10.0164C15.3135 10.1315 15.2355 10.2337 15.1388 10.3162C15.042 10.3988 14.9288 10.4597 14.8067 10.495H14.8ZM10.6125 13.1217L14.7308 14.46C14.8516 14.4993 14.9627 14.564 15.0565 14.6497C15.1503 14.7353 15.2248 14.84 15.275 14.9567C15.3251 15.0734 15.3498 15.1995 15.3474 15.3266C15.3449 15.4536 15.3154 15.5786 15.2608 15.6933C14.775 16.7129 14.0725 17.6141 13.2025 18.3342C13.1043 18.415 12.9899 18.474 12.867 18.5071C12.7442 18.5403 12.6157 18.5468 12.4901 18.5263C12.3645 18.5058 12.2448 18.4587 12.1388 18.3882C12.0329 18.3177 11.9432 18.2254 11.8758 18.1175L9.57583 14.4433C9.13583 13.7375 9.81583 12.865 10.6058 13.1233L10.6125 13.1217ZM6.61583 9.48167L2.545 2.43C2.48386 2.32346 2.44536 2.20544 2.43189 2.08334C2.41842 1.96124 2.43028 1.83768 2.46672 1.72036C2.50317 1.60305 2.56341 1.49452 2.6437 1.40154C2.72398 1.30857 2.82258 1.23315 2.93333 1.18C4.3112 0.522435 5.79805 0.123324 7.32 0.0025037C7.44264 -0.00703826 7.56592 0.00889814 7.68211 0.0493107C7.79829 0.0897234 7.90485 0.153738 7.9951 0.237329C8.08534 0.32092 8.15731 0.422279 8.20649 0.535032C8.25566 0.647786 8.28097 0.769494 8.28083 0.892504V9.0325C8.28083 9.94584 7.0725 10.2683 6.61583 9.47834V9.48167ZM5.90167 12.9567L1.7 14.005C1.57657 14.0356 1.44805 14.0395 1.323 14.0164C1.19795 13.9934 1.07926 13.9439 0.97484 13.8713C0.870421 13.7988 0.782677 13.7048 0.717464 13.5956C0.652251 13.4865 0.611069 13.3647 0.596666 13.2383C0.469605 12.1152 0.591959 10.9779 0.954999 9.9075C0.995445 9.78716 1.06112 9.67685 1.14764 9.58393C1.23415 9.49102 1.33951 9.41765 1.45667 9.36874C1.57382 9.31983 1.70007 9.2965 1.82697 9.30031C1.95387 9.30412 2.07849 9.33498 2.1925 9.39084L6.0825 11.29C6.8325 11.655 6.71833 12.7567 5.91 12.9567H5.90167ZM6.64 14.1875C7.1975 13.5675 8.22417 13.9825 8.195 14.8142L8.03667 19.1375C8.03209 19.2644 8.00051 19.389 7.94405 19.5027C7.88759 19.6165 7.80753 19.717 7.70921 19.7974C7.61089 19.8778 7.49656 19.9364 7.37384 19.9691C7.25112 20.0019 7.12283 20.0082 6.9975 19.9875C5.88493 19.8007 4.82647 19.3735 3.89583 18.7358C3.79129 18.6636 3.70334 18.57 3.63787 18.4611C3.5724 18.3522 3.5309 18.2306 3.51615 18.1044C3.5014 17.9782 3.51374 17.8504 3.55234 17.7293C3.59094 17.6083 3.65492 17.4969 3.74 17.4025L6.6375 14.1825L6.64 14.1875Z" fill="#9CA3AF"/>
+                      </svg>
+                  </a>
                   
                   
                   
                   
                   
-                  
-                  
-                  
-                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://tiktok.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Tiktok</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M9.43752 0.0166667C10.5292 0 11.6125 0.00833333 12.6959 0C12.7625 1.275 13.2209 2.575 14.1542 3.475C15.0875 4.4 16.4042 4.825 17.6875 4.96667V8.325C16.4875 8.28333 15.2792 8.03333 14.1875 7.51667C13.7125 7.3 13.2709 7.025 12.8375 6.74167C12.8292 9.175 12.8459 11.6083 12.8209 14.0333C12.7542 15.2 12.3709 16.3583 11.6959 17.3167C10.6042 18.9167 8.71252 19.9583 6.77085 19.9917C5.57919 20.0583 4.38752 19.7333 3.37085 19.1333C1.68752 18.1417 0.504186 16.325 0.329186 14.375C0.312519 13.9583 0.304186 13.5417 0.320852 13.1333C0.470852 11.55 1.25419 10.0333 2.47085 9C3.85419 7.8 5.78752 7.225 7.59585 7.56667C7.61252 8.8 7.56252 10.0333 7.56252 11.2667C6.73752 11 5.77085 11.075 5.04585 11.575C4.52085 11.9167 4.12085 12.4417 3.91252 13.0333C3.73752 13.4583 3.78752 13.925 3.79585 14.375C3.99585 15.7417 5.31252 16.8917 6.71252 16.7667C7.64585 16.7583 8.53752 16.2167 9.02085 15.425C9.17918 15.15 9.35419 14.8667 9.36252 14.5417C9.44585 13.05 9.41252 11.5667 9.42085 10.075C9.42919 6.71667 9.41252 3.36667 9.43752 0.0166667V0.0166667Z" fill="#9CA3AF"/>
+                      </svg>   
+                  </a>
                   
                   
                   
@@ -1533,6 +1618,14 @@
                           </li>
                           
                           
+                          <li>
+                              <a
+                                  href="team"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Team</a
+                              >
+                          </li>
+                          
                           
                           
                           <li>
@@ -1551,9 +1644,9 @@
                           
                           <li>
                               <a
-                                  href="service-Interior-Painting"
+                                  href="service-Interior-Paintingz"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Interior Painting</a
+                                  >Interior Paintingz</a
                               >
                           </li>
                           
@@ -1575,25 +1668,25 @@
                           
                           <li>
                               <a
-                                  href="service-Drywall-and-Plastering"
+                                  href="service-nop"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Drywall and Plastering</a
+                                  >nop</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Pre-paint-Washing"
+                                  href="service-NEW-SERVICE-4"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Pre-paint Washing</a
+                                  >NEW SERVICE 4</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Other-Painting-Services"
+                                  href="service-NEW-SERVICE-5"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Other Painting Services</a
+                                  >NEW SERVICE 5</a
                               >
                           </li>
                           
@@ -1609,7 +1702,7 @@
                               <a
                                   href="index"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >CITY, STATE</a
+                                  >milwaukee, wi</a
                               >
                           </li>
                           
@@ -1620,7 +1713,7 @@
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Sun:  0:00am - 0:00am 
+                                Sun:  8:00am - 6:00pm 
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
@@ -1644,7 +1737,7 @@
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Sat:  0:00am - 0:00am 
+                                Sat:  8:00am - 6:00pm 
                             </li>
                         
                       </ul>
@@ -1729,7 +1822,7 @@
                 </div>
 
 
-                <form class="overflow-y-auto pb-20 sm:w-full" onsubmit="send_sms('Caro-Painting')">
+                <form class="overflow-y-auto pb-20 sm:w-full" onsubmit="send_sms('BoomCo')">
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
                         <div class="h-full px-6 pb-1 mt-6 space-y-6 sm:grid sm:grid-cols-2 sm:min-w-max sm:space-x-3">
                             
@@ -1805,68 +1898,68 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117512"
-                                                    name="117512"
+                                                    id="contact-service-116949"
+                                                    name="116949"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Interior Painting"
+                                                    value="Interior Paintingz"
                                             />
-                                            <label for="contact-label-service-117512" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
+                                            <label for="contact-label-service-116949" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117513"
-                                                    name="117513"
+                                                    id="contact-service-116950"
+                                                    name="116950"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-117513" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                            <label for="contact-label-service-116950" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117514"
-                                                    name="117514"
+                                                    id="contact-service-116951"
+                                                    name="116951"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-117514" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                            <label for="contact-label-service-116951" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117515"
-                                                    name="117515"
+                                                    id="contact-service-116952"
+                                                    name="116952"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Drywall and Plastering"
+                                                    value="nop"
                                             />
-                                            <label for="contact-label-service-117515" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                            <label for="contact-label-service-116952" class="ml-3 text-sm font-medium text-gray-700">nop</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117516"
-                                                    name="117516"
+                                                    id="contact-service-116953"
+                                                    name="116953"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Pre-paint Washing"
+                                                    value="NEW SERVICE 4"
                                             />
-                                            <label for="contact-label-service-117516" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
+                                            <label for="contact-label-service-116953" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 4</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117517"
-                                                    name="117517"
+                                                    id="contact-service-116954"
+                                                    name="116954"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Other Painting Services"
+                                                    value="NEW SERVICE 5"
                                             />
-                                            <label for="contact-label-service-117517" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                            <label for="contact-label-service-116954" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 5</label>
                                         </div>
                                         
                                     </div>
@@ -1895,68 +1988,68 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117512"
-                                                    name="117512"
+                                                    id="contact-service-116949"
+                                                    name="116949"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Interior Painting"
+                                                    value="Interior Paintingz"
                                             />
-                                            <label for="contact-label-service-117512" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
+                                            <label for="contact-label-service-116949" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117513"
-                                                    name="117513"
+                                                    id="contact-service-116950"
+                                                    name="116950"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-117513" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                            <label for="contact-label-service-116950" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117514"
-                                                    name="117514"
+                                                    id="contact-service-116951"
+                                                    name="116951"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-117514" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                            <label for="contact-label-service-116951" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117515"
-                                                    name="117515"
+                                                    id="contact-service-116952"
+                                                    name="116952"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Drywall and Plastering"
+                                                    value="nop"
                                             />
-                                            <label for="contact-label-service-117515" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                            <label for="contact-label-service-116952" class="ml-3 text-sm font-medium text-gray-700">nop</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117516"
-                                                    name="117516"
+                                                    id="contact-service-116953"
+                                                    name="116953"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Pre-paint Washing"
+                                                    value="NEW SERVICE 4"
                                             />
-                                            <label for="contact-label-service-117516" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
+                                            <label for="contact-label-service-116953" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 4</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-117517"
-                                                    name="117517"
+                                                    id="contact-service-116954"
+                                                    name="116954"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Other Painting Services"
+                                                    value="NEW SERVICE 5"
                                             />
-                                            <label for="contact-label-service-117517" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                            <label for="contact-label-service-116954" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 5</label>
                                         </div>
                                         
                                     </div>
@@ -2019,34 +2112,41 @@
     })
 </script>
 <div
-	class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white backdrop-blur-sm"
-    id="text-thank-you"
-    style="display: none"
+	class="fixed inset-0 z-40 md:pt-8 md:pb-20"
+	id="text-thank-you"
+	style="display: none;"
 >
-	<div class="mt-3 text-center">
-		<div
-			class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
-		>
-			<svg
-				class="h-6 w-6 text-green-600"
-				fill="none"
-				stroke="currentColor"
-				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg"
+	<div
+		class="fixed inset-0 bg-black bg-opacity-50"
+	></div>
+	<div
+		class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white"
+	>
+		<div class="mt-3 text-center">
+			<div
+				class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
 			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M5 13l4 4L19 7"
-				></path>
-			</svg>
-		</div>
-		<h3 class="text-lg leading-6 font-medium text-gray-900">Thank you!</h3>
-		<div class="mt-1 px-7 py-3">
-			<p class="text-sm text-gray-500">
-				Your message was sent successfully. We’ll send you a text or give you a call soon.
-			</p>
+				<svg
+					class="h-6 w-6 text-green-600"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M5 13l4 4L19 7"
+					></path>
+				</svg>
+			</div>
+			<h3 class="text-lg leading-6 font-medium text-gray-900">Thank you!</h3>
+			<div class="mt-1 px-7 py-3">
+				<p class="text-sm text-gray-500">
+					Your message was sent successfully. We’ll send you a text or give you a call soon.
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -2079,15 +2179,21 @@
                     <span hidden class="sr-only">Review types</span>
                     
                     <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://google.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                        <a target="_blank" rel="noopener noreferrer" href="https://google.com/goop" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
                             Leave a Review
                         </a>
                     </li>
                     
                     
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://yelp.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            See More Reviews
+                        </a>
+                    </li>
+                    
                     
                     <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://facebook.com//reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                        <a target="_blank" rel="noopener noreferrer" href="https://bucks.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
                             Leave a Review
                         </a>
                     </li>
@@ -2102,3 +2208,11 @@
 
 </body>
 </html>
+
+<script>
+    if (window.location.href.includes('prosite.prophone.com')) {
+        document.body.className = "pt-56 md:pt-48"
+    } else {
+        document.body.className = "pt-24 md:pt-44"
+    }
+</script>
