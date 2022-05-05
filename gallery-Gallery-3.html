@@ -275,15 +275,58 @@
 
                         });
 
-
-
-
     </script>
 </head>
-<body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-24 md:pt-44">
+<body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-56 md:pt-48">
 
-
-<nav class="fixed inset-x-0 top-0 z-20">
+<div
+    id="launch-site-banner"
+    x-data="{ scrolledFromTop: false }"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
+    class="fixed inset-x-0 top-0 z-20 bg-orange-600 sm:h-16 transition-all duration-200"
+>
+    <div
+        :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
+        class="relative transition-all duration-200"
+    >
+        <div
+            :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
+            class="flex flex-col justify-center sm:flex-row sm:justify-between sm:h-16 w-4/5 items-start sm:items-center m-auto transition-all duration-200"
+        >
+            <div class="flex flex-row items-center">
+                <div class="hidden sm:flex mr-2 bg-orange-900 rounded-md p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                    </svg>
+                </div>
+                <div
+                    :class="{'hidden': !scrolledFromTop, 'hidden': scrolledFromTop}"
+                    class="sm:flex text-white text-sm mb-3 sm:mb-0"
+                >
+                    You’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
+                </div>
+            </div>
+            <div class="flex flex-row items-center">
+                <a class="flex bg-white px-4 py-2 rounded-md text-orange-600 mr-4 text-sm" href="http://app.prophone.com?id=KLENXDQX1AH4SBLQ1VV4P10Z7NJ2KA">
+                    Launch my site
+                </a>
+                <a class="flex font-bold underline underline-offset-4 text-white text-sm" href="https://www.prophone.com/learn-more">
+                    Learn more →
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<nav
+    id="nav-bar"
+    x-data="{ scrolledFromTop: false }"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    :class="{'top-32': !scrolledFromTop, 'top-16': scrolledFromTop}"
+    class="fixed inset-x-0 z-20"
+>
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
@@ -838,6 +881,31 @@
     </div>
 </nav>
 
+<script>
+    const navBar = document.getElementById('nav-bar')
+    const launchBanner = document.getElementById('launch-site-banner')
+
+    function detectMob() {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            return true
+        } else { 
+            return false
+        }
+    }
+    const isMobile = detectMob()
+
+    if (window.location.href.includes('prosite.prophone.com')) {
+        launchBanner.style.display = 'block'
+        if (isMobile) {
+            navBar.className = "fixed inset-x-0 sm:top-16 z-20 transition-all duration-200"
+        } else {
+            navBar.className = "fixed inset-x-0 top-0 sm:top-16 z-20 transition-all duration-200"
+        }
+    } else {
+        launchBanner.style.display = 'none'
+        navBar.className = "fixed inset-x-0 !top-0 sm:top-0 z-20 transition-all duration-200"
+    }
+</script>
 <div
     x-data="{ buttonVisible: false }"
     x-init="buttonVisible = window.pageYOffset >= 400 && (window.innerHeight + window.pageYOffset) <= document.body.scrollHeight - 500"
@@ -1560,34 +1628,41 @@
     })
 </script>
 <div
-	class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white backdrop-blur-sm"
-    id="text-thank-you"
-    style="display: none"
+	class="fixed inset-0 z-40 md:pt-8 md:pb-20"
+	id="text-thank-you"
+	style="display: none;"
 >
-	<div class="mt-3 text-center">
-		<div
-			class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
-		>
-			<svg
-				class="h-6 w-6 text-green-600"
-				fill="none"
-				stroke="currentColor"
-				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg"
+	<div
+		class="fixed inset-0 bg-black bg-opacity-50"
+	></div>
+	<div
+		class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white"
+	>
+		<div class="mt-3 text-center">
+			<div
+				class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
 			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M5 13l4 4L19 7"
-				></path>
-			</svg>
-		</div>
-		<h3 class="text-lg leading-6 font-medium text-gray-900">Thank you!</h3>
-		<div class="mt-1 px-7 py-3">
-			<p class="text-sm text-gray-500">
-				Your message was sent successfully. We’ll send you a text or give you a call soon.
-			</p>
+				<svg
+					class="h-6 w-6 text-green-600"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M5 13l4 4L19 7"
+					></path>
+				</svg>
+			</div>
+			<h3 class="text-lg leading-6 font-medium text-gray-900">Thank you!</h3>
+			<div class="mt-1 px-7 py-3">
+				<p class="text-sm text-gray-500">
+					Your message was sent successfully. We’ll send you a text or give you a call soon.
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -1643,3 +1718,11 @@
 
 </body>
 </html>
+
+<script>
+    if (window.location.href.includes('prosite.prophone.com')) {
+        document.body.className = "pt-56 md:pt-48"
+    } else {
+        document.body.className = "pt-24 md:pt-44"
+    }
+</script>
