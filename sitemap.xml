@@ -4,105 +4,112 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/index</loc>
+        <loc>https://yurp.com/index</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/store</loc>
+        <loc>https://yurp.com/store</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/teams</loc>
+        <loc>https://yurp.com/reviews</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/reviews</loc>
+        <loc>https://yurp.com/gallery-All</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/gallery-All</loc>
+        <loc>https://yurp.com/gallery-Gallery-4</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/gallery-yurp</loc>
+        <loc>https://yurp.com/gallery-Exterior-Painting</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/gallery-Interior-Painting</loc>
+        <loc>https://yurp.com/gallery-Interior-Painting</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/gallery-Exterior-Painting</loc>
+        <loc>https://yurp.com/gallery-Gallery-3</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/gallery-fvb-</loc>
+        <loc>https://yurp.com/gallery-Gallery-5</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/service-Interior-Paintingz</loc>
+        <loc>https://yurp.com/gallery-Gallery-6</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/service-Exterior-Painting</loc>
+        <loc>https://yurp.com/service-Interior-Painting</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/service-Kitchen-and-Cabinet-Refinishing</loc>
+        <loc>https://yurp.com/service-Exterior-Painting</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/service-nop</loc>
+        <loc>https://yurp.com/service-Kitchen-and-Cabinet-Refinishing</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/service-NEW-SERVICE-4</loc>
+        <loc>https://yurp.com/service-Drywall-and-Plastering</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://dev.prosite.prophone.com/m/v2/BoomCo/Index/service-NEW-SERVICE-5</loc>
+        <loc>https://yurp.com/service-Pre-paint-Washing</loc>
+        <lastmod>2022-05-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Other-Painting-Services</loc>
         <lastmod>2022-05-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
