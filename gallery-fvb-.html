@@ -1,0 +1,1872 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>painters near me in milwaukee, wi | BoomCo |  Gallery | Fvb</title>
+    <meta name="description"
+          content="A collection of fvb photos to showcase our best work as a painters near me company. See what BoomCo can do for you!">
+    <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/5f7e0d62-b6d4-460f-81f7-15a031f7331a.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://prophone-templates.vercel.app/assets/output.css">
+    
+
+    <link defer href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/output.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
+<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <style>
+            :root {
+                --contrastThreshold: 60%;
+
+                --color-primary-h: 240.0;
+                --color-primary-s: 100.0%;
+                --color-primary-l: 15.625%;
+                --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
+
+                --color-secondary-h: 217.14285714285714;
+                --color-secondary-s: 16.27906976744186%;
+                --color-secondary-l: 74.8046875%;
+                --color-secondary-darker: hsl(var(--color-secondary-h), var(--color-secondary-s), calc(var(--color-secondary-l) - 7.5%));
+
+                --switch: calc((var(--color-primary-l) - var(--contrastThreshold)) * -100);
+                --color-primary-foreground: hsl(0, 0%, var(--switch));
+            }
+
+
+
+    </style>
+    <script type="text/javascript" defer>
+                    function send_sms(slug){
+                        const sendButton = document.getElementById('sendButton')
+                        sendButton.disabled = true
+                        console.log('send_sms',1, slug)
+                        event.preventDefault()
+                        function uuidV4() {
+                            return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+                              (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+                            );
+                          }
+
+                        const getFileExtenstion = (dataUrl) =>{
+                            var arr = dataUrl.split(','),
+                                  mime = arr[0].match(/:(.*?);/)[1]
+                            return mime.split('/')[1]
+                        }
+  
+                          const getFileName = (dataUrl) =>{
+                              const uuid = uuidV4()
+                              const fileName = `${uuid}.${getFileExtenstion(dataUrl)}`
+                              return fileName
+                          }
+                          function dataURLtoFile(dataUrl, filename) {
+                              var arr = dataUrl.split(','),
+                                  mime = arr[0].match(/:(.*?);/)[1],
+                                  bstr = atob(arr[1]),
+                                  n = bstr.length,
+                                  u8arr = new Uint8Array(n);
+  
+                              while(n--){
+                                  u8arr[n] = bstr.charCodeAt(n);
+                              }
+  
+                              return new File([u8arr], filename, {type:mime});
+                          }
+                        function uploadFile(file, signedRequest, url) {
+                            return new Promise(function (resolve, reject) {
+                                const xhr = new XMLHttpRequest()
+                                xhr.open('PUT', signedRequest)
+                                xhr.onreadystatechange = () => {
+                                    if (xhr.readyState === 4) {
+                                        if (xhr.status === 200) {
+                                            console.log(url, 'url in uploadFile')
+                                            resolve(file.name)
+                                            //   resolve(url)
+                                        } else {
+                                            alert('Could not upload file.')
+                                        }
+                                    }
+                                }
+                                xhr.send(file)
+                            })
+                        }
+                        
+                        function getSignedRequest(file,fileName) {
+                            return new Promise(function (resolve, reject) {
+                                const xhr = new XMLHttpRequest()
+                                console.log(fileName, 'fileName')
+                                const newUrl = `https://programmable-voice-server-node.herokuapp.com/sign_s3?file_name=${fileName}&file_type=${file.type}`
+                                console.log('newurl', newUrl)
+                                xhr.open('GET', newUrl)
+                                xhr.onreadystatechange = async function () {
+                                    console.log('getSignedRequest - in onreadystatechange - xhr', xhr)
+                                    if (xhr.readyState === 4) {
+                                        if (xhr.status === 200) {
+                                            const response = JSON.parse(xhr.responseText)
+                                            const uploaded = await uploadFile(
+                                                file,
+                                                response.signedRequest,
+                                                response.url
+                                            )
+                                            resolve(fileName)
+                                        } else {
+                                            alert('Could not get signed URL.')
+                                        }
+                                    }
+                                }
+                                console.log('getSignedRequest -pre xhr.send')
+                                xhr.send()
+                            })
+                        }
+                        const get_sender_attachment = ()=>{
+                            var ImageSrc = getIdValue(`#contact-attachment`)
+                            console.log(ImageSrc,"ImageSrc")
+                            if (ImageSrc){
+                                const fileName = getFileName(ImageSrc)
+                                const fileObject = dataURLtoFile(ImageSrc,fileName)
+                                getSignedRequest(fileObject,fileName).then(res => console.log(res))
+                                return fileName
+                            }
+                            return ""
+                        }
+
+                        // var sender_fname = $(`#${form_num}-first-name`).val()
+                        // var sender_lname = $(`#${form_num}-last-name`).val()
+                        // var sender_number = $(`#${form_num}-phone-number`).val()
+                        // console.log(sender_number)
+                        // var sender_message = $(`#${form_num}-message`).val()
+
+                        const checkIdExist = (id) =>{
+                            if ($(id).length) return true
+                            return false
+                        }
+
+                        const getIdValue = (id) => {
+                            if (checkIdExist(id)) return $(id).val()
+                            else return ""
+                        }
+                        const getSenderName = () =>{
+                        const sender_full_name = getIdValue(`#contact-full-name`)
+                        if (sender_full_name){
+                            const full_name_split = sender_full_name.split(' ')
+                        const sender_fname = full_name_split.shift()
+                        const sender_lname = full_name_split.join(' ')
+                        return [sender_full_name,sender_fname,sender_lname]
+                        }
+                        else{
+                            return ["","",""]
+                        }
+
+                        }
+                        const getSelectedServices = () =>{
+                            const allSelectedServiced = Array.from(document.querySelectorAll('[id^="contact-service"]'))
+                            if (allSelectedServiced.length){
+                                return allSelectedServiced.filter( (x)=> x.checked
+                            ).map(item => item.value).join(",");
+                            }
+                            else {return ""}
+
+                        }
+
+
+                        const [sender_full_name,sender_fname,sender_lname  ]=getSenderName()
+                        var sender_number = getIdValue(`#contact-phone-number`)
+                        var sender_email = getIdValue(`#contact-email`)
+                        var sender_contact_date = getIdValue(`#contact-date`)
+                        var sender_promo = getIdValue(`#contact-promo-code`)
+                        var sender_address = getIdValue(`#contact-address`)
+                        const photo = get_sender_attachment()
+                        console.log(photo,"sender_attachment")
+                        // TODO As services are multiple choice option do user can select only one or user can select multiple option
+                            // discuss about how this should happen
+                        // iterate over the service
+                        const services = getSelectedServices()
+                        // var sender_service = "" //$(`#contact-phone-number`).val()
+
+                        var sender_message = getIdValue(`#contact-concern`)
+                        // TODO add a better validator for each field
+                            // Perform validation before any computation
+
+                        // if (!sender_fname || !sender_number || !sender_message){
+                        // // if (!sender_fname || !sender_lname || !sender_number || !sender_message){
+                        //     alert("Please make sure to fill out all the form fields")
+                        //     return
+                        // }
+
+                        var cleaned_sender_number = sender_number.replace("(", "").replace(")", "").replace("-", "").replace(" ", "")
+
+
+                        console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
+                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
+                            method: 'POST',
+                            body: JSON.stringify({
+                                sender_full_name : sender_full_name,
+                                sender_email : sender_email,
+                                sender_promo : sender_promo,
+                                sender_fname : sender_fname,
+                                sender_lname: sender_lname,
+                                sender_number: cleaned_sender_number,
+                                sender_message: sender_message,
+                                sender_address: sender_address,
+                                sender_date: sender_contact_date,
+                                photo,
+                                services
+                            })
+
+                        })
+                        .then(result => {
+                            //Here body is not ready yet, throw promise
+                            if (!result.ok) throw result;
+                            return result.json();
+                        })
+                        .then(result => {
+                            const sendTextModalId = document.getElementById("send-text-modal")
+                            sendTextModalId.style.display = 'none'
+                            const modalId = document.getElementById("text-thank-you")
+                            modalId.style.display = 'block';
+                            setTimeout(() => {location.reload()}, 3000);
+                            return result
+                        })
+                        .catch(result => {
+                            console.log(result)
+                            sendButton.disabled = false
+                            alert("There was a problem sending your text. Please reach out to ProPhone.")
+                        })
+
+                    }
+                
+                    console.log('go bucks')
+                    $('document').ready(function(){
+                        console.log('doc ready')
+                        let cover = $("#cover-button")
+                        console.log("cover", cover)
+
+                        if (cover.position() !== undefined){
+                            let cover_bottom = cover.position().top - 40
+                            $(window).scroll(function(){
+                                console.log("in scroll")
+                                console.log($(window).scrollTop(), cover_bottom)
+                            if($(window).scrollTop() < (cover_bottom)){
+                                if ( $("#side-button").hasClass('-translate-x-80')){
+                                $("#side-button").removeClass("-translate-x-80").addClass("translate-x-64")
+                                }
+
+                            }
+                            else{
+                                $("#side-button").addClass("transform -translate-x-80 ease-in duration-700");
+                            }
+                            });
+                        } else {
+                            $("#side-button").addClass("transform -translate-x-80 ease-in duration-700");
+                        }
+
+
+
+                        });
+
+    </script>
+</head>
+<body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-56 md:pt-48">
+
+<div
+    id="launch-site-banner"
+    x-data="{ scrolledFromTop: false }"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
+    class="fixed inset-x-0 top-0 z-20 bg-orange-600 sm:h-16 transition-all duration-200"
+>
+    <div
+        :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
+        class="relative transition-all duration-200"
+    >
+        <div
+            :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
+            class="flex flex-col justify-center sm:flex-row sm:justify-between sm:h-16 w-4/5 items-start sm:items-center m-auto transition-all duration-200"
+        >
+            <div class="flex flex-row items-center">
+                <div class="hidden sm:flex mr-2 bg-orange-900 rounded-md p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                    </svg>
+                </div>
+                <div
+                    :class="{'hidden': !scrolledFromTop, 'hidden': scrolledFromTop}"
+                    class="sm:flex text-white text-sm mb-3 sm:mb-0"
+                >
+                    You’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
+                </div>
+            </div>
+            <div class="flex flex-row items-center">
+                <a class="flex bg-white px-4 py-2 rounded-md text-orange-600 mr-4 text-sm" href="http://app.prophone.com?id=7E84KL0G65LOWTD7AFGSOWPUQ7H8AI">
+                    Launch my site
+                </a>
+                <a class="flex font-bold underline underline-offset-4 text-white text-sm" href="https://www.prophone.com/learn-more">
+                    Learn more →
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<nav
+    id="nav-bar"
+    x-data="{ scrolledFromTop: false }"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    :class="{'top-32': !scrolledFromTop, 'top-16': scrolledFromTop}"
+    class="fixed inset-x-0 z-20"
+>
+    <div
+        x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
+        x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+        @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+        :class="{'translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'h-24 shadow-magical': scrolledFromTop}"
+        class="relative transition-all duration-200 bg-white"
+    >
+        <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-full">
+                <div class="flex items-center">
+                    <div
+                        :class="{'scale-100': !scrolledFromTop, 'xl:scale-50': scrolledFromTop}"
+                        class="flex items-center h-full transition-all duration-200 origin-left"
+                    >
+                    
+                        <a  href= " index "
+                            class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                        >
+                            <img
+                                class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto"
+                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5f7e0d62-b6d4-460f-81f7-15a031f7331a.png"
+                                alt="Brand Logo"
+                            />
+                        </a>
+                    
+                    </div>
+                    <div
+                        :class="{'h-16': !scrolledFromTop, 'h-16 -translate-x-24': scrolledFromTop}"
+                        class="hidden transition-all duration-200 xl:ml-6 xl:flex xl:space-x-5"
+                    >
+                    
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" index "
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                    >
+                                        Home 
+                                    </a>
+                                
+                                
+                                
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <button
+                                        type="button"
+                                        aria-haspopup="true"
+                                        :aria-expanded="desktopOpen"
+                                        aria-controls="navitem_2"
+                                        @click="desktopOpen = !desktopOpen"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2"
+                                    >
+                                        <span>Services</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            :class="{ '-rotate-180': desktopOpen }"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                
+                                
+                                    <div
+                                        x-cloak
+                                        x-show="desktopOpen"
+                                        x-transition:enter="transition ease-out duration-200"
+                                        x-transition:enter-start="opacity-0 translate-y-1"
+                                        x-transition:enter-end="opacity-100 translate-y-0"
+                                        x-transition:leave="transition ease-in duration-150"
+                                        x-transition:leave-start="opacity-100 translate-y-0"
+                                        x-transition:leave-end="opacity-0 translate-y-1"
+                                        id="navitem_2"
+                                        role="menu"
+                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
+                                                  
+                                                    <a
+                                                        href=" service-Interior-Paintingz "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">Interior Paintingz</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" service-Exterior-Painting "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" service-Kitchen-and-Cabinet-Refinishing "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">Kitchen and Cabinet Refinishing</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" service-nop "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">nop</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" service-NEW-SERVICE-4 "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">NEW SERVICE 4</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" service-NEW-SERVICE-5 "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">NEW SERVICE 5</p>
+                                                    </a>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <button
+                                        type="button"
+                                        aria-haspopup="true"
+                                        :aria-expanded="desktopOpen"
+                                        aria-controls="navitem_3"
+                                        @click="desktopOpen = !desktopOpen"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2"
+                                    >
+                                        <span>Galleries</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            :class="{ '-rotate-180': desktopOpen }"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                
+                                
+                                    <div
+                                        x-cloak
+                                        x-show="desktopOpen"
+                                        x-transition:enter="transition ease-out duration-200"
+                                        x-transition:enter-start="opacity-0 translate-y-1"
+                                        x-transition:enter-end="opacity-100 translate-y-0"
+                                        x-transition:leave="transition ease-in duration-150"
+                                        x-transition:leave-start="opacity-100 translate-y-0"
+                                        x-transition:leave-end="opacity-0 translate-y-1"
+                                        id="navitem_3"
+                                        role="menu"
+                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
+                                                  
+                                                    <a
+                                                        href=" gallery-yurp "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">yurp</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" gallery-Interior-Painting "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" gallery-Exterior-Painting "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" gallery-fvb "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">fvb</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" gallery-All "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">All Photos</p>
+                                                    </a>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" reviews "
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                    >
+                                        Reviews 
+                                    </a>
+                                
+                                
+                                
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" team "
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                    >
+                                        Team 
+                                    </a>
+                                
+                                
+                                
+                            </div>
+                        
+
+                    </div>
+                </div>
+                <div class="flex flex-col items-center text-gray-500 xl:hidden">
+                    <span>Menu</span>
+                    <button @click="mobileOpen = !mobileOpen" class="p-2">
+                        <span hidden class="sr-only">Open/CLose menu TODO:</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="items-center hidden space-x-5 xl:flex">
+                    <p :class="{'translate-x-0': !scrolledFromTop, 'translate-x-12': scrolledFromTop}" class="text-gray-500 transition-transform">
+                        
+                    </p>
+                    <div class="w-full sm:w-auto">
+                        
+                        <div class="w-full sm:w-auto">
+                            <button
+                            :class="{'scale-100': !scrolledFromTop, 'scale-75 translate-x-8': scrolledFromTop}"
+                            @click="contactModalOpen = true"
+                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none hover:bg-primary-darker sm:w-auto bg-primary focus-visible:ring-2 ring-primary ring-opacity-75 ring-offset-2"
+                                >
+                                Send us a text pls
+                            </button>
+                        </div> 
+                        
+                            
+                     
+                    
+                    
+                    
+                    
+                    </div>
+                    <div class="inline-flex w-full ml-3 sm:w-auto">
+                        
+                        <div class="inline-flex w-full ml-3 sm:w-auto">
+                            <a
+                                href="//"
+                            :class="{'scale-100': !scrolledFromTop, 'scale-75': scrolledFromTop}"
+                            class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
+                                >
+                                Book Now or else
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            x-cloak
+            x-show="mobileOpen"
+            x-trap.inert.noscroll="mobileOpen"
+            x-transition:enter="duration-150 ease-out"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="duration-100 ease-in"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95"
+            class="fixed inset-0 z-30 h-screen p-2 overflow-y-scroll transition origin-top-right transform xl:hidden"
+        >
+            <div class="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
+                <div class="flex items-center justify-between px-5 pt-4">
+                    <div>
+                        <a
+                            href="/"
+                            class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
+                        >
+                            <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5f7e0d62-b6d4-460f-81f7-15a031f7331a.png" alt="Brand Logo" />
+                        </a>
+                    </div>
+                    <div class="-mr-2">
+                        <button
+                            @click="mobileOpen = false"
+                            type="button"
+                            class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                        >
+                            <span class="sr-only">Close menu</span>
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="overflow-y-scroll">
+                    <div x-data="{ openMenu: '' }" class="flex flex-col px-2 pt-2 pb-3 space-y-1">
+                        
+                            <div x-trap.inert="openMenu == 'navitem_1'">
+                                
+                                    <a
+                                        href=" index "
+                                        class=" 'text-gray-700'  block px-3 py-2 text-base font-medium rounded-md border-secondary transition"
+                                        >Home</a
+                                    >
+                                
+                                
+                            </div>
+                      
+                            <div x-trap.inert="openMenu == 'navitem_2'">
+                                
+                                    <button
+                                        aria-haspopup="true"
+                                        :aria-expanded="openMenu == 'navitem_2'"
+                                        aria-controls="mobile-navitem_2"
+                                        @click="openMenu = openMenu == 'navitem_2' ? '' : 'navitem_2'"
+                                        class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-700 transition rounded-md  border-secondary"
+                                        :class="openMenu == 'navitem_2' ? 'z-30' : 'z-0'"
+                                    >
+                                        <span>Services</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            :class="{ '-rotate-180': openMenu == 'navitem_2' }"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                
+                                
+                                    <div
+                                        x-cloak
+                                        x-show="openMenu == 'navitem_2'"
+                                        x-collapse
+                                        id="mobile-navitem_2"
+                                        role="menu"
+                                        class="z-20 pt-1 pb-2"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
+                                            
+                                                <a href="service-Interior-Paintingz" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">Interior Paintingz</p>
+                                                </a>
+                                            
+                                                <a href="service-Exterior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
+                                                </a>
+                                            
+                                                <a href="service-Kitchen-and-Cabinet-Refinishing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">Kitchen and Cabinet Refinishing</p>
+                                                </a>
+                                            
+                                                <a href="service-nop" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">nop</p>
+                                                </a>
+                                            
+                                                <a href="service-NEW-SERVICE-4" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">NEW SERVICE 4</p>
+                                                </a>
+                                            
+                                                <a href="service-NEW-SERVICE-5" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">NEW SERVICE 5</p>
+                                                </a>
+                                            
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                      
+                            <div x-trap.inert="openMenu == 'navitem_3'">
+                                
+                                    <button
+                                        aria-haspopup="true"
+                                        :aria-expanded="openMenu == 'navitem_3'"
+                                        aria-controls="mobile-navitem_3"
+                                        @click="openMenu = openMenu == 'navitem_3' ? '' : 'navitem_3'"
+                                        class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-700 transition rounded-md  border-secondary"
+                                        :class="openMenu == 'navitem_3' ? 'z-30' : 'z-0'"
+                                    >
+                                        <span>Galleries</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            :class="{ '-rotate-180': openMenu == 'navitem_3' }"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                
+                                
+                                    <div
+                                        x-cloak
+                                        x-show="openMenu == 'navitem_3'"
+                                        x-collapse
+                                        id="mobile-navitem_3"
+                                        role="menu"
+                                        class="z-20 pt-1 pb-2"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
+                                            
+                                                <a href="gallery-yurp" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">yurp</p>
+                                                </a>
+                                            
+                                                <a href="gallery-Interior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
+                                                </a>
+                                            
+                                                <a href="gallery-Exterior-Painting" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">Exterior Painting</p>
+                                                </a>
+                                            
+                                                <a href="gallery-fvb" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">fvb</p>
+                                                </a>
+                                            
+                                                <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">All Photos</p>
+                                                </a>
+                                            
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                      
+                            <div x-trap.inert="openMenu == 'navitem_4'">
+                                
+                                    <a
+                                        href=" reviews "
+                                        class=" 'text-gray-700'  block px-3 py-2 text-base font-medium rounded-md border-secondary transition"
+                                        >Reviews</a
+                                    >
+                                
+                                
+                            </div>
+                      
+                            <div x-trap.inert="openMenu == 'navitem_5'">
+                                
+                                    <a
+                                        href=" team "
+                                        class=" 'text-gray-700'  block px-3 py-2 text-base font-medium rounded-md border-secondary transition"
+                                        >Team</a
+                                    >
+                                
+                                
+                            </div>
+                      
+                    </div>
+                    <div class="d-none p-1 bg-primary sm:bg-gray-50">
+                        
+                            <button
+                            @click="contactModalOpen = true"
+                            class="relative block w-full px-5 py-3 font-medium text-center rounded-md  focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary  hover:bg-gray-100"
+                            >
+                                Send us a text pls
+                            </button>
+                        
+                        
+                            <a
+                                target="_blank" rel="noopener noreferrer" 
+                                href="//"
+                            :class="{'scale-100': !scrolledFromTop, 'scale-75': scrolledFromTop}"
+                            class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
+                                >
+                                Book Now or else
+                            </a>
+                         
+                     
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const navBar = document.getElementById('nav-bar')
+    const launchBanner = document.getElementById('launch-site-banner')
+
+    function detectMob() {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            return true
+        } else { 
+            return false
+        }
+    }
+    const isMobile = detectMob()
+
+    if (window.location.href.includes('prosite.prophone.com')) {
+        launchBanner.style.display = 'block'
+        if (isMobile) {
+            navBar.className = "fixed inset-x-0 sm:top-16 z-20 transition-all duration-200"
+        } else {
+            navBar.className = "fixed inset-x-0 top-0 sm:top-16 z-20 transition-all duration-200"
+        }
+    } else {
+        launchBanner.style.display = 'none'
+        navBar.className = "fixed inset-x-0 !top-0 sm:top-0 z-20 transition-all duration-200"
+    }
+</script>
+<div
+    x-data="{ buttonVisible: false }"
+    x-init="buttonVisible = window.pageYOffset >= 400 && (window.innerHeight + window.pageYOffset) <= document.body.scrollHeight - 500"
+    @scroll.window="window.pageYOffset >= 400 && (window.innerHeight + window.scrollY) <= document.body.scrollHeight - 500 ? buttonVisible = true : buttonVisible = false"
+    class="fixed z-40 right-7 bottom-7"
+>
+    <div
+        x-cloak
+        x-show="buttonVisible"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="translate-x-full scale-50"
+        x-transition:enter-end="translate-x-0 scale-100"
+        x-transition:leave="transition ease-out duration-300"
+        x-transition:leave-start="translate-x-0 opacity-100"
+        x-transition:leave-end="translate-x-full opacity-0"
+        class="w-full sm:w-auto"
+    >
+        <button
+            @click="contactModalOpen = true"
+            class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md shadow-md  sm:py-4 sm:px-10 hover:bg-secondary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-secondary"
+        >
+            Text Us
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="overflow-hidden bg-white">
+    <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
+        <h1>
+            <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Our Best Work</span>
+            <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">fvb</span>
+        </h1>
+        <div class="relative mt-12">
+            <div
+    x-data="{
+        activeImage: 0,
+        amountOfImages: 2,
+        next() {
+            if (this.activeImage < this.amountOfImages - 1)
+                this.activeImage ++;
+        },
+        prev() {
+            if (this.activeImage > 0)
+                this.activeImage --;
+        },
+        loop() {
+            setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
+        },
+    }"
+>
+    <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/85fc7d7a-7ae6-48db-8b1b-7880552d5b89.jpeg" alt="fvb for BoomCo in milwaukee, wi" loading="lazy"/> 
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6283c322-7f0f-445d-9cd1-3fe0aba71ec5.jpeg" alt="fvb for BoomCo in milwaukee, wi" loading="lazy"/> 
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+    </ul>
+
+    <template x-teleport="body">
+        <div x-cloak x-show="galleryModalOpen" @keydown.escape.prevent.stop="galleryModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="galleryModalOpen">
+            <div x-show="galleryModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+            <div
+                x-show="galleryModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                @click="galleryModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full"
+            >
+                <div @click.stop class="flex flex-col w-full max-h-full pb-12 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-4 sm:my-8 sm:align-middle sm:max-w-5xl">
+                    <div class="relative h-16 px-6 bg-white">
+                        <h2 class="sr-only" :id="$id('modal-title')">Modal Gallery</h2>
+
+                        <button @click="galleryModalOpen = false;" class="absolute p-1 transition rounded top-5 right-1 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                            <span class="sr-only">Close modal</span>
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col w-full">
+                        <div @keydown.right="next" @keydown.left="prev" tabindex="0" role="region" aria-labelledby="carousel-label" class="w-full z-10 flex space-x-6 focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 ">
+                            <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+
+                            <button :class="activeImage > 0 ? 'opacity-100' : 'opacity-0'" @click="prev" class="text-6xl transition-opacity focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m10 19-7-7m0 0 7-7m-7 7h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to previous slide</span>
+                            </button>
+
+                            <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+
+                            <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/85fc7d7a-7ae6-48db-8b1b-7880552d5b89.jpeg" alt="fvb for BoomCo in milwaukee, wi" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 1">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6283c322-7f0f-445d-9cd1-3fe0aba71ec5.jpeg" alt="fvb for BoomCo in milwaukee, wi" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                            </ul>
+
+                            <button :class="activeImage < amountOfImages - 1 ? 'opacity-100' : 'opacity-0'" @click="next" class="text-6xl transition-opacity focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m14 5 7 7m0 0-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to next slide</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="bg-white">
+    <div class="px-4 py-12 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+        <h2 class="text-3xl font-extrabold sm:text-4xl">
+            <span class="block">Ready to get started?</span>
+            <span class="block">Book an appointment today.</span>
+        </h2>
+        <div class="flex justify-center mt-8">
+            
+            
+            <div class="w-full sm:w-auto">
+                <button
+                    @click="contactModalOpen = true"
+                    class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-primary"
+                    >
+                    Get yer quote here
+                </button>
+            </div> 
+            
+                
+            
+            <div class="inline-flex w-full ml-3 sm:w-auto">
+                <a
+                target = "_blank" href="mailto:None?subject=[company type] Job - Requesting a quote&body=Hi [[Owner Name]],%0d%0a %0d%0a  My name is [your name]. I&#x27;m writing from your website about requesting a quote for a [[company type]] job. I&#x27;ve included my information below - %0d%0a%0d%0a Quick Description: %0d%0a Address: [your address here] %0d%0a Urgency: [low, medium, high] %0d%0a Would like a quote by: [date] %0d%0a Additional notes: %0d%0a %0d%0a Thanks!"
+                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary"
+                >
+                    Email Us NOW
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<footer class="bg-primary" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-16 lg:pb-10 lg:px-8">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div class="space-y-8 xl:col-span-1">
+              
+              <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5f7e0d62-b6d4-460f-81f7-15a031f7331a.png" alt="" />
+              
+              <p class="text-base text-gray-100">
+                  BoomCo<br/>
+                   
+                      milwaukee, wi <br/>
+                  
+                  4148402721
+              </p>
+              <div class="flex flex-wrap align-middle items-center">
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Facebook</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                              fill-rule="evenodd"
+                              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                              clip-rule="evenodd"
+                          />
+                      </svg>
+                  </a>
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://instagram.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Instagram</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                              fill-rule="evenodd"
+                              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                              clip-rule="evenodd"
+                          />
+                      </svg>
+                  </a>
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Twitter</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                              d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                          />
+                      </svg>
+                  </a>
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://youtube.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">YOUTUBE</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M19.5583 3.16209C19.3249 2.29938 18.6509 1.62547 17.7882 1.39203C16.2362 0.96875 9.98971 0.96875 9.98971 0.96875C9.98971 0.96875 3.7432 0.981577 2.19119 1.40485C1.32848 1.6383 0.654573 2.31221 0.421128 3.17491C-0.0483229 5.93261 -0.23046 10.1346 0.433954 12.782C0.667399 13.6447 1.34131 14.3186 2.20401 14.552C3.75602 14.9753 10.0025 14.9753 10.0025 14.9753C10.0025 14.9753 16.2491 14.9753 17.8011 14.552C18.6638 14.3186 19.3377 13.6447 19.5711 12.782C20.0662 10.0204 20.2189 5.82102 19.5583 3.16209Z" fill="#9CA3AF"/>
+                          <path d="M8.00159 10.9735L13.1835 7.97205L8.00159 4.97064V10.9735Z" fill="white"/>
+                      </svg>
+                  </a>
+                  
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://google.com" class="mr-3 -mb-1 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Google</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#9CA3AF"/>
+                          <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#9CA3AF"/>
+                          <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#9CA3AF"/>
+                          <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#9CA3AF"/>
+                      </svg>    
+                  </a>
+                  
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://yelp.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Yelp</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M14.8 10.495L10.6375 11.6892C9.8375 11.9192 9.1875 11.0225 9.6575 10.3308L12.0783 6.74084C12.1493 6.63566 12.2418 6.5468 12.3498 6.48018C12.4578 6.41356 12.5787 6.3707 12.7045 6.35446C12.8304 6.33822 12.9582 6.34897 13.0796 6.38599C13.2009 6.42301 13.313 6.48546 13.4083 6.56917C14.2569 7.31611 14.9296 8.24156 15.3783 9.27917C15.4291 9.39576 15.4544 9.52183 15.4525 9.64896C15.4507 9.7761 15.4217 9.90138 15.3676 10.0164C15.3135 10.1315 15.2355 10.2337 15.1388 10.3162C15.042 10.3988 14.9288 10.4597 14.8067 10.495H14.8ZM10.6125 13.1217L14.7308 14.46C14.8516 14.4993 14.9627 14.564 15.0565 14.6497C15.1503 14.7353 15.2248 14.84 15.275 14.9567C15.3251 15.0734 15.3498 15.1995 15.3474 15.3266C15.3449 15.4536 15.3154 15.5786 15.2608 15.6933C14.775 16.7129 14.0725 17.6141 13.2025 18.3342C13.1043 18.415 12.9899 18.474 12.867 18.5071C12.7442 18.5403 12.6157 18.5468 12.4901 18.5263C12.3645 18.5058 12.2448 18.4587 12.1388 18.3882C12.0329 18.3177 11.9432 18.2254 11.8758 18.1175L9.57583 14.4433C9.13583 13.7375 9.81583 12.865 10.6058 13.1233L10.6125 13.1217ZM6.61583 9.48167L2.545 2.43C2.48386 2.32346 2.44536 2.20544 2.43189 2.08334C2.41842 1.96124 2.43028 1.83768 2.46672 1.72036C2.50317 1.60305 2.56341 1.49452 2.6437 1.40154C2.72398 1.30857 2.82258 1.23315 2.93333 1.18C4.3112 0.522435 5.79805 0.123324 7.32 0.0025037C7.44264 -0.00703826 7.56592 0.00889814 7.68211 0.0493107C7.79829 0.0897234 7.90485 0.153738 7.9951 0.237329C8.08534 0.32092 8.15731 0.422279 8.20649 0.535032C8.25566 0.647786 8.28097 0.769494 8.28083 0.892504V9.0325C8.28083 9.94584 7.0725 10.2683 6.61583 9.47834V9.48167ZM5.90167 12.9567L1.7 14.005C1.57657 14.0356 1.44805 14.0395 1.323 14.0164C1.19795 13.9934 1.07926 13.9439 0.97484 13.8713C0.870421 13.7988 0.782677 13.7048 0.717464 13.5956C0.652251 13.4865 0.611069 13.3647 0.596666 13.2383C0.469605 12.1152 0.591959 10.9779 0.954999 9.9075C0.995445 9.78716 1.06112 9.67685 1.14764 9.58393C1.23415 9.49102 1.33951 9.41765 1.45667 9.36874C1.57382 9.31983 1.70007 9.2965 1.82697 9.30031C1.95387 9.30412 2.07849 9.33498 2.1925 9.39084L6.0825 11.29C6.8325 11.655 6.71833 12.7567 5.91 12.9567H5.90167ZM6.64 14.1875C7.1975 13.5675 8.22417 13.9825 8.195 14.8142L8.03667 19.1375C8.03209 19.2644 8.00051 19.389 7.94405 19.5027C7.88759 19.6165 7.80753 19.717 7.70921 19.7974C7.61089 19.8778 7.49656 19.9364 7.37384 19.9691C7.25112 20.0019 7.12283 20.0082 6.9975 19.9875C5.88493 19.8007 4.82647 19.3735 3.89583 18.7358C3.79129 18.6636 3.70334 18.57 3.63787 18.4611C3.5724 18.3522 3.5309 18.2306 3.51615 18.1044C3.5014 17.9782 3.51374 17.8504 3.55234 17.7293C3.59094 17.6083 3.65492 17.4969 3.74 17.4025L6.6375 14.1825L6.64 14.1875Z" fill="#9CA3AF"/>
+                      </svg>
+                  </a>
+                  
+                  
+                  
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://tiktok.com" class="mr-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                      <span class="sr-only">Tiktok</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M9.43752 0.0166667C10.5292 0 11.6125 0.00833333 12.6959 0C12.7625 1.275 13.2209 2.575 14.1542 3.475C15.0875 4.4 16.4042 4.825 17.6875 4.96667V8.325C16.4875 8.28333 15.2792 8.03333 14.1875 7.51667C13.7125 7.3 13.2709 7.025 12.8375 6.74167C12.8292 9.175 12.8459 11.6083 12.8209 14.0333C12.7542 15.2 12.3709 16.3583 11.6959 17.3167C10.6042 18.9167 8.71252 19.9583 6.77085 19.9917C5.57919 20.0583 4.38752 19.7333 3.37085 19.1333C1.68752 18.1417 0.504186 16.325 0.329186 14.375C0.312519 13.9583 0.304186 13.5417 0.320852 13.1333C0.470852 11.55 1.25419 10.0333 2.47085 9C3.85419 7.8 5.78752 7.225 7.59585 7.56667C7.61252 8.8 7.56252 10.0333 7.56252 11.2667C6.73752 11 5.77085 11.075 5.04585 11.575C4.52085 11.9167 4.12085 12.4417 3.91252 13.0333C3.73752 13.4583 3.78752 13.925 3.79585 14.375C3.99585 15.7417 5.31252 16.8917 6.71252 16.7667C7.64585 16.7583 8.53752 16.2167 9.02085 15.425C9.17918 15.15 9.35419 14.8667 9.36252 14.5417C9.44585 13.05 9.41252 11.5667 9.42085 10.075C9.42919 6.71667 9.41252 3.36667 9.43752 0.0166667V0.0166667Z" fill="#9CA3AF"/>
+                      </svg>   
+                  </a>
+                  
+                  
+                  
+              </div>
+          </div>
+          <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+              <div class="md:grid md:grid-cols-2 md:gap-8">
+                  <div>
+                      <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Company</h3>
+                      <ul role="list" class="mt-4 -mx-1 space-y-4">
+                          <li>
+                              <a
+                                  href="index"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Home</a
+                              >
+                          </li>
+                          
+                              
+                              <li>
+                                  <a
+                                      href="#gallery"
+                                      class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                      >Gallery</a
+                                  >
+                              </li>
+                              
+                          
+                          
+                          <li>
+                              <a
+                                  href="reviews"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Reviews</a
+                              >
+                          </li>
+                          
+                          
+                          <li>
+                              <a
+                                  href="team"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Team</a
+                              >
+                          </li>
+                          
+                          
+                          
+                          <li>
+                              <a
+                                  href='sitemap.xml'
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Sitemap</a
+                              >
+                          </li>
+                          
+                      </ul>
+                  </div>
+                  <div class="mt-12 md:mt-0">
+                      <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Services</h3>
+                      <ul role="list" class="mt-4 -mx-1 space-y-4">
+                          
+                          <li>
+                              <a
+                                  href="service-Interior-Paintingz"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Interior Paintingz</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-Exterior-Painting"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Exterior Painting</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-Kitchen-and-Cabinet-Refinishing"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Kitchen and Cabinet Refinishing</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-nop"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >nop</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-NEW-SERVICE-4"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >NEW SERVICE 4</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-NEW-SERVICE-5"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >NEW SERVICE 5</a
+                              >
+                          </li>
+                          
+                      </ul>
+                  </div>
+              </div>
+              <div class="md:grid md:grid-cols-2 md:gap-8">
+                  <div>
+                      <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Service Areas</h3>
+                      <ul role="list" class="mt-4 -mx-1 space-y-4">
+                          
+                          <li>
+                              <a
+                                  href="index"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >milwaukee, wi</a
+                              >
+                          </li>
+                          
+                      </ul>
+                  </div>
+                  <div class="mt-12 md:mt-0">
+                      <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Hours</h3>
+                      <ul role="list" class="mt-4 -mx-1 space-y-4">
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Sun:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Mon:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Tues:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Wed:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Thu:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Fri:  8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
+                                Sat:  8:00am - 6:00pm 
+                            </li>
+                        
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="pt-8 mt-12 text-center border-t-2 border-primary-darker">
+          <p class="inline-flex items-center text-base text-gray-100 xl:text-center">
+              Built with ♥ from
+              <a href="https://www.prophone.com" class="inline-block p-1 -m-1 ml-0.5 rounded focus:outline-none focus:ring-2 ring-white ring-opacity-75">
+                  <span class="sr-only">ProPhone</span>
+                  <svg aria-hidden="true" width="95" height="20" viewBox="0 0 95 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2081_3309)">
+                          <path d="M0.166504 4.11491C0.166504 3.88479 0.349686 3.69824 0.575652 3.69824H8.41749C8.70492 3.69824 8.90279 3.99213 8.79912 4.26515L2.9271 19.7339C2.86615 19.8944 2.71452 20.0003 2.54548 20.0003H0.575652C0.349686 20.0003 0.166504 19.8138 0.166504 19.5837V4.11491Z" fill="#F3F4F6"/>
+                          <path d="M15.5607 15.8854C15.5607 16.1155 15.3775 16.3021 15.1515 16.3021H7.3097C7.02227 16.3021 6.8244 16.0082 6.92806 15.7352L12.8001 0.266426C12.861 0.105862 13.0127 0 13.1817 0H15.1515C15.3775 0 15.5607 0.186548 15.5607 0.416667V15.8854Z" fill="#F3F4F6"/>
+                          <path d="M23.2834 15.5732H25.2474V11.7139H27.0118C29.1598 11.7139 30.6941 10.3076 30.6941 8.27637C30.6941 6.24512 29.1598 4.82324 27.0118 4.82324H23.2834V15.5732ZM25.2474 6.44824H26.7356C27.871 6.44824 28.6689 7.18262 28.6689 8.27637C28.6689 9.35449 27.871 10.0889 26.7356 10.0889H25.2474V6.44824ZM32.6332 15.5732H34.5971V10.3545C35.1034 9.69824 35.7938 9.33887 36.4382 9.33887C36.6684 9.33887 36.9139 9.37012 37.1287 9.43262V7.65137C36.9139 7.58887 36.6991 7.57324 36.4843 7.57324C35.8245 7.57324 35.1494 7.91699 34.5971 8.54199V7.76074H32.6332V15.5732ZM38.142 11.667C38.142 14.0576 39.7837 15.7607 42.1005 15.7607C44.4173 15.7607 46.0437 14.0576 46.0437 11.667C46.0437 9.26074 44.4173 7.57324 42.1005 7.57324C39.7837 7.57324 38.142 9.26074 38.142 11.667ZM40.152 11.667C40.152 10.2295 40.9498 9.24512 42.1005 9.24512C43.2359 9.24512 44.0338 10.2295 44.0338 11.667C44.0338 13.1045 43.2359 14.0889 42.1005 14.0889C40.9498 14.0889 40.152 13.1045 40.152 11.667Z" fill="#F3F4F6"/>
+                          <path d="M48.2825 15.5733H50.2464V11.7139H52.0108C54.1588 11.7139 55.6931 10.3076 55.6931 8.27637C55.6931 6.24512 54.1588 4.82324 52.0108 4.82324H48.2825V15.5733ZM50.2464 6.44824H51.7346C52.87 6.44824 53.6678 7.18262 53.6678 8.27637C53.6678 9.3545 52.87 10.0889 51.7346 10.0889H50.2464V6.44824ZM57.632 15.5733H59.5959V10.1514C60.1022 9.6045 60.6699 9.32325 61.2376 9.32325C62.0354 9.32325 62.5878 9.917 62.5878 10.7451V15.5733H64.567V10.3857C64.567 8.7295 63.4316 7.57324 61.836 7.57324C61.0535 7.57324 60.2863 7.87012 59.5959 8.43262V4.33887H57.632V15.5733ZM66.4225 11.667C66.4225 14.0576 68.0642 15.7608 70.381 15.7608C72.6978 15.7608 74.3242 14.0576 74.3242 11.667C74.3242 9.26075 72.6978 7.57324 70.381 7.57324C68.0642 7.57324 66.4225 9.26075 66.4225 11.667ZM68.4324 11.667C68.4324 10.2295 69.2303 9.24512 70.381 9.24512C71.5164 9.24512 72.3142 10.2295 72.3142 11.667C72.3142 13.1045 71.5164 14.0889 70.381 14.0889C69.2303 14.0889 68.4324 13.1045 68.4324 11.667ZM76.2559 15.5733H78.2198V10.1514C78.7261 9.6045 79.2938 9.32325 79.8615 9.32325C80.6593 9.32325 81.2117 9.917 81.2117 10.7451V15.5733H83.1909V10.3857C83.1909 8.7295 82.0555 7.57324 80.4599 7.57324C79.6774 7.57324 78.9102 7.87012 78.2198 8.43262V7.76074H76.2559V15.5733ZM85.0464 11.6045C85.0464 14.042 86.6728 15.7608 88.9896 15.7608C89.8488 15.7608 90.7233 15.5576 91.5979 15.1514V13.4795C90.8 13.9482 90.0175 14.2139 89.3118 14.2139C88.023 14.2139 87.1024 13.4014 86.9796 12.2139H92.1809C92.2116 11.9482 92.2116 11.6982 92.2116 11.4795C92.2116 9.18262 90.8461 7.57324 88.8361 7.57324C86.6421 7.57324 85.0464 9.24512 85.0464 11.6045ZM86.9796 10.917C87.0717 9.83887 87.8081 9.12012 88.7594 9.12012C89.634 9.12012 90.263 9.8545 90.3244 10.917H86.9796Z" fill="#F3F4F6"/>
+                      </g>
+                      <defs>
+                          <clipPath id="clip0_2081_3309">
+                              <rect width="94.6667" height="20" fill="white" transform="translate(0.166504)"/>
+                          </clipPath>
+                      </defs>
+                  </svg>
+              </a>
+          </p>
+      </div>
+  </div>
+</footer>
+
+<template x-teleport="body">
+    <div
+            x-show="contactModalOpen"
+            @keydown.escape.prevent.stop="contactModalOpen = false"
+            role="dialog"
+            aria-modal="true"
+            x-id="['modal-title']"
+            :aria-labelledby="$id('modal-title')"
+            class="fixed inset-0 z-40 md:pt-8 md:pb-20"
+            x-trap.noscroll.inert="contactModalOpen"
+            id="send-text-modal"
+    >
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                aria-hidden="true"
+                class="fixed inset-0 bg-black bg-opacity-50"
+        ></div>
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                @click="contactModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full"
+        >
+            <div
+                    @click.stop
+                    class="flex flex-col w-full 2xl:h-max 2xl:mt-8 h-full overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl"
+            >
+                <div class="relative px-6 bg-white">
+                    <h2 class="mt-6 text-lg font-medium text-center" :id="$id('modal-title')">Send us a text</h2>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8 bg-gradient-to-b from-white"></div>
+                    <button
+                            @click="contactModalOpen = false;"
+                            class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                    >
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+
+
+                <form class="overflow-y-auto pb-20 sm:w-full" onsubmit="send_sms('BoomCo')">
+                    <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
+                        <div class="h-full px-6 pb-1 mt-6 space-y-6 sm:grid sm:grid-cols-2 sm:min-w-max sm:space-x-3">
+                            
+                            <div class="sm:ml-3 sm:transform sm:translate-y-6">
+                                <label for="contact-full-name" class="sr-only">Full Name</label>
+                                <input
+                                        required
+                                        type="text"
+                                        name="full-name"
+                                        id="contact-full-name"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Full Name"
+                                />
+                            </div>
+                            
+                            
+                            <div>
+                                <label for="contact-phone-number" class="sr-only">Phone Number</label>
+                                <input
+                                        required
+                                        type="tel"
+                                        name="phone-number"
+                                        id="contact-phone-number"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Phone Number"
+                                />
+                            </div>
+                            
+                            
+                            <div>
+                                <label for="contact-email" class="sr-only">EmailTrue</label>
+                                <input
+                                        required
+                                        type="email"
+                                        name="email"
+                                        id="contact-email"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Email"
+                                />
+                            </div>
+                            
+
+                            
+                            <div>
+                                <label for="contact-address" class="sr-only">Address</label>
+                                <input
+                                        type="text"
+                                        name="address"
+                                        id="contact-address"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Address"
+                                />
+                            </div>
+                            
+                            
+                            <div>
+                                <label for="contact-date" class="sr-only">Preferred Date of Service</label>
+                                <input
+                                        type="date"
+                                        name="date"
+                                        id="contact-date"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                        placeholder="Preferred Date of Service"
+                                />
+                            </div>
+                            
+                            
+                            <div class='sm:col-span-2'>
+                                
+                                <fieldset class="hidden sm:block sm:mb-3">
+                                    <legend class="text-base font-medium text-gray-900">Services</legend>
+                                    <div class="my-2.5 grid gap-y-3.5 grid-cols-2 ">
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116949"
+                                                    name="116949"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Interior Paintingz"
+                                            />
+                                            <label for="contact-label-service-116949" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116950"
+                                                    name="116950"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Exterior Painting"
+                                            />
+                                            <label for="contact-label-service-116950" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116951"
+                                                    name="116951"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Kitchen and Cabinet Refinishing"
+                                            />
+                                            <label for="contact-label-service-116951" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116952"
+                                                    name="116952"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="nop"
+                                            />
+                                            <label for="contact-label-service-116952" class="ml-3 text-sm font-medium text-gray-700">nop</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116953"
+                                                    name="116953"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 4"
+                                            />
+                                            <label for="contact-label-service-116953" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 4</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116954"
+                                                    name="116954"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 5"
+                                            />
+                                            <label for="contact-label-service-116954" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 5</label>
+                                        </div>
+                                        
+                                    </div>
+                                </fieldset>
+                                
+                                <div>
+                                
+                                <div class='sm:flex sm:flex-1 sm:mt-3 sm:space-x-3'>
+                                <div class='sm:flex-grow'>
+                                    <label for="contact-concern" class="sr-only">How can we help you?</label>
+                                    <textarea
+                                            id="contact-concern"
+                                            name="concern"
+                                            rows="4"
+                                            class="block py-3.5 px-2.5 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+                                            placeholder="How can we help you?"
+                                    ></textarea>
+                                </div>
+                                
+                                
+                                
+                                <fieldset class="sm:hidden my-3 sm:mb-0">
+                                    <legend class="text-base font-medium text-gray-900">Services</legend>
+                                    <div class="mt-2.5 grid gap-y-3.5 grid-cols-2 sm:flex sm:space-x-6">
+
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116949"
+                                                    name="116949"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Interior Paintingz"
+                                            />
+                                            <label for="contact-label-service-116949" class="ml-3 text-sm font-medium text-gray-700">Interior Paintingz</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116950"
+                                                    name="116950"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Exterior Painting"
+                                            />
+                                            <label for="contact-label-service-116950" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116951"
+                                                    name="116951"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Kitchen and Cabinet Refinishing"
+                                            />
+                                            <label for="contact-label-service-116951" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116952"
+                                                    name="116952"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="nop"
+                                            />
+                                            <label for="contact-label-service-116952" class="ml-3 text-sm font-medium text-gray-700">nop</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116953"
+                                                    name="116953"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 4"
+                                            />
+                                            <label for="contact-label-service-116953" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 4</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-116954"
+                                                    name="116954"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 5"
+                                            />
+                                            <label for="contact-label-service-116954" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 5</label>
+                                        </div>
+                                        
+                                    </div>
+                                </fieldset>
+                                
+                                
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center w-full">
+                        <button   id='sendButton'  class="
+                                    py-2.5
+                                    w-4/5
+                                    fixed
+                                    bottom
+                                    text-sm
+                                    font-medium
+                                    transition
+                                    border-2 border-transparent
+                                    rounded-md
+                                    bg-primary
+                                    text-primary-foreground
+                                    focus:outline-none
+                                    hover:bg-primary-darker
+                                    bg-primar
+                                    focus-visible:ring-2
+                                    ring-primary ring-opacity-75 ring-offset-2
+                                    disabled:bg-primary-darker"
+                                    style="
+                                    position:absolute;
+                                    left: 50%;
+                                    bottom: 0;
+                                    transform: translate(-50%, -50%);
+                                    margin-top: 0;
+                                    margin-bottom: 0">Send
+                        </button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = Array.from(
+            document.querySelectorAll('input[name=email], input[name=phone-number]')
+        )
+
+        const inputListener = e => {
+            inputs
+                .filter(i => i !== e.target)
+                .forEach(i => (i.required = !e.target.value.length))
+        }
+
+        inputs.forEach(i => i.addEventListener('input', inputListener))
+    })
+</script>
+<div
+	class="fixed inset-0 z-40 md:pt-8 md:pb-20"
+	id="text-thank-you"
+	style="display: none;"
+>
+	<div
+		class="fixed inset-0 bg-black bg-opacity-50"
+	></div>
+	<div
+		class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white"
+	>
+		<div class="mt-3 text-center">
+			<div
+				class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
+			>
+				<svg
+					class="h-6 w-6 text-green-600"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M5 13l4 4L19 7"
+					></path>
+				</svg>
+			</div>
+			<h3 class="text-lg leading-6 font-medium text-gray-900">Thank you!</h3>
+			<div class="mt-1 px-7 py-3">
+				<p class="text-sm text-gray-500">
+					Your message was sent successfully. We’ll send you a text or give you a call soon.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<template x-teleport="body">
+    <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
+        <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+        <div
+            x-show="reviewModalOpen"
+            x-transition:enter="ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave="ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            @click="reviewModalOpen = false"
+            class="relative flex items-center justify-center w-full h-full"
+        >
+            <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl px-6 sm:my-8 sm:align-middle sm:max-w-sm">
+                <div class="relative px-6 bg-white">
+                    <h2 class="mt-16 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
+                    <button @click="reviewModalOpen = false;" class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="mt-2 space-y-6">
+                    <span hidden class="sr-only">Review types</span>
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://google.com/goop" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            Leave a Review
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://yelp.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            See More Reviews
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://bucks.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            Leave a Review
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+
+</body>
+</html>
+
+<script>
+    if (window.location.href.includes('prosite.prophone.com')) {
+        document.body.className = "pt-56 md:pt-48"
+    } else {
+        document.body.className = "pt-24 md:pt-44"
+    }
+</script>
