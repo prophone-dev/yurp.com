@@ -28,7 +28,7 @@
 <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
 <script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--    <script defer src='https://cdn.tailwindcss.com'></script>-->
+    <script src='https://cdn.tailwindcss.com'></script>
 
     <style>
             :root {
@@ -51,7 +51,6 @@
 
 
     </style>
-
     <script type="text/javascript" defer>
                     function send_sms(slug){
                         const sendButton = document.getElementById('sendButton')
@@ -290,7 +289,7 @@
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
-    class="fixed inset-x-0 top-0 z-20 bg-orange-600 sm:h-16 transition-all duration-200"
+    class="fixed hidden inset-x-0 top-0 z-20 bg-orange-600 sm:h-16 transition-all duration-200"
 >
     <div
         :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
