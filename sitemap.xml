@@ -18,20 +18,6 @@
     </url>
 
     <url>
-        <loc>https://yurp.com/jobs</loc>
-        <lastmod>2022-05-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://yurp.com/teams</loc>
-        <lastmod>2022-05-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://yurp.com/reviews</loc>
         <lastmod>2022-05-18</lastmod>
         <changefreq>weekly</changefreq>
@@ -46,14 +32,35 @@
     </url>
 
     <url>
-        <loc>https://yurp.com/gallery-Before-After-Photos</loc>
+        <loc>https://yurp.com/gallery-Interior-Painting</loc>
         <lastmod>2022-05-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://yurp.com/service-Exterior-Painting</loc>
+        <loc>https://yurp.com/gallery-Exterior-Painting</loc>
+        <lastmod>2022-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/gallery-Gallery-3</loc>
+        <lastmod>2022-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/gallery-Gallery-4</loc>
+        <lastmod>2022-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/gallery-Gallery-5</loc>
         <lastmod>2022-05-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -67,14 +74,7 @@
     </url>
 
     <url>
-        <loc>https://yurp.com/service-Drywall-Repair</loc>
-        <lastmod>2022-05-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://yurp.com/service-Deck-Refinishing</loc>
+        <loc>https://yurp.com/service-Exterior-Painting</loc>
         <lastmod>2022-05-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -88,7 +88,21 @@
     </url>
 
     <url>
-        <loc>https://yurp.com/service-Staining</loc>
+        <loc>https://yurp.com/service-Drywall-and-Plastering</loc>
+        <lastmod>2022-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Pre-paint-Washing</loc>
+        <lastmod>2022-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://yurp.com/service-Other-Painting-Services</loc>
         <lastmod>2022-05-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
