@@ -995,14 +995,15 @@
     <div
         x-data="{
         activeImage: 1,
-        amountOfImages: 1,
+        amountOfImages: 5,
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
-        }"
-            x-init="loop"
-            class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
-        >
+    }"
+        x-init="loop"
+        class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
+    >
+        
         <div
             class="absolute inset-0"
             x-show="activeImage === 1"
@@ -1013,17 +1014,91 @@
             x-transition:leave-start="transform"
             x-transition:leave-end="transform -translate-x-full"
         >
-        
             
-            <img
-                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/AdobeStock_279953994_5.jpeg"
-                alt=""
-            />
-                
-        
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/71b6ed48-46c4-4e50-9e32-7a77ea7f9b43.png"
+                    alt="painters near me company Caro Painting in Austin, TX"
+                />
             
         </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 2"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9a3f99a4-31b1-4efb-9f0c-8fe59dcf7214.png"
+                    alt="painters near me company Caro Painting in Austin, TX"
+                />
+            
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 3"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/2a1fe51c-4068-4e14-9559-732defde9003.png"
+                    alt="painters near me company Caro Painting in Austin, TX"
+                />
+            
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 4"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ee6ad804-d0d5-46a6-9819-741a0a0ecf41.jpeg"
+                    alt="painters near me company Caro Painting in Austin, TX"
+                />
+            
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 5"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/71873bad-eecd-48c6-b0fc-2c9a8ee2dd9d.png"
+                    alt="painters near me company Caro Painting in Austin, TX"
+                />
+            
+        </div>
+        
     </div>
     
 </div>
