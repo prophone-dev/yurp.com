@@ -1838,7 +1838,7 @@
             <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 28,
+        amountOfImages: 27,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1859,24 +1859,6 @@
                     <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/534bcc46-6b3d-4a8c-b99a-b5a20e7682d2.svg%2Bxml#t=0.5" >
-                                </video>
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            
                                 
                                     <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9681ea7b-933c-42c2-ba13-764ac9f3bcf9.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
@@ -1893,7 +1875,7 @@
         
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
@@ -1912,7 +1894,7 @@
         
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
@@ -1931,7 +1913,7 @@
         
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
@@ -1948,9 +1930,9 @@
                 </div>
             </li>
         
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
@@ -1969,7 +1951,7 @@
         
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
@@ -1988,11 +1970,30 @@
         
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
                                     <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2c40b875-0400-4bf7-96a8-2ae0d2885a20.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/191af3d9-42ee-4cf7-b315-3ef58b756d4a.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2011,7 +2012,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/191af3d9-42ee-4cf7-b315-3ef58b756d4a.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/7af92227-ed31-4a57-9a3e-767c0702415e.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2030,7 +2031,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/7af92227-ed31-4a57-9a3e-767c0702415e.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/19adae15-39b6-4df7-a5f2-a1df47d55e95.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2049,7 +2050,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/19adae15-39b6-4df7-a5f2-a1df47d55e95.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9b89a794-9a44-489a-ba68-de39b383af78.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2068,7 +2069,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9b89a794-9a44-489a-ba68-de39b383af78.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/52c9908a-9b72-4fc4-ae11-8ed50b89d82f.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2087,7 +2088,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/52c9908a-9b72-4fc4-ae11-8ed50b89d82f.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/171f6c36-a31a-403f-9d16-45a1c54a5b19.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2106,7 +2107,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/171f6c36-a31a-403f-9d16-45a1c54a5b19.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/d79637ea-1cad-4650-8f37-9c1eb3b64eee.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2125,7 +2126,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/d79637ea-1cad-4650-8f37-9c1eb3b64eee.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/66a7c209-58ce-4dd8-9851-947daadb4257.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2144,7 +2145,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/66a7c209-58ce-4dd8-9851-947daadb4257.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/93374de2-83ad-4fba-a76d-a6a9cfd5a382.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2163,7 +2164,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/93374de2-83ad-4fba-a76d-a6a9cfd5a382.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0ba0e1ca-ede2-4c82-8056-d04c425735ea.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2182,7 +2183,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0ba0e1ca-ede2-4c82-8056-d04c425735ea.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/d3b73675-ab60-4983-ae96-ca1565801ba9.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2201,7 +2202,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/d3b73675-ab60-4983-ae96-ca1565801ba9.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/87ad6117-cc5e-4cf6-88ef-5b53c5533c2b.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2220,7 +2221,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/87ad6117-cc5e-4cf6-88ef-5b53c5533c2b.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/78f027e2-c711-44d1-b355-b5829d965c0f.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2239,7 +2240,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/78f027e2-c711-44d1-b355-b5829d965c0f.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2a1fe51c-4068-4e14-9559-732defde9003.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2258,7 +2259,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2a1fe51c-4068-4e14-9559-732defde9003.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ee6ad804-d0d5-46a6-9819-741a0a0ecf41.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2277,7 +2278,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ee6ad804-d0d5-46a6-9819-741a0a0ecf41.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
+                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9a3f99a4-31b1-4efb-9f0c-8fe59dcf7214.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                 
                             
                         </div>
@@ -2295,25 +2296,6 @@
                     <button @click="activeImage = 23; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9a3f99a4-31b1-4efb-9f0c-8fe59dcf7214.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
-                                
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 24; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            
                                 <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/b3ea14a8-ddb8-4f60-9a8c-16cb088921ab.mp4#t=0.5" >
                                 </video>
                             
@@ -2329,7 +2311,7 @@
         
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 25; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 24; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
@@ -2348,7 +2330,7 @@
         
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 26; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 25; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
@@ -2367,7 +2349,7 @@
         
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 27; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 26; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d367ff64-f783-4c1b-acea-f6faab9b09fc.mp4#t=0.5" >
@@ -2427,175 +2409,167 @@
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
                                 
                                     <li class="flex flex-col" x-show="activeImage === 0">
-                                        
-                                            <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/534bcc46-6b3d-4a8c-b99a-b5a20e7682d2.svg%2Bxml#t=0.5" >
-                                            </video>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 1">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/9681ea7b-933c-42c2-ba13-764ac9f3bcf9.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 2">
+                                    <li class="flex flex-col" x-show="activeImage === 1">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/9bd39db1-628b-463a-bb90-44198658ed30.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 3">
+                                    <li class="flex flex-col" x-show="activeImage === 2">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/d40d5910-b285-4599-8f45-5f800a73b82e.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 4">
+                                    <li class="flex flex-col" x-show="activeImage === 3">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/bc4fafdc-aff7-454b-8bfc-1f70db075e8d.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 5">
+                                    <li class="flex flex-col" x-show="activeImage === 4">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/3da46fc2-bdcc-4a4b-9043-6753d3fd56d9.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 6">
+                                    <li class="flex flex-col" x-show="activeImage === 5">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/465a1426-8296-485c-b484-8eb5f8491cc2.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 7">
+                                    <li class="flex flex-col" x-show="activeImage === 6">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/2c40b875-0400-4bf7-96a8-2ae0d2885a20.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 8">
+                                    <li class="flex flex-col" x-show="activeImage === 7">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/191af3d9-42ee-4cf7-b315-3ef58b756d4a.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 9">
+                                    <li class="flex flex-col" x-show="activeImage === 8">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/7af92227-ed31-4a57-9a3e-767c0702415e.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 10">
+                                    <li class="flex flex-col" x-show="activeImage === 9">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/19adae15-39b6-4df7-a5f2-a1df47d55e95.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 11">
+                                    <li class="flex flex-col" x-show="activeImage === 10">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/9b89a794-9a44-489a-ba68-de39b383af78.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 12">
+                                    <li class="flex flex-col" x-show="activeImage === 11">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/52c9908a-9b72-4fc4-ae11-8ed50b89d82f.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 13">
+                                    <li class="flex flex-col" x-show="activeImage === 12">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/171f6c36-a31a-403f-9d16-45a1c54a5b19.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 14">
+                                    <li class="flex flex-col" x-show="activeImage === 13">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/d79637ea-1cad-4650-8f37-9c1eb3b64eee.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 15">
+                                    <li class="flex flex-col" x-show="activeImage === 14">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/66a7c209-58ce-4dd8-9851-947daadb4257.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 16">
+                                    <li class="flex flex-col" x-show="activeImage === 15">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/93374de2-83ad-4fba-a76d-a6a9cfd5a382.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 17">
+                                    <li class="flex flex-col" x-show="activeImage === 16">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/0ba0e1ca-ede2-4c82-8056-d04c425735ea.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 18">
+                                    <li class="flex flex-col" x-show="activeImage === 17">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/d3b73675-ab60-4983-ae96-ca1565801ba9.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 19">
+                                    <li class="flex flex-col" x-show="activeImage === 18">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/87ad6117-cc5e-4cf6-88ef-5b53c5533c2b.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 20">
+                                    <li class="flex flex-col" x-show="activeImage === 19">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/78f027e2-c711-44d1-b355-b5829d965c0f.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 21">
+                                    <li class="flex flex-col" x-show="activeImage === 20">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/2a1fe51c-4068-4e14-9559-732defde9003.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 22">
+                                    <li class="flex flex-col" x-show="activeImage === 21">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/ee6ad804-d0d5-46a6-9819-741a0a0ecf41.jpeg" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 23">
+                                    <li class="flex flex-col" x-show="activeImage === 22">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/9a3f99a4-31b1-4efb-9f0c-8fe59dcf7214.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 24">
+                                    <li class="flex flex-col" x-show="activeImage === 23">
                                         
                                             <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/b3ea14a8-ddb8-4f60-9a8c-16cb088921ab.mp4#t=0.5" >
                                             </video>
@@ -2603,21 +2577,21 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 25">
+                                    <li class="flex flex-col" x-show="activeImage === 24">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/71873bad-eecd-48c6-b0fc-2c9a8ee2dd9d.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 26">
+                                    <li class="flex flex-col" x-show="activeImage === 25">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/7d83ede9-ea34-411c-8b84-b9a1145f4036.png" alt="Interior Painting 2 for Caro Painting in Austin, TX" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 27">
+                                    <li class="flex flex-col" x-show="activeImage === 26">
                                         
                                             <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d367ff64-f783-4c1b-acea-f6faab9b09fc.mp4#t=0.5" >
                                             </video>
