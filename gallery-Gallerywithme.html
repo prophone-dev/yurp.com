@@ -7,6 +7,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -21,7 +23,6 @@
 
     <link rel="preload" href="https://prophone-templates.vercel.app/assets/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://prophone-templates.vercel.app/assets/output.css"></noscript>
-    
     <script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
 <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 <script defer src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"></script>
@@ -317,6 +318,7 @@
     </script>
 </head>
 <body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-56 md:pt-48">
+    
 
 <div
     id="launch-site-banner"
@@ -668,7 +670,7 @@
                     </p>
                     <div class="w-full sm:w-auto">
                         
-                        <div class="w-full sm:w-auto">
+                        <div class="w-full sm:w-auto cta_text_button">
                             <button
                             :class="{'scale-100': !scrolledFromTop, 'scale-75 translate-x-8': scrolledFromTop}"
                             @click="contactModalOpen = true"
@@ -918,12 +920,11 @@
         }
     }
     const isMobile = detectMob()
-
-    if (window.location.href.includes('prosite.prophone.com')
+    if (((window.location.href.includes('prosite.prophone.com')
      || window.location.href.includes('dev.prosite.prophone.com')
      || window.location.href.includes('stage.prosite.prophone.com')
      || window.location.href.includes('127.0.0.1:8000')
-     || window.location.href.includes('localhost')) {
+     || window.location.href.includes('localhost')) && window.location.href.includes('m/v2/b'))) {
         launchBanner.style.display = 'block'
         if (isMobile) {
             navBar.className = "fixed inset-x-0 sm:top-16 z-20 transition-all duration-200"
@@ -969,7 +970,7 @@
 
 
 
-<section class="overflow-hidden h-full bg-white">
+<section class="overflow-hidden bg-white">
     <div class="relative h-1/2 min-h-screen  px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
         <h1>
             <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary"> Our Best Work </span>
@@ -1344,7 +1345,7 @@
         <div class="flex justify-center mt-8">
             
             
-            <div class="w-full sm:w-auto">
+            <div class="w-full sm:w-auto cta_text_button">
                 <button
                     @click="contactModalOpen = true"
                     class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-primary"
@@ -1741,11 +1742,13 @@
                             <div>
                                 <label for="contact-date" class="sr-only">Preferred Date of Service</label>
                                 <input
-                                        type="date"
+                                        type="text"
                                         name="date"
                                         id="contact-date"
                                         class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
                                         placeholder="Preferred Date of Service"
+                                        onfocus="(this.type='date')"
+                                        required
                                 />
                             </div>
                             
@@ -1758,81 +1761,119 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126938"
-                                                    name="126938"
+                                                    id="contact-service-127486"
+                                                    name="127486"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Painting 2"
                                             />
-                                            <label for="contact-label-service-126938" class="ml-3 text-sm font-medium text-gray-700">Interior Painting 2</label>
+        
+                                            <label for="contact-label-service-127486" class="ml-3 text-sm font-medium text-gray-700">Interior Painting 2</label>
+                                            
+                                            
                                         </div>
+                                    
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126939"
-                                                    name="126939"
+                                                    id="contact-service-127487"
+                                                    name="127487"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-126939" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+        
+                                            <label for="contact-label-service-127487" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                            
+                                            
                                         </div>
+                                    
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126940"
-                                                    name="126940"
+                                                    id="contact-service-127488"
+                                                    name="127488"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-126940" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+        
+                                            <label for="contact-label-service-127488" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                            
+                                            
                                         </div>
+                                    
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126941"
-                                                    name="126941"
+                                                    id="contact-service-127489"
+                                                    name="127489"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Pre-paint Washing"
                                             />
-                                            <label for="contact-label-service-126941" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
+        
+                                            <label for="contact-label-service-127489" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
+                                            
+                                            
                                         </div>
+                                    
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126942"
-                                                    name="126942"
+                                                    id="contact-service-127490"
+                                                    name="127490"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Drywall and Plastering"
                                             />
-                                            <label for="contact-label-service-126942" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+        
+                                            <label for="contact-label-service-127490" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                            
+                                            
                                         </div>
+                                    
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126943"
-                                                    name="126943"
+                                                    id="contact-service-127491"
+                                                    name="127491"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Painting"
                                             />
-                                            <label for="contact-label-service-126943" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
+        
+                                            <label for="contact-label-service-127491" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
+                                            
+                                            
                                         </div>
+                                    
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126944"
-                                                    name="126944"
+                                                    id="contact-service-127492"
+                                                    name="127492"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Other Painting Services"
                                             />
-                                            <label for="contact-label-service-126944" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+        
+                                            <label for="contact-label-service-127492" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                            
+                                            
                                         </div>
+                                    
                                         
+                                        <div class="flex items-center">
+                                        <input
+                                                    id="contact-service-Other"
+                                                    name="Other"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Other"
+                                            />
+                                            <label for="contact-label-service-Other" class="ml-3 text-sm font-medium text-gray-700">Other</label>
+                                            </div>
                                     </div>
                                 </fieldset>
                                 
@@ -1859,79 +1900,79 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126938"
-                                                    name="126938"
+                                                    id="contact-service-127486"
+                                                    name="127486"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Painting 2"
                                             />
-                                            <label for="contact-label-service-126938" class="ml-3 text-sm font-medium text-gray-700">Interior Painting 2</label>
+                                            <label for="contact-label-service-127486" class="ml-3 text-sm font-medium text-gray-700">Interior Painting 2</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126939"
-                                                    name="126939"
+                                                    id="contact-service-127487"
+                                                    name="127487"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-126939" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                            <label for="contact-label-service-127487" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126940"
-                                                    name="126940"
+                                                    id="contact-service-127488"
+                                                    name="127488"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-126940" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                            <label for="contact-label-service-127488" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126941"
-                                                    name="126941"
+                                                    id="contact-service-127489"
+                                                    name="127489"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Pre-paint Washing"
                                             />
-                                            <label for="contact-label-service-126941" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
+                                            <label for="contact-label-service-127489" class="ml-3 text-sm font-medium text-gray-700">Pre-paint Washing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126942"
-                                                    name="126942"
+                                                    id="contact-service-127490"
+                                                    name="127490"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Drywall and Plastering"
                                             />
-                                            <label for="contact-label-service-126942" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                            <label for="contact-label-service-127490" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126943"
-                                                    name="126943"
+                                                    id="contact-service-127491"
+                                                    name="127491"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Painting"
                                             />
-                                            <label for="contact-label-service-126943" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
+                                            <label for="contact-label-service-127491" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126944"
-                                                    name="126944"
+                                                    id="contact-service-127492"
+                                                    name="127492"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Other Painting Services"
                                             />
-                                            <label for="contact-label-service-126944" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                            <label for="contact-label-service-127492" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
                                         </div>
                                         
                                     </div>
@@ -2084,9 +2125,10 @@
 </body>
   
 <script>
-    if (window.location.href.includes('prosite.prophone.com')) {
+    if (window.location.href.includes('prosite.prophone.com') && window.location.href.includes('m/v2/b/')) {
         document.body.className = "pt-56 md:pt-48"
-    } else {
+    } 
+    else {
         document.body.className = "pt-24 md:pt-44"
     }
 </script>
